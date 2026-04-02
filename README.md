@@ -111,3 +111,4 @@ Userful helper:
 - `./ipa_archive.py get url 21968` # print URL of entry
 - `./ipa_archive.py get img 21968` # force (re)download of .png image
 - `./ipa_archive.py get ipa 21968` # download ipa file for debugging
+PR trigger

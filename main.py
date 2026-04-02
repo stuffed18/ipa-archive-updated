@@ -334,9 +334,13 @@ class CacheDB:
             version += f' ({v_long})'
         # minOS = [int(x) for x in plist.get('MinimumOSVersion', '0').split('.')]
         raw = plist.get('MinimumOSVersion')
+        
+        # FIX crash: ensure raw is always string
+        raw_str = "" if raw is None else str(raw)
+        raw_str = raw_str.strip()
 
         # Handle empty / missing MinimumOSVersion (log once per UID)
-        if not raw or raw.strip() == "":
+        if raw_str == "":
             if not hasattr(self, "_warned_empty_min_os"):
                 self._warned_empty_min_os = set()
 
@@ -346,7 +350,7 @@ class CacheDB:
 
             minOS = [0]
         else:
-            minOS = [int(x) for x in raw.split('.') if x.isdigit()]
+            minOS = [int(x) for x in raw_str.split('.') if x.isdigit()]
 
         minOS += [0, 0, 0]  # ensures at least 3 components are given
         platforms = sum(1 << int(x) for x in plist.get('UIDeviceFamily', []))
@@ -420,12 +424,18 @@ def downloadListArchiveOrg(
     # read saved json from disk
     with gzip.open(json_file, 'rb') as fp:
         data = json.load(fp)
-    # process and add to DB
-    return [(x['name'], int(x.get('size', 0)), x.get('crc32'))
-            for x in data['result']
-            if x['source'] == 'original' and x['name'].endswith('.ipa')]
 
+    # 🔥 FIX: handle broken API response
+    if 'result' not in data:
+        print(f"[ERROR] archive.org response missing 'result' for {archiveId}")
+        print(f"[DEBUG] Response keys: {list(data.keys())}")
+        return []
 
+    return [
+        (x['name'], int(x.get('size', 0)), x.get('crc32'))
+        for x in data['result']
+        if x.get('source') == 'original' and x.get('name', '').endswith('.ipa')
+    ]
 ###############################################
 # [update] Re-index existing URL caches
 ###############################################
@@ -498,11 +508,12 @@ def _lookupBaseUrl(url_or_index: 'str|int') -> 'tuple[int|None, str|None]':
 
 def processPending():
     processed = 0
-    with Pool(processes=8) as pool:
+    import os
+    with Pool(processes=os.cpu_count() - 1) as pool:
         while True:
             DB = CacheDB()
             pending = DB.count(done=0)
-            batch = DB.getPendingQueue(done=0, batchsize=100)
+            batch = DB.getPendingQueue(done=0, batchsize=300)
             del DB
             if not batch:
                 print('Queue empty. done.')
@@ -511,7 +522,7 @@ def processPending():
             batch = [(processed + i + 1, pending - i - 1, *x)
                      for i, x in enumerate(batch)]
 
-            result = pool.starmap_async(procSinglePending, batch).get()
+            result = pool.starmap_async(procSinglePending, batch, chunksize=10).get()
             processed += len(result)
             DB = CacheDB()
             for uid, success in result:

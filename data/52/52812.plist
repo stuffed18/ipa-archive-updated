@@ -2,30 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
   <dict>
-    <key>CFBundleURLTypes</key>
-    <array>
-      <dict>
-        <key>CFBundleURLName</key>
-        <string>com.rovio.angrybirdsfight</string>
-        <key>CFBundleURLSchemes</key>
-        <array>
-          <string>fb363584170396623</string>
-          <string>wb2299878299</string>
-          <string>com.rovio.angrybirdsfight</string>
-          <string>com.rovio.angrybirdsfight-2.5.6</string>
-        </array>
-        <key>CFBundleTypeRole</key>
-        <string>Editor</string>
-      </dict>
-    </array>
     <key>NSContactsUsageDescription</key>
     <string>Allow this app to access contacts</string>
-    <key>CFBundleInfoDictionaryVersion</key>
-    <string>6.0</string>
     <key>UIRequiredDeviceCapabilities</key>
     <array>
       <string>gamekit</string>
     </array>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>UIRequiresFullScreen</key>
+    <true/>
     <key>DTPlatformVersion</key>
     <string>10.2</string>
     <key>CFBundleIconFile</key>
@@ -55,8 +41,8 @@
     </array>
     <key>NSPhotoLibraryUsageDescription</key>
     <string>Allow this app to access photo library</string>
-    <key>UIRequiresFullScreen</key>
-    <true/>
+    <key>DTCompiler</key>
+    <string>com.apple.compilers.llvm.clang.1_0</string>
     <key>LSApplicationCategoryType</key>
     <string></string>
     <key>CFBundleDisplayName</key>
@@ -189,30 +175,26 @@
     </array>
     <key>Fabric</key>
     <dict>
-      <key>APIKey</key>
-      <string>6a08b65836d6632b107ab06e7e842fdab8beba4e</string>
       <key>Kits</key>
       <array>
         <dict>
+          <key>KitInfo</key>
+          <dict>
+            <key>consumerKey</key>
+            <string>uYHGoIGQhBJ5mxKwdm43taNOx</string>
+            <key>consumerSecret</key>
+            <string>tAxl6Cs8gDsQCEca2nFKp9TYwBZ80RwlXrRGE3Y86cpPqW1BTA</string>
+          </dict>
           <key>KitName</key>
           <string>Twitter</string>
-          <key>KitInfo</key>
-          <dict>
-            <key>consumerKey</key>
-            <string>uYHGoIGQhBJ5mxKwdm43taNOx</string>
-            <key>consumerSecret</key>
-            <string>tAxl6Cs8gDsQCEca2nFKp9TYwBZ80RwlXrRGE3Y86cpPqW1BTA</string>
-          </dict>
         </dict>
         <dict>
-          <key>KitName</key>
-          <string>Crashlytics</string>
           <key>KitInfo</key>
           <dict/>
+          <key>KitName</key>
+          <string>Crashlytics</string>
         </dict>
         <dict>
-          <key>KitName</key>
-          <string>Digits</string>
           <key>KitInfo</key>
           <dict>
             <key>consumerKey</key>
@@ -220,8 +202,12 @@
             <key>consumerSecret</key>
             <string>tAxl6Cs8gDsQCEca2nFKp9TYwBZ80RwlXrRGE3Y86cpPqW1BTA</string>
           </dict>
+          <key>KitName</key>
+          <string>Digits</string>
         </dict>
       </array>
+      <key>APIKey</key>
+      <string>6a08b65836d6632b107ab06e7e842fdab8beba4e</string>
     </dict>
     <key>FacebookDisplayName</key>
     <string>Fight!</string>
@@ -255,7 +241,23 @@
     <string>????</string>
     <key>DTPlatformName</key>
     <string>iphoneos</string>
-    <key>DTCompiler</key>
-    <string>com.apple.compilers.llvm.clang.1_0</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+        <key>CFBundleURLName</key>
+        <string>com.rovio.angrybirdsfight</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>fb363584170396623</string>
+          <string>wb2299878299</string>
+          <string>com.rovio.angrybirdsfight</string>
+          <string>com.rovio.angrybirdsfight-2.5.6</string>
+        </array>
+      </dict>
+    </array>
+    <key>DTAppStoreToolsBuild</key>
+    <string>12E506</string>
   </dict>
 </plist>

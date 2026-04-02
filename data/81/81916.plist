@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+    <key>Chartboost Sega App Signature</key>
+    <string>715a66c2c4ecfa820bf403aa610aa81718c35ba5</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Advertisement would like to store a photo.</string>
+    <key>Sega Mopub tab interestitial</key>
+    <string>9a3ad478951c48db8f3d6d5f4a1376aa</string>
+    <key>DTPlatformVersion</key>
+    <string>10.3</string>
+    <key>Chartboost App Signature</key>
+    <string>62e070a9e6c430c99ad2410e702e026fc20bbafb</string>
+    <key>Sega Mopub tab save</key>
+    <string>aede364a8a0342ecbc92a9c67c347ea2</string>
+    <key>DTSDKBuild</key>
+    <string>14E269</string>
+    <key>CFBundleIcons~ipad</key>
+    <dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>AppIcon29x29</string>
+          <string>AppIcon40x40</string>
+          <string>AppIcon57x57</string>
+          <string>AppIcon60x60</string>
+          <string>AppIcon76x76</string>
+          <string>AppIcon83.5x83.5</string>
+        </array>
+        <key>UIPrerenderedIcon</key>
+        <true/>
+      </dict>
+    </dict>
+    <key>Sega UA game id</key>
+    <string>1232063</string>
+    <key>Mopub Interstitial Ad Unit Id</key>
+    <string>6fe655fa58304dc0b0f914e1fd5f7ad8</string>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>NSCameraUsageDescription</key>
+    <string>Advertisement would like to use camera.</string>
+    <key>Sega Mopub tab pause</key>
+    <string>3a6bb23d5873491f82c3d57758e873ad</string>
+    <key>AppsFlyerDevKey</key>
+    <string>BdP724hHJFraJaxKXvNex7</string>
+    <key>AppLovinSdkKey</key>
+    <string>7OtpnU0eDCM-zZOR12R4JLGqhv89eT-msrZcKaGXndVkCvADybIGyZ5dSDo6gmsWbQ8w_PSn1zVEsfSpGl3CJ8</string>
+    <key>Sega UA phone prestitial</key>
+    <string>prestitial</string>
+    <key>DTXcodeBuild</key>
+    <string>8E2002</string>
+    <key>CFBundleLocalizations</key>
+    <array>
+      <string>en</string>
+      <string>fr</string>
+      <string>it</string>
+      <string>de</string>
+      <string>es</string>
+      <string>ja</string>
+      <string>ko</string>
+      <string>zh_CN</string>
+      <string>zh_TW</string>
+      <string>ru</string>
+      <string>pt</string>
+    </array>
+    <key>Sega UA tablet prestitial</key>
+    <string>tabletPrestitial</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.sega.sonic1international</string>
+    <key>LSApplicationCategoryType</key>
+    <string>public.app-category.games</string>
+    <key>Native Ad ID Tablet</key>
+    <string>aede364a8a0342ecbc92a9c67c347ea2</string>
+    <key>UIDeviceFamily</key>
+    <array>
+      <integer>1</integer>
+      <integer>2</integer>
+    </array>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleIcons</key>
+    <dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>AppIcon29x29</string>
+          <string>AppIcon40x40</string>
+          <string>AppIcon57x57</string>
+          <string>AppIcon60x60</string>
+        </array>
+        <key>UIPrerenderedIcon</key>
+        <true/>
+      </dict>
+    </dict>
+    <key>MarioAppsFlyerDevKey</key>
+    <string>r3XYRja9GGyFPYRUpDVffd</string>
+    <key>CFBundleSupportedPlatforms</key>
+    <array>
+      <string>iPhoneOS</string>
+    </array>
+    <key>UIMainStoryboardFile</key>
+    <string>Main</string>
+    <key>UIRequiresFullScreen</key>
+    <true/>
+    <key>Chartboost App Id</key>
+    <string>5800a64804b0161caacd5e5b</string>
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>Advertisement would like to use bluetooth.</string>
+    <key>MinimumOSVersion</key>
+    <string>8.0</string>
+    <key>CFBundleName</key>
+    <string>Sonic 1</string>
+    <key>CFBundleShortVersionString</key>
+    <string>2.2.2</string>
+    <key>UIStatusBarHidden</key>
+    <true/>
+    <key>UIAppFonts</key>
+    <array>
+      <string>intro_black.otf</string>
+      <string>RetroComputer.ttf</string>
+    </array>
+    <key>UIRequiredDeviceCapabilities</key>
+    <array>
+      <string>armv7</string>
+      <string>gamekit</string>
+    </array>
+    <key>AppsFlyerAppID</key>
+    <string>316050001</string>
+    <key>CFBundleExecutable</key>
+    <string>Sonic 1</string>
+    <key>Sega Mopub phone prestitial</key>
+    <string>1cc98e5cf5634614ba1dea4ed75a15a0</string>
+    <key>UIViewControllerBasedStatusBarAppearance</key>
+    <false/>
+    <key>Sega Unity Ads Interstitial Placement</key>
+    <string>video</string>
+    <key>Sega Mopub tab character</key>
+    <string>71cd7b7aa8a447a9aabbea4fe089f150</string>
+    <key>UISupportedInterfaceOrientations~ipad</key>
+    <array>
+      <string>UIInterfaceOrientationLandscapeLeft</string>
+      <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <key>Sega Mopub phone character</key>
+    <string>6417be0d5b534cafa9b6bb03aea9071d</string>
+    <key>Sega UA tablet interestitial</key>
+    <string>tabletInterstitial</string>
+    <key>Sega Unity Ads Interstitial Game ID</key>
+    <string>1337900</string>
+    <key>UIPrerenderedIcon</key>
+    <true/>
+    <key>Sega Mopub phone interestitial</key>
+    <string>ca747bc4aff64b13b683fc1a3f4d9ac2</string>
+    <key>BuildMachineOSBuild</key>
+    <string>16E195</string>
+    <key>Sega Mopub phone pause</key>
+    <string>7850557697e94b4f9a78a528c4f71e09</string>
+    <key>NSCalendarsUsageDescription</key>
+    <string>Advertisement would like to create a calendar event.</string>
+    <key>Sega Mopub phone save</key>
+    <string>7fd685e0aa2d4cff8669fa85117d9e82</string>
+    <key>DTPlatformName</key>
+    <string>iphoneos</string>
+    <key>CFBundleVersion</key>
+    <string>2.2.2.1</string>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>DTCompiler</key>
+    <string>com.apple.compilers.llvm.clang.1_0</string>
+    <key>Chartboost Sega App Id</key>
+    <string>581bcd3504b01651f47767df</string>
+    <key>DTSDKName</key>
+    <string>iphoneos10.3</string>
+    <key>Fabric</key>
+    <dict>
+      <key>Kits</key>
+      <array>
+        <dict>
+          <key>KitName</key>
+          <string>Crashlytics</string>
+          <key>KitInfo</key>
+          <dict/>
+        </dict>
+      </array>
+      <key>APIKey</key>
+      <string>8d8830cc0741ef903514ddf70c07889680c63f46</string>
+    </dict>
+    <key>UISupportedExternalAccessoryProtocols</key>
+    <array>
+      <string>com.apple.mfi.gamecontroller</string>
+    </array>
+    <key>Sega UA phone interestitial</key>
+    <string>interstitial</string>
+    <key>DTPlatformBuild</key>
+    <string>14E269</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+      <key>NSAllowsArbitraryLoads</key>
+      <true/>
+      <key>NSExceptionDomains</key>
+      <dict>
+        <key>noahapps.jp</key>
+        <dict>
+          <key>NSExceptionAllowsInsecureHTTPLoads</key>
+          <true/>
+          <key>NSIncludesSubdomains</key>
+          <true/>
+        </dict>
+      </dict>
+    </dict>
+    <key>Native Ad ID</key>
+    <string>71cd7b7aa8a447a9aabbea4fe089f150</string>
+    <key>DTXcode</key>
+    <string>0832</string>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+      <string>UIInterfaceOrientationLandscapeLeft</string>
+      <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <key>Sega Mopub tab prestitial</key>
+    <string>f0068a04c69849049f7559c993ae4a39</string>
+  </dict>
+</plist>

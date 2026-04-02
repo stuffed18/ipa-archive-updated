@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>This app will use your location information to identify what’s happening at nearby Apple Retail stores and to notify you about and access services available in store.</string>
+    <key>DTPlatformVersion</key>
+    <string>12.0</string>
+    <key>DTSDKBuild</key>
+    <string>16A366</string>
+    <key>CFBundleIcons~ipad</key>
+    <dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>AppIcon29x29</string>
+          <string>AppIcon40x40</string>
+          <string>AppIcon60x60</string>
+          <string>AppIcon76x76</string>
+          <string>AppIcon83.5x83.5</string>
+        </array>
+        <key>CFBundleIconName</key>
+        <string>AppIcon</string>
+      </dict>
+    </dict>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>NSCameraUsageDescription</key>
+    <string>The Apple Store app will let you scan barcodes to confirm compatibility and learn product information. In select countries, it can also scan to make purchases and store payment cards.</string>
+    <key>UIStatusBarHidden~ipad</key>
+    <false/>
+    <key>CFBundleDisplayName</key>
+    <string>Apple Store</string>
+    <key>DTXcodeBuild</key>
+    <string>10A254a</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.apple.store.Jolly</string>
+    <key>NSUserActivityTypes</key>
+    <array>
+      <string>GetReadyIntent</string>
+      <string>com.apple.store.activity.handoff</string>
+      <string>com.apple.store.activity.storelocation</string>
+    </array>
+    <key>CoreSpotlightContinuation</key>
+    <true/>
+    <key>UIDeviceFamily</key>
+    <array>
+      <integer>1</integer>
+      <integer>2</integer>
+    </array>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+      <string>wechat</string>
+      <string>weixin</string>
+    </array>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleIcons</key>
+    <dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>AppIcon29x29</string>
+          <string>AppIcon40x40</string>
+          <string>AppIcon60x60</string>
+        </array>
+        <key>CFBundleIconName</key>
+        <string>AppIcon</string>
+      </dict>
+    </dict>
+    <key>CFBundleSupportedPlatforms</key>
+    <array>
+      <string>iPhoneOS</string>
+    </array>
+    <key>UIRequiresFullScreen</key>
+    <false/>
+    <key>ITSAppUsesNonExemptEncryption</key>
+    <false/>
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>This app will use your bluetooth to identify what's happening around you.</string>
+    <key>MinimumOSVersion</key>
+    <string>10.0</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>This app will need to access your Photo Library</string>
+    <key>CFBundleName</key>
+    <string>Apple Store</string>
+    <key>CFBundleShortVersionString</key>
+    <string>501010</string>
+    <key>UIStatusBarHidden</key>
+    <false/>
+    <key>UIBackgroundModes</key>
+    <array>
+      <string>audio</string>
+      <string>fetch</string>
+      <string>remote-notification</string>
+    </array>
+    <key>UIRequiredDeviceCapabilities</key>
+    <array>
+      <string>armv7</string>
+    </array>
+    <key>UIAppFonts</key>
+    <array>
+      <string>AppleIcons-Text.ttf</string>
+      <string>AppleIcons-Thin.ttf</string>
+      <string>AppleIcons-Ultralight.ttf</string>
+    </array>
+    <key>CFBundleExecutable</key>
+    <string>Apple Store</string>
+    <key>UIViewControllerBasedStatusBarAppearance</key>
+    <true/>
+    <key>UISupportedInterfaceOrientations~ipad</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+      <string>UIInterfaceOrientationPortraitUpsideDown</string>
+      <string>UIInterfaceOrientationLandscapeLeft</string>
+      <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <key>NSAppleMusicUsageDescription</key>
+    <string>We’ll provide you with relevant products, features, services, and more.</string>
+    <key>UIPrerenderedIcon</key>
+    <true/>
+    <key>NSLocationUsageDescription</key>
+    <string>This app will use your location information to identify what’s happening at nearby Apple Retail stores and to notify you about and access services available in store.</string>
+    <key>BuildMachineOSBuild</key>
+    <string>17A405001</string>
+    <key>NSCalendarsUsageDescription</key>
+    <string>This app requires access to your Calendar to add reminders you’ve scheduled and to allow you to view those reminders later.</string>
+    <key>DTPlatformName</key>
+    <string>iphoneos</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>This app will use your location information to identify what’s happening at nearby Apple Retail stores and to notify you about and access services available in store. Your location is used to identify, notify you about, and access services available in nearby Apple Retail Stores while you are using the app.</string>
+    <key>CFBundleVersion</key>
+    <string>5.1.1.0373</string>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en_US</string>
+    <key>NSFaceIDUsageDescription</key>
+    <string>This app will use Face ID instead of your Apple ID password to check out, view orders, edit shipping and payment information, access Self-Checkout receipts, and make reservations at an Apple Store.</string>
+    <key>DTCompiler</key>
+    <string>com.apple.compilers.llvm.clang.1_0</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+        <key>CFBundleURLName</key>
+        <string>com.apple.store.Jolly</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>applestore</string>
+          <string>applestore-sec</string>
+          <string>wxde3e4ac7392459ad</string>
+          <string>wx761814480c29fef9</string>
+          <string>applestore-alipay</string>
+        </array>
+      </dict>
+    </array>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>Selecting “While Using the App” will use your location to identify Apple Stores nearby. Selecting “Always” allows the app to automatically detect when you are at an Apple Store and provide you with relevant features and services in selected countries.</string>
+    <key>DTSDKName</key>
+    <string>iphoneos12.0</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+      <key>NSAllowsArbitraryLoads</key>
+      <true/>
+    </dict>
+    <key>NSContactsUsageDescription</key>
+    <string>This app will access your Contacts for shipping and billing address information.</string>
+    <key>DTPlatformBuild</key>
+    <string>16A366</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>This app will need to access your Photo Library</string>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+    </array>
+    <key>DTXcode</key>
+    <string>1000</string>
+    <key>DTAppStoreToolsBuild</key>
+    <string>10A247</string>
+  </dict>
+</plist>

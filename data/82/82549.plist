@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Coldplay</string>
+	<key>CFBundleExecutable</key>
+	<string>Coldplay</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.tapulous.coldplay</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Coldplay</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleResourceSpecification</key>
+	<string>ResourceRules.plist</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.tapulous.coldplay.coldplaycmdurl</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>coldplaycmd</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>DTPlatformName</key>
+	<string>iphoneos</string>
+	<key>DTSDKName</key>
+	<string>iphoneos2.0</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>MinimumOSVersion</key>
+	<string>2.0</string>
+	<key>NSMainNibFile</key>
+	<string>MainWindow</string>
+	<key>SignerIdentity</key>
+	<string>Apple iPhone OS Application Signing</string>
+	<key>UIPrerenderedIcon</key>
+	<true/>
+	<key>UIStatusBarHidden</key>
+	<true/>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleBlackOpaque</string>
+	<key>kTTRAppStoreURL</key>
+	<string>http://tapulous.com/redirect/coldplay/</string>
+	<key>kTTRAppSubtitleForChallengeEmail</key>
+	<string>the hot music rhythm game featuring music from Coldplay for the iPhone and iPod touch</string>
+	<key>kTTRIfYouDontHaveItLineForChallengeEmail</key>
+	<string>If you don't have it installed, click below to get it from the App Store!</string>
+	<key>kTTRLongAppName</key>
+	<string>Tap Tap Revenge: Coldplay Edition</string>
+</dict>
+</plist>

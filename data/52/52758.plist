@@ -2,25 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
   <dict>
-    <key>CFBundleURLTypes</key>
-    <array>
-      <dict>
-        <key>CFBundleURLName</key>
-        <string>facebook-unity-sdk</string>
-        <key>CFBundleURLSchemes</key>
-        <array>
-          <string>fb669297996522196</string>
-        </array>
-      </dict>
-    </array>
     <key>UIRequiredDeviceCapabilities</key>
     <array>
       <string>armv7</string>
     </array>
-    <key>CFBundleInfoDictionaryVersion</key>
-    <string>6.0</string>
     <key>UIRequiresFullScreen</key>
     <true/>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>DTCompiler</key>
+    <string>com.apple.compilers.llvm.clang.1_0</string>
     <key>DTPlatformVersion</key>
     <string>9.2</string>
     <key>UILaunchStoryboardName~ipad</key>
@@ -37,13 +28,13 @@
     <dict>
       <key>CFBundlePrimaryIcon</key>
       <dict>
-        <key>UIPrerenderedIcon</key>
-        <true/>
         <key>CFBundleIconFiles</key>
         <array>
           <string>AppIcon57x57</string>
           <string>AppIcon60x60</string>
         </array>
+        <key>UIPrerenderedIcon</key>
+        <true/>
       </dict>
     </dict>
     <key>UIStatusBarStyle</key>
@@ -142,74 +133,74 @@
     <key>UILaunchImages</key>
     <array>
       <dict>
-        <key>UILaunchImageOrientation</key>
-        <string>Portrait</string>
+        <key>UILaunchImageSize</key>
+        <string>{414, 736}</string>
         <key>UILaunchImageName</key>
         <string>LaunchImage-800-Portrait-736h</string>
-        <key>UILaunchImageSize</key>
-        <string>{414, 736}</string>
         <key>UILaunchImageMinimumOSVersion</key>
         <string>8.0</string>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
       </dict>
       <dict>
-        <key>UILaunchImageOrientation</key>
-        <string>Landscape</string>
+        <key>UILaunchImageSize</key>
+        <string>{414, 736}</string>
         <key>UILaunchImageName</key>
         <string>LaunchImage-800-Landscape-736h</string>
-        <key>UILaunchImageSize</key>
-        <string>{414, 736}</string>
         <key>UILaunchImageMinimumOSVersion</key>
         <string>8.0</string>
-      </dict>
-      <dict>
-        <key>UILaunchImageOrientation</key>
-        <string>Portrait</string>
-        <key>UILaunchImageName</key>
-        <string>LaunchImage-800-667h</string>
-        <key>UILaunchImageSize</key>
-        <string>{375, 667}</string>
-        <key>UILaunchImageMinimumOSVersion</key>
-        <string>8.0</string>
-      </dict>
-      <dict>
-        <key>UILaunchImageOrientation</key>
-        <string>Portrait</string>
-        <key>UILaunchImageName</key>
-        <string>LaunchImage-700</string>
-        <key>UILaunchImageSize</key>
-        <string>{320, 480}</string>
-        <key>UILaunchImageMinimumOSVersion</key>
-        <string>7.0</string>
-      </dict>
-      <dict>
-        <key>UILaunchImageOrientation</key>
-        <string>Portrait</string>
-        <key>UILaunchImageName</key>
-        <string>LaunchImage-700-568h</string>
-        <key>UILaunchImageSize</key>
-        <string>{320, 568}</string>
-        <key>UILaunchImageMinimumOSVersion</key>
-        <string>7.0</string>
-      </dict>
-      <dict>
-        <key>UILaunchImageOrientation</key>
-        <string>Portrait</string>
-        <key>UILaunchImageName</key>
-        <string>LaunchImage-700-Portrait</string>
-        <key>UILaunchImageSize</key>
-        <string>{768, 1024}</string>
-        <key>UILaunchImageMinimumOSVersion</key>
-        <string>7.0</string>
-      </dict>
-      <dict>
         <key>UILaunchImageOrientation</key>
         <string>Landscape</string>
-        <key>UILaunchImageName</key>
-        <string>LaunchImage-700-Landscape</string>
+      </dict>
+      <dict>
         <key>UILaunchImageSize</key>
-        <string>{768, 1024}</string>
+        <string>{375, 667}</string>
+        <key>UILaunchImageName</key>
+        <string>LaunchImage-800-667h</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>8.0</string>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageSize</key>
+        <string>{320, 480}</string>
+        <key>UILaunchImageName</key>
+        <string>LaunchImage-700</string>
         <key>UILaunchImageMinimumOSVersion</key>
         <string>7.0</string>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageSize</key>
+        <string>{320, 568}</string>
+        <key>UILaunchImageName</key>
+        <string>LaunchImage-700-568h</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>7.0</string>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageSize</key>
+        <string>{768, 1024}</string>
+        <key>UILaunchImageName</key>
+        <string>LaunchImage-700-Portrait</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>7.0</string>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageSize</key>
+        <string>{768, 1024}</string>
+        <key>UILaunchImageName</key>
+        <string>LaunchImage-700-Landscape</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>7.0</string>
+        <key>UILaunchImageOrientation</key>
+        <string>Landscape</string>
       </dict>
     </array>
     <key>UIApplicationExitsOnSuspend</key>
@@ -235,6 +226,8 @@
     <string>0721</string>
     <key>NSAppTransportSecurity</key>
     <dict>
+      <key>NSAllowsArbitraryLoads</key>
+      <true/>
       <key>NSExceptionDomains</key>
       <dict>
         <key>NSExceptionRequiresForwardSecrecy</key>
@@ -242,8 +235,6 @@
         <key>NSIncludesSubdomains</key>
         <true/>
       </dict>
-      <key>NSAllowsArbitraryLoads</key>
-      <true/>
     </dict>
     <key>CFBundleExecutable</key>
     <string>popcorn</string>
@@ -253,8 +244,6 @@
     <dict>
       <key>CFBundlePrimaryIcon</key>
       <dict>
-        <key>UIPrerenderedIcon</key>
-        <true/>
         <key>CFBundleIconFiles</key>
         <array>
           <string>AppIcon57x57</string>
@@ -263,11 +252,24 @@
           <string>AppIcon76x76</string>
           <string>AppIcon83.5x83.5</string>
         </array>
+        <key>UIPrerenderedIcon</key>
+        <true/>
       </dict>
     </dict>
     <key>DTPlatformName</key>
     <string>iphoneos</string>
-    <key>DTCompiler</key>
-    <string>com.apple.compilers.llvm.clang.1_0</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleURLName</key>
+        <string>facebook-unity-sdk</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>fb669297996522196</string>
+        </array>
+      </dict>
+    </array>
+    <key>DTAppStoreToolsBuild</key>
+    <string>12E506</string>
   </dict>
 </plist>
