@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildDateString</key>
+	<string>2010-12-15 00:55:26</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDisplayName</key>
+	<string>iAmZombie</string>
+	<key>CFBundleExecutable</key>
+	<string>iAmZombieFree</string>
+	<key>CFBundleIconFile</key>
+	<string>57x57.png</string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>114x114.png</string>
+		<string>57x57.png</string>
+	</array>
+	<key>CFBundleIdentifier</key>
+	<string>com.riptidegames.iamzombiefree</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>iAmZombieFree</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleResourceSpecification</key>
+	<string>ResourceRules.plist</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>iPhoneOS</string>
+	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.riptidegames.iamzombiefree</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>iamzombiefree</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1.4.2.373</string>
+	<key>DTCompiler</key>
+	<string>4.2</string>
+	<key>DTPlatformBuild</key>
+	<string>8C134</string>
+	<key>DTPlatformName</key>
+	<string>iphoneos</string>
+	<key>DTPlatformVersion</key>
+	<string>4.2 Seed 2</string>
+	<key>DTSDKName</key>
+	<string>iphoneos4.2</string>
+	<key>DTXcode</key>
+	<string>0325</string>
+	<key>DTXcodeBuild</key>
+	<string>10M2423</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>MinimumOSVersion</key>
+	<string>3.1</string>
+	<key>NSMainNibFile</key>
+	<string>MainWindow</string>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>1</integer>
+	</array>
+	<key>UIPrerenderedIcon</key>
+	<true/>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array/>
+	<key>UIStatusBarHidden</key>
+	<true/>
+</dict>
+</plist>

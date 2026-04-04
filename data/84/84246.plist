@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+      <string>UIInterfaceOrientationLandscapeRight</string>
+      <string>UIInterfaceOrientationLandscapeLeft</string>
+    </array>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>NSLocationAlwaysUsageDescription should be set to a valid usage description</string>
+    <key>DTPlatformVersion</key>
+    <string>10.3</string>
+    <key>DTSDKBuild</key>
+    <string>14E269</string>
+    <key>UIStatusBarStyle</key>
+    <string>UIStatusBarStyleBlackTranslucent</string>
+    <key>NSSiriUsageDescription</key>
+    <string>NSSiriUsageDescription should be set to a valid usage description</string>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>NSCameraUsageDescription</key>
+    <string>NSCameraUsageDescription should be set to a valid usage description</string>
+    <key>NSMainNibFile</key>
+    <string>MainWindow</string>
+    <key>CFBundleDisplayName</key>
+    <string>Lost Ship</string>
+    <key>CoronaViewSupportedInterfaceOrientations</key>
+    <array>
+      <string>UIInterfaceOrientationLandscapeRight</string>
+      <string>UIInterfaceOrientationLandscapeLeft</string>
+    </array>
+    <key>DTXcodeBuild</key>
+    <string>8E2002</string>
+    <key>NSRemindersUsageDescription</key>
+    <string>NSRemindersUsageDescription should be set to a valid usage description</string>
+    <key>CFBundleIdentifier</key>
+    <string>net.lonewolfgames.thelostship</string>
+    <key>UIDeviceFamily</key>
+    <array>
+      <integer>1</integer>
+      <integer>2</integer>
+    </array>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>NSMainNibFile~ipad</key>
+    <string>MainWindow-iPad</string>
+    <key>CFBundleSupportedPlatforms</key>
+    <array>
+      <string>iPhoneOS</string>
+    </array>
+    <key>NSHealthUpdateUsageDescription</key>
+    <string>NSHealthUpdateUsageDescription should be set to a valid usage description</string>
+    <key>UIRequiresFullScreen</key>
+    <true/>
+    <key>CoronaSDKBuild</key>
+    <string>2017.3118</string>
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>NSBluetoothPeripheralUsageDescription should be set to a valid usage description</string>
+    <key>MinimumOSVersion</key>
+    <string>8.0</string>
+    <key>CFBundleIconFiles</key>
+    <array>
+      <string>Icon-40.png</string>
+      <string>Icon-58.png</string>
+      <string>Icon-76.png</string>
+      <string>Icon-80.png</string>
+      <string>Icon-87.png</string>
+      <string>Icon-120.png</string>
+      <string>Icon-152.png</string>
+      <string>Icon-167.png</string>
+      <string>Icon-180.png</string>
+    </array>
+    <key>NSMotionUsageDescription</key>
+    <string>NSMotionUsageDescription should be set to a valid usage description</string>
+    <key>CFBundleName</key>
+    <string>Lost Ship</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.8</string>
+    <key>UIStatusBarHidden</key>
+    <true/>
+    <key>UIAppFonts</key>
+    <array>
+      <string>Georgia.ttf</string>
+      <string>GeorgiaBold.ttf</string>
+    </array>
+    <key>CFBundleExecutable</key>
+    <string>Lost Ship</string>
+    <key>NSHealthShareUsageDescription</key>
+    <string>NSHealthShareUsageDescription should be set to a valid usage description</string>
+    <key>NSAppleMusicUsageDescription</key>
+    <string>NSAppleMusicUsageDescription should be set to a valid usage description</string>
+    <key>NSSpeechRecognitionUsageDescription</key>
+    <string>NSSpeechRecognitionUsageDescription should be set to a valid usage description</string>
+    <key>UIPrerenderedIcon</key>
+    <true/>
+    <key>NSLocationUsageDescription</key>
+    <string>NSLocationUsageDescription should be set to a valid usage description</string>
+    <key>BuildMachineOSBuild</key>
+    <string>16A323</string>
+    <key>NSCalendarsUsageDescription</key>
+    <string>NSCalendarsUsageDescription should be set to a valid usage description</string>
+    <key>DTPlatformName</key>
+    <string>iphoneos</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>NSMicrophoneUsageDescription should be set to a valid usage description</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>NSLocationWhenInUseUsageDescription should be set to a valid usage description</string>
+    <key>CFBundleVersion</key>
+    <string>2017.08.151325</string>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>DTCompiler</key>
+    <string>com.apple.compilers.llvm.clang.1_0</string>
+    <key>NSHomeKitUsageDescription</key>
+    <string>NSHomeKitUsageDescription should be set to a valid usage description</string>
+    <key>DTSDKName</key>
+    <string>iphoneos10.3</string>
+    <key>NSContactsUsageDescription</key>
+    <string>NSContactsUsageDescription should be set to a valid usage description</string>
+    <key>DTPlatformBuild</key>
+    <string>14E269</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>NSPhotoLibraryUsageDescription should be set to a valid usage description</string>
+    <key>CoronaDelegates</key>
+    <array/>
+    <key>UIInterfaceOrientation</key>
+    <string>UIInterfaceOrientationLandscapeRight</string>
+    <key>DTXcode</key>
+    <string>0832</string>
+  </dict>
+</plist>

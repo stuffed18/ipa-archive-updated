@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDisplayName</key>
+	<string>Poker With Bob</string>
+	<key>CFBundleExecutable</key>
+	<string>Poker With Bob</string>
+	<key>CFBundleIconFile</key>
+	<string>Icon_57x57.png</string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>Icon_57x57.png</string>
+		<string>Icon_57x57@2x.png</string>
+		<string>Icon-72.png</string>
+		<string>Icon-Small.png</string>
+		<string>Icon-Small@2x.png</string>
+		<string>Icon-Small-50.png</string>
+	</array>
+	<key>CFBundleIdentifier</key>
+	<string>com.scaryrobot.pokerwithbob</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Poker With Bob</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleResourceSpecification</key>
+	<string>ResourceRules.plist</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>iPhoneOS</string>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1.0.2</string>
+	<key>DTCompiler</key>
+	<string>4.2</string>
+	<key>DTPlatformName</key>
+	<string>iphoneos</string>
+	<key>DTPlatformVersion</key>
+	<string>4.1 GM</string>
+	<key>DTSDKName</key>
+	<string>iphoneos4.1</string>
+	<key>DTXcode</key>
+	<string>0324</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>MinimumOSVersion</key>
+	<string>3.0</string>
+	<key>NSMainNibFile</key>
+	<string>MainWindow_Phone</string>
+	<key>S3DOptionContentScaleFactor</key>
+	<string>2</string>
+	<key>S3DOptionForceGLES1</key>
+	<true/>
+	<key>S3DOptionForceLowResolution</key>
+	<true/>
+	<key>S3DOptionMSAASamples</key>
+	<integer>0</integer>
+	<key>S3DOptionMoviePlayerOrientations</key>
+	<integer>0</integer>
+	<key>UIApplicationExitsOnSuspend</key>
+	<true/>
+	<key>UIDeviceFamily</key>
+	<array>
+		<string>1</string>
+	</array>
+	<key>UIPrerenderedIcon</key>
+	<true/>
+	<key>UIStatusBarHidden</key>
+	<true/>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleBlackOpaque</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>br.com.tapps.vloggergoviral</string>
+          <string>fb182632228743257</string>
+        </array>
+      </dict>
+    </array>
+    <key>UIRequiredDeviceCapabilities</key>
+    <array>
+      <string>opengles-2</string>
+    </array>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>UIRequiresFullScreen</key>
+    <true/>
+    <key>DTPlatformVersion</key>
+    <string>11.2</string>
+    <key>CFBundleName</key>
+    <string>Vlogger Go Viral</string>
+    <key>DTSDKName</key>
+    <string>iphoneos11.2</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Not used by the app</string>
+    <key>UIViewControllerBasedStatusBarAppearance</key>
+    <false/>
+    <key>CFBundleIcons</key>
+    <dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>iOS AppIcon57x57</string>
+          <string>iOS AppIcon60x60</string>
+        </array>
+        <key>CFBundleIconName</key>
+        <string>iOS AppIcon</string>
+      </dict>
+    </dict>
+    <key>UIStatusBarStyle</key>
+    <string>UIStatusBarStyleLightContent</string>
+    <key>CFBundleDisplayName</key>
+    <string>Vlogger Go Viral</string>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+      <string>fb</string>
+      <string>fbapi</string>
+      <string>fb-messenger-api</string>
+      <string>fbauth2</string>
+      <string>fbshareextension</string>
+      <string>br.com.tapps.cowevolution</string>
+      <string>br.com.tapps.myboo</string>
+    </array>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Not used by the app</string>
+    <key>UsesFirebase</key>
+    <true/>
+    <key>CFBundleDocumentTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleTypeName</key>
+        <string>LÖVE Project</string>
+        <key>CFBundleTypeRole</key>
+        <string>Viewer</string>
+        <key>CFBundleTypeIconFiles</key>
+        <array>
+          <string>LoveDocument.icns</string>
+        </array>
+        <key>LSItemContentTypes</key>
+        <array>
+          <string>org.love2d.love-game</string>
+        </array>
+        <key>LSHandlerRank</key>
+        <string>Owner</string>
+      </dict>
+    </array>
+    <key>DTSDKBuild</key>
+    <string>15C107</string>
+    <key>NSCameraUsageDescription</key>
+    <string>Not used by the app</string>
+    <key>CFBundleShortVersionString</key>
+    <string>2.12</string>
+    <key>CFBundleSupportedPlatforms</key>
+    <array>
+      <string>iPhoneOS</string>
+    </array>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Not used by the app</string>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+      <string>UIInterfaceOrientationPortraitUpsideDown</string>
+    </array>
+    <key>BuildMachineOSBuild</key>
+    <string>17G65</string>
+    <key>DTPlatformBuild</key>
+    <string>15C107</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>MinimumOSVersion</key>
+    <string>8.0</string>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>DTXcodeBuild</key>
+    <string>9C40b</string>
+    <key>CFBundleVersion</key>
+    <string>177</string>
+    <key>UTExportedTypeDeclarations</key>
+    <array>
+      <dict>
+        <key>UTTypeIdentifier</key>
+        <string>org.love2d.love-game</string>
+        <key>UTTypeSize320IconFile</key>
+        <string>LoveDocument</string>
+        <key>UTTypeSize64IconFile</key>
+        <string>LoveDocument</string>
+        <key>UTTypeDescription</key>
+        <string>LÖVE Project</string>
+        <key>UTTypeConformsTo</key>
+        <array>
+          <string>com.pkware.zip-archive</string>
+        </array>
+        <key>UTTypeTagSpecification</key>
+        <dict>
+          <key>com.apple.ostype</key>
+          <string>LOVE</string>
+          <key>public.mime-type</key>
+          <string>application/x-love-game</string>
+          <key>public.filename-extension</key>
+          <array>
+            <string>love</string>
+          </array>
+        </dict>
+      </dict>
+    </array>
+    <key>AppLovinSdkKey</key>
+    <string>Ra31GHTlRgcB-un7sTCEz902duzU6iyXI_ZTG2Ihkwthoeqd71t4At7pm5HsoEO4DydU-xAhr2OdhDGpE7uP__</string>
+    <key>UIStatusBarHidden</key>
+    <true/>
+    <key>FirebaseAppDelegateProxyEnabled</key>
+    <false/>
+    <key>FacebookAppID</key>
+    <string>182632228743257</string>
+    <key>UIDeviceFamily</key>
+    <array>
+      <integer>1</integer>
+      <integer>2</integer>
+    </array>
+    <key>TPNApplicationDelegates</key>
+    <array>
+      <string>TPNNotificationsApplicationDelegate</string>
+      <string>TPNFirebaseDynamicLinks</string>
+      <string>TPNFacebookApplicationDelegate</string>
+      <string>TPNAppsflyerApplicationDelegate</string>
+      <string>TPDefaultApplicationDelegate</string>
+    </array>
+    <key>UILaunchStoryboardName</key>
+    <string>Launch Screen</string>
+    <key>Fabric</key>
+    <dict>
+      <key>Kits</key>
+      <array>
+        <dict>
+          <key>KitInfo</key>
+          <dict/>
+          <key>KitName</key>
+          <string>Crashlytics</string>
+        </dict>
+      </array>
+      <key>APIKey</key>
+      <string>7b800269771236cf6a0c468d09f5784ef419a5e8</string>
+    </dict>
+    <key>CFBundleIdentifier</key>
+    <string>br.com.tapps.vloggergoviral</string>
+    <key>DTXcode</key>
+    <string>0920</string>
+    <key>NSCalendarsUsageDescription</key>
+    <string>Not used by the app</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+      <key>NSAllowsArbitraryLoads</key>
+      <true/>
+    </dict>
+    <key>CFBundleExecutable</key>
+    <string>tplove</string>
+    <key>CFBundleIcons~ipad</key>
+    <dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>iOS AppIcon57x57</string>
+          <string>iOS AppIcon60x60</string>
+          <string>iOS AppIcon72x72</string>
+          <string>iOS AppIcon76x76</string>
+          <string>iOS AppIcon83.5x83.5</string>
+        </array>
+        <key>CFBundleIconName</key>
+        <string>iOS AppIcon</string>
+      </dict>
+    </dict>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>DTPlatformName</key>
+    <string>iphoneos</string>
+    <key>DTCompiler</key>
+    <string>com.apple.compilers.llvm.clang.1_0</string>
+    <key>DTAppStoreToolsBuild</key>
+    <string>10B63</string>
+  </dict>
+</plist>

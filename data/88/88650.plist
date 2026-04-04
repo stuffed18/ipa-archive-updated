@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Complete</string>
+	<key>CFBundleExecutable</key>
+	<string>Complete</string>
+	<key>CFBundleIconFile</key>
+	<string>logo.png</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.lexi.Complete</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Lexi-Complete</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleResourceSpecification</key>
+	<string>ResourceRules.plist</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.4</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>15</string>
+	<key>DTPlatformName</key>
+	<string>iphoneos</string>
+	<key>DTSDKName</key>
+	<string>iphoneos2.0</string>
+	<key>MinimumOSVersion</key>
+	<string>2.0</string>
+	<key>NSMainNibFile</key>
+	<string>MainWindow</string>
+	<key>ProductLink</key>
+	<string>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=295363885&amp;mt=8</string>
+	<key>SignerIdentity</key>
+	<string>Apple iPhone OS Application Signing</string>
+</dict>
+</plist>

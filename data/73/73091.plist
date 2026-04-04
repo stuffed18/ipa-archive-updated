@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ATSApplicationFontsPath</key>
+	<string>.</string>
+	<key>BuildMachineOSBuild</key>
+	<string>10K549</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>NewsHour</string>
+	<key>CFBundleDocumentTypes</key>
+	<array/>
+	<key>CFBundleExecutable</key>
+	<string>App</string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>icon.png</string>
+		<string>icon@2x.png</string>
+    <string>icon-ios7.png</string>
+		<string>icon-ipad.png</string>
+    <string>icon-ipad@2x.png</string>
+    <string>icon-ipad-nonretina-ios7.png</string>
+    <string>icon-ipad-retina-ios7.png</string>
+    <string>Icon-ipad-Spotlight.png</string>
+		<string>icon-ipad-spotlightandsettings.png</string>
+		<string>icon-iphone3-spotlightandsettings.png</string>
+		<string>icon-iphone4-spotlightandsettings.png</string>
+  </array>
+  <key>UILaunchImages</key>
+  <array>
+    <dict>
+      <key>UILaunchImageMinimumOSVersion</key>
+      <string>8.0</string>
+      <key>UILaunchImageName</key>
+      <string>Default-568h@2x</string>
+      <key>UILaunchImageOrientation</key>
+      <string>Portrait</string>
+      <key>UILaunchImageSize</key>
+      <string>{320, 568}</string>
+    </dict>
+    <dict>
+      <key>UILaunchImageMinimumOSVersion</key>
+      <string>8.0</string>
+      <key>UILaunchImageName</key>
+      <string>Default</string>
+      <key>UILaunchImageOrientation</key>
+      <string>Portrait</string>
+      <key>UILaunchImageSize</key>
+      <string>{320, 480}</string>
+    </dict>
+    <dict>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>8.0</string>
+        <key>UILaunchImageName</key>
+        <string>Default-667h@2x</string>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+        <key>UILaunchImageSize</key>
+        <string>{375, 667}</string>
+    </dict>    
+    <dict>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>8.0</string>
+        <key>UILaunchImageName</key>
+        <string>Default-736h@3x</string>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+        <key>UILaunchImageSize</key>
+        <string>{414, 736}</string>
+    </dict>    
+    
+  </array>
+  <key>CFBundleIdentifier</key>
+	<string>com.pointabout.18720</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>7.0</string>
+	<key>CFBundleName</key>
+	<string>com.pointabout.18720</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleResourceSpecification</key>
+	<string>ResourceRules.plist</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>iPhoneOS</string>
+	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+	
+	</array>
+	<key>CFBundleVersion</key>
+	<string>18.1.0</string>
+  <key>CFBundleShortVersionString</key>
+  <string>18.1</string>
+	<key>DTCompiler</key>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<key>DTPlatformBuild</key>
+	<string>11A465</string>
+	<key>DTPlatformName</key>
+	<string>iphoneos</string>
+	<key>DTPlatformVersion</key>
+	<string>7.0</string>
+	<key>DTSDKBuild</key>
+	<string>11A465</string>
+	<key>DTSDKName</key>
+	<string>iphoneos7.0</string>
+	<key>DTXcode</key>
+	<string>0511</string>
+	<key>DTXcodeBuild</key>
+	<string>5B1008</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>MinimumOSVersion</key>
+	<string>6.0</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Habibi-Regular.otf</string>
+		<string>Politica Bold.otf</string>
+		<string>Adventure Subtitles.ttf</string>
+		<string>atwriter.ttf</string>
+		<string>Classic Robot.ttf</string>
+		<string>Comic_Book.ttf</string>
+		<string>Dimbo Regular.ttf</string>
+		<string>KRONIKA_.ttf</string>
+		<string>lovely_eunike_hans.otf</string>
+		<string>Stencilia-A.ttf</string>
+		<string>CartoGothicStd-Book.otf</string>
+		<string>Familiar_Pro-Bold.otf</string>
+		<string>Florsn01.ttf</string>
+		<string>Howie_s_Funhouse.ttf</string>
+		
+	</array>
+  
+	<key>UIDeviceFamily</key>
+	<array>
+    <integer>1</integer>
+    
+  </array>
+  <key>UIPrerenderedIcon</key>
+  <true/>
+  <key>UIStatusBarHidden</key>
+  <false/>
+  <key>UIViewControllerBasedStatusBarAppearance</key>
+  <false/>  
+  <key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+  <key>NSLocationUsageDescription</key>
+  <string>To optimize the content based on your location.</string>
+  <key>NSLocationWhenInUseUsageDescription</key>
+  <string>To optimize the content based on your location.</string>
+  <key>NSAppTransportSecurity</key>
+  <dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
+  </dict>
+  
+  <key>NSLocationAlwaysUsageDescription</key>
+  <string>This app uses your location to send location-based push notifications.</string>
+
+</dict>
+</plist>

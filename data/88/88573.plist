@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Auditorium</string>
+	<key>CFBundleExecutable</key>
+	<string>Auditorium</string>
+	<key>CFBundleIconFile</key>
+	<string>menu_icon.png</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.ea.auditorium.na</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleLocalizations</key>
+	<array>
+		<string>en</string>
+		<string>fr</string>
+		<string>it</string>
+		<string>de</string>
+		<string>es</string>
+		<string>ja</string>
+	</array>
+	<key>CFBundleName</key>
+	<string>Auditorium</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleResourceSpecification</key>
+	<string>ResourceRules.plist</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>iPhoneOS</string>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1.0.0 iPhoneCake.com</string>
+	<key>DTPlatformName</key>
+	<string>iphoneos</string>
+	<key>DTSDKName</key>
+	<string>iphoneos3.0</string>
+	<key>DebugEnabled</key>
+	<string>FALSE</string>
+	<key>EAServerURL</key>
+	<string>https://synergy.eamobile.com</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>MinimumOSVersion</key>
+	<string>3.0</string>
+	<key>NSMainNibFile</key>
+	<string>MainWindow</string>
+	<key>ProductID</key>
+	<string>30623</string>
+	<key>RegionCode</key>
+	<string>EN</string>
+	<key>SellID</key>
+	<string>774189</string>
+	<key>SignerIdentity</key>
+	<string>Apple iPhone OS Application Signing</string>
+	<key>UIPrerenderedIcon</key>
+	<true/>
+	<key>UIRequiresPersistentWiFi</key>
+	<true/>
+	<key>UIStatusBarHidden</key>
+	<true/>
+	<key>UpSellURL</key>
+	<string>http://mg.eamobile.com/?rId=12662&amp;sp=30043&amp;mc=IPHL-CH-LW</string>
+</dict>
+</plist>
