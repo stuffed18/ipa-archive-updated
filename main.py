@@ -12,6 +12,8 @@ import json
 import gzip
 import os
 import re
+import subprocess
+import shutil
 
 import warnings
 with warnings.catch_warnings():  # hide macOS LibreSSL warning
@@ -29,6 +31,47 @@ re_archive_url = re.compile(
     r'https?://archive.org/(?:metadata|details|download)/([^/]+)(?:/.*)?')
 CACHE_DIR = Path(__file__).parent / 'data'
 CACHE_DIR.mkdir(exist_ok=True)
+
+PNGDEFRY_BIN = Path(__file__).parent.parent / 'node-pngdefry' / 'lib' / 'pngdefry' / 'source' / 'pngdefry'
+
+def fix_extracted_image(png_path: Path):
+    """Automatically defry and convert PNG to JPG."""
+    if not png_path.exists():
+        return
+
+    # 1. Check if it's CgBI (Apple crushed PNG)
+    is_cgbi = False
+    try:
+        with open(png_path, 'rb') as f:
+            header = f.read(32)
+            if b'CgBI' in header:
+                is_cgbi = True
+    except Exception:
+        pass
+
+    # 2. Defry if needed
+    if is_cgbi and PNGDEFRY_BIN.exists():
+        temp_dir = png_path.parent / f'temp_defry_{png_path.stem}'
+        temp_dir.mkdir(exist_ok=True)
+        try:
+            subprocess.run([str(PNGDEFRY_BIN), f'-o{temp_dir}', str(png_path)], 
+                           capture_output=True, check=False)
+            output_file = temp_dir / png_path.name
+            if output_file.exists():
+                output_file.replace(png_path)
+        finally:
+            if temp_dir.exists():
+                shutil.rmtree(temp_dir)
+
+    # 3. Convert to JPG (128px max)
+    jpg_path = png_path.with_suffix('.jpg')
+    try:
+        subprocess.run(['magick', str(png_path), '-resize', '128x128', str(jpg_path)], 
+                       check=True, capture_output=True)
+        if jpg_path.exists():
+            png_path.unlink() # Remove PNG after successful conversion
+    except Exception as e:
+        print(f"  [WARN] Failed to convert {png_path.name} to JPG: {e}")
 
 
 def main():
@@ -615,6 +658,10 @@ def loadIpa(uid: int, url: str, *,
                 if icon:
                     extractZipEntry(zip, icon, img_path)
 
+        # Automatically defry and convert to JPG
+        if img_path.exists():
+            fix_extracted_image(img_path)
+
     return plist_path.exists()
 
 
@@ -647,9 +694,11 @@ def expandImageName(
 
 
 def unpackNameListFromPlistDict(bundleDict: 'dict|None') -> 'list[str]|None':
-    if not bundleDict:
+    if not bundleDict or not isinstance(bundleDict, dict):
         return None
     primaryDict = bundleDict.get('CFBundlePrimaryIcon', {})
+    if not isinstance(primaryDict, dict):
+        return None
     icons = primaryDict.get('CFBundleIconFiles')
     if not icons:
         singular = primaryDict.get('CFBundleIconName')
