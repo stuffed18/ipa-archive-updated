@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildRevision</key>
+	<string>xported</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDisplayName</key>
+	<string>H. Manor</string>
+	<key>CFBundleDisplayName~ipad</key>
+	<string>Haunted Manor</string>
+	<key>CFBundleExecutable</key>
+	<string>Haunted Manor</string>
+	<key>CFBundleIconFile</key>
+	<string>Icon.png</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.bigfishgames.hmiphone10</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Haunted Manor</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleResourceSpecification</key>
+	<string>ResourceRules.plist</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>iPhoneOS</string>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>DTCompiler</key>
+	<string>4.2</string>
+	<key>DTPlatformBuild</key>
+	<string>8C134</string>
+	<key>DTPlatformName</key>
+	<string>iphoneos</string>
+	<key>DTPlatformVersion</key>
+	<string>4.2 Seed 2</string>
+	<key>DTSDKName</key>
+	<string>iphoneos4.2</string>
+	<key>DTXcode</key>
+	<string>0325</string>
+	<key>DTXcodeBuild</key>
+	<string>10M2423</string>
+	<key>LSRequiresIPhoneOS</key>
+	<false/>
+	<key>MinimumOSVersion</key>
+	<string>3.1.3</string>
+	<key>UIApplicationExitsOnSuspend</key>
+	<false/>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>1</integer>
+	</array>
+	<key>UIInterfaceOrientation</key>
+	<string>UIInterfaceOrientationLandscapeRight</string>
+	<key>UILaunchImageFile</key>
+	<string>Default-iphone.png</string>
+	<key>UIPrerenderedIcon</key>
+	<string>YES</string>
+	<key>UIStatusBarHidden</key>
+	<true/>
+</dict>
+</plist>

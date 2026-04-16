@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildMachineOSBuild</key>
+	<string>14B25</string>
+	<key>BuildTime</key>
+	<string>Wed Nov 26 08:14:42 EST 2014</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>KLEW AM</string>
+	<key>CFBundleExecutable</key>
+	<string>KLEW AM NEWS</string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>icon_57.png</string>
+		<string>icon_114.png</string>
+		<string>icon_120.png</string>
+	</array>
+	<key>CFBundleIdentifier</key>
+	<string>com.cellit.amnews.klew-am</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>KLEW AM NEWS</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.1.5</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>iPhoneOS</string>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>6</string>
+	<key>DTCompiler</key>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<key>DTPlatformBuild</key>
+	<string>12B411</string>
+	<key>DTPlatformName</key>
+	<string>iphoneos</string>
+	<key>DTPlatformVersion</key>
+	<string>8.1</string>
+	<key>DTSDKBuild</key>
+	<string>12B411</string>
+	<key>DTSDKName</key>
+	<string>iphoneos8.1</string>
+	<key>DTXcode</key>
+	<string>0610</string>
+	<key>DTXcodeBuild</key>
+	<string>6A1052d</string>
+	<key>GoogleAnalyticsTrackingID</key>
+	<string>UA-48316712-32</string>
+	<key>GoogleAutoCompleteApiKey</key>
+	<string></string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>MinimumOSVersion</key>
+	<string>6.0</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Your location is used for weather and traffic information.</string>
+	<key>TutorialBackground</key>
+	<string>blue</string>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>1</integer>
+	</array>
+	<key>UIPrerenderedIcon</key>
+	<true/>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>provider_name</key>
+	<string>klew_am</string>
+</dict>
+</plist>

@@ -227,6 +227,14 @@ def fix_missing_images(DB: 'CacheDB'):
             url = DB.getUrl(pk)
             print(f"[{pk}] Fix unique image: {url}")
             loadIpa(pk, url, overwrite=True, image_only=True)
+            
+            # Verify if it was actually fixed
+            if not diskPath(pk, '.jpg').exists():
+                retries = DB.incrementRetryCount(pk)
+                if retries >= 2:
+                    print(f"[{pk}] Image missing after {retries} retries. Skipping in future fix runs.")
+                else:
+                    print(f"[{pk}] Image missing. Retry count: {retries}")
     print("done.")
 
 
@@ -254,6 +262,7 @@ class CacheDB:
                 path_name TEXT NOT NULL,
                 done INTEGER DEFAULT 0,
                 fsize INTEGER DEFAULT 0,
+                retry_count INTEGER DEFAULT 0,
 
                 min_os INTEGER DEFAULT NULL,
                 platform INTEGER DEFAULT NULL,
@@ -375,11 +384,11 @@ class CacheDB:
             ORDER BY tt COLLATE NOCASE, min_os, platform, version;''', [done])
 
     def getUniqueImagePks(self) -> Iterable[tuple[int, int]]:
-        ''' Returns (pk, image_pk) for each unique image_pk, excluding known errors (done=4) '''
+        ''' Returns (pk, image_pk) for each unique image_pk, excluding those that failed to fix (retry_count >= 2) '''
         yield from self._db.execute('''
             SELECT MIN(pk), image_pk 
             FROM idx 
-            WHERE done=1 AND image_pk IS NOT NULL 
+            WHERE done=1 AND image_pk IS NOT NULL AND retry_count < 2
             GROUP BY image_pk
         ''')
 
@@ -394,6 +403,17 @@ class CacheDB:
             self._db.commit()
 
     # Process Pending
+
+    def incrementRetryCount(self, uid: int) -> int:
+        self._db.execute('UPDATE idx SET retry_count=retry_count+1 WHERE pk=?;', [uid])
+        self._db.commit()
+        x = self._db.execute('SELECT retry_count FROM idx WHERE pk=?;', [uid])
+        return x.fetchone()[0]
+
+    def getRetryCount(self, uid: int) -> int:
+        x = self._db.execute('SELECT retry_count FROM idx WHERE pk=?;', [uid])
+        row = x.fetchone()
+        return row[0] if row else 0
 
     def count(self, *, done: int) -> int:
         x = self._db.execute('SELECT COUNT() FROM idx WHERE done=?;', [done])

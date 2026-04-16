@@ -38,7 +38,7 @@
 	<div id="templates" hidden>
 		<div class="entry full">
 			<div>
-				<img src="$IMG">
+				<img src="$IMG" onerror="this.onerror=null;this.src='./apple-touch-icon.png';">
 				<button onclick="installIPA($IDX)">Install</button>
 			</div>
 			<div class="info">
@@ -51,7 +51,7 @@
 			</div>
 		</div>
 		<div class="entry short">
-			<div><img src="$IMG"></div>
+			<div><img src="$IMG" onerror="this.onerror=null;this.src='./apple-touch-icon.png';"></div>
 			<div class="info">
 				<h4>$TITLE</h4>
 				<div>BundleId: $BUNDLEID</div>

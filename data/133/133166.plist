@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>bcfgantsmasherxmas</string>
+        </array>
+      </dict>
+    </array>
+    <key>UIRequiredDeviceCapabilities</key>
+    <array>
+      <string>gamekit</string>
+    </array>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>UIRequiresFullScreen</key>
+    <true/>
+    <key>DTPlatformVersion</key>
+    <string>11.2</string>
+    <key>CFBundleName</key>
+    <string>Ant Smasher Xmas</string>
+    <key>DTSDKName</key>
+    <string>iphoneos11.2</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Some advertising framework may access user's photo album</string>
+    <key>UIViewControllerBasedStatusBarAppearance</key>
+    <false/>
+    <key>CFBundleIcons</key>
+    <dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>AppIcon Xmas29x29</string>
+          <string>AppIcon Xmas40x40</string>
+          <string>AppIcon Xmas57x57</string>
+          <string>AppIcon Xmas60x60</string>
+        </array>
+        <key>CFBundleIconName</key>
+        <string>AppIcon Xmas</string>
+      </dict>
+    </dict>
+    <key>LSApplicationCategoryType</key>
+    <string></string>
+    <key>CFBundleDisplayName</key>
+    <string>Ant Smasher</string>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string></string>
+    <key>UIBackgroundModes</key>
+    <array>
+      <string>remote-notification</string>
+    </array>
+    <key>DTSDKBuild</key>
+    <string>15C107</string>
+    <key>Application Release Type</key>
+    <integer>0</integer>
+    <key>CFBundleShortVersionString</key>
+    <string>6.0.15</string>
+    <key>CFBundleSupportedPlatforms</key>
+    <array>
+      <string>iPhoneOS</string>
+    </array>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+    </array>
+    <key>BuildMachineOSBuild</key>
+    <string>16G1314</string>
+    <key>DTPlatformBuild</key>
+    <string>15C107</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>DTXcodeBuild</key>
+    <string>9C40b</string>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>MinimumOSVersion</key>
+    <string>9.0</string>
+    <key>CFBundleVersion</key>
+    <string>1.0</string>
+    <key>UIAppFonts</key>
+    <array>
+      <string>House-A-Rama-Kingpin.otf</string>
+      <string>House-A-Rama-League-Night.otf</string>
+    </array>
+    <key>AppLovinSdkKey</key>
+    <string>K5XrGJlA8qVywhf0HcQGH90G6R_KAnTVt4K7O3IWupTpU7pnlE11N2HUUHpe3M9wRT2qXKLP8pCcw_OfEQgcSz</string>
+    <key>UILaunchImageFile</key>
+    <string>LaunchImage-2</string>
+    <key>FirebaseAppDelegateProxyEnabled</key>
+    <false/>
+    <key>UILaunchImages</key>
+    <array>
+      <dict>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+        <key>UILaunchImageName</key>
+        <string>LaunchImage-2-700</string>
+        <key>UILaunchImageSize</key>
+        <string>{320, 480}</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>7.0</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+        <key>UILaunchImageName</key>
+        <string>LaunchImage-2-700-568h</string>
+        <key>UILaunchImageSize</key>
+        <string>{320, 568}</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>7.0</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+        <key>UILaunchImageName</key>
+        <string>LaunchImage-2-700-Portrait</string>
+        <key>UILaunchImageSize</key>
+        <string>{768, 1024}</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>7.0</string>
+      </dict>
+    </array>
+    <key>UIPrerenderedIcon</key>
+    <true/>
+    <key>UIStatusBarHidden</key>
+    <true/>
+    <key>UIApplicationExitsOnSuspend</key>
+    <false/>
+    <key>UIDeviceFamily</key>
+    <array>
+      <integer>1</integer>
+      <integer>2</integer>
+    </array>
+    <key>NSMainNibFile</key>
+    <string>MainWindow</string>
+    <key>Fabric</key>
+    <dict>
+      <key>Kits</key>
+      <array>
+        <dict>
+          <key>KitInfo</key>
+          <dict/>
+          <key>KitName</key>
+          <string>Crashlytics</string>
+        </dict>
+      </array>
+      <key>APIKey</key>
+      <string>874eb79492263a7ff2bbd03a16dc96d4f1878870</string>
+    </dict>
+    <key>CFBundleIdentifier</key>
+    <string>com.ccffgames.AntSmasherXmasFreeWorld</string>
+    <key>CFBundleIconFiles</key>
+    <array>
+      <string>Icon-72.png</string>
+      <string>Icon.png</string>
+      <string>Icon@2x.png</string>
+      <string>Icon-72@2x.png</string>
+      <string>Icon-76.png</string>
+      <string>Icon-76@2x.png</string>
+      <string>Icon-60@2x.png</string>
+    </array>
+    <key>DTXcode</key>
+    <string>0920</string>
+    <key>NSCalendarsUsageDescription</key>
+    <string>Some advertising framework may access user's calendars</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+      <key>NSAllowsArbitraryLoads</key>
+      <true/>
+    </dict>
+    <key>CFBundleExecutable</key>
+    <string>Ant Smasher Xmas</string>
+    <key>NSMainNibFile~ipad</key>
+    <string>MainWindow</string>
+    <key>CFBundleIcons~ipad</key>
+    <dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>AppIcon Xmas29x29</string>
+          <string>AppIcon Xmas40x40</string>
+          <string>AppIcon Xmas57x57</string>
+          <string>AppIcon Xmas60x60</string>
+          <string>AppIcon Xmas50x50</string>
+          <string>AppIcon Xmas72x72</string>
+          <string>AppIcon Xmas76x76</string>
+          <string>AppIcon Xmas83.5x83.5</string>
+        </array>
+        <key>CFBundleIconName</key>
+        <string>AppIcon Xmas</string>
+      </dict>
+    </dict>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>DTPlatformName</key>
+    <string>iphoneos</string>
+    <key>DTCompiler</key>
+    <string>com.apple.compilers.llvm.clang.1_0</string>
+    <key>DTAppStoreToolsBuild</key>
+    <string>10B63</string>
+    <key>UISupportedDevices</key>
+    <array>
+      <string>iPad3,1</string>
+      <string>iPad3,2</string>
+      <string>iPad3,3</string>
+      <string>iPad3,4</string>
+      <string>iPad3,5</string>
+      <string>iPad3,6</string>
+    </array>
+  </dict>
+</plist>

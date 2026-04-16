@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Pee Monkey</string>
+	<key>CFBundleExecutable</key>
+	<string>PeeMonkeyToiletTrainer</string>
+	<key>CFBundleIdentifier</key>
+	<string>net.exoweb.PeeMonkeyToiletTrainer</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>PeeMonkeyToiletTrainer</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleResourceSpecification</key>
+	<string>ResourceRules.plist</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.2.9</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>iPhoneOS</string>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>17</string>
+	<key>DTCompiler</key>
+	<string>4.2</string>
+	<key>DTPlatformName</key>
+	<string>iphoneos</string>
+	<key>DTPlatformVersion</key>
+	<string>4.1 GM</string>
+	<key>DTSDKName</key>
+	<string>iphoneos4.1</string>
+	<key>DTXcode</key>
+	<string>0324</string>
+	<key>FlurryKey</key>
+	<string>ba9e6f498f14640577cde20f21a2bbb4</string>
+	<key>HLPConf</key>
+	<string>hlp.toilettrainer.plist</string>
+	<key>HighScoreServer</key>
+	<string>http://app.happylatte.com/scoreboard/</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>MinimumOSVersion</key>
+	<string>3.0</string>
+	<key>UIApplicationExitsOnSuspend</key>
+	<true/>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>1</integer>
+	</array>
+	<key>UIPrerenderedIcon</key>
+	<true/>
+	<key>UIRequiresPersistentWiFi</key>
+	<true/>
+	<key>UIStatusBarHidden</key>
+	<true/>
+	<key>isFullVersion</key>
+	<false/>
+</dict>
+</plist>

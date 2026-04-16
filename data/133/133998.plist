@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Colloquy</string>
+	<key>CFBundleExecutable</key>
+	<string>Colloquy</string>
+	<key>CFBundleIdentifier</key>
+	<string>info.colloquy.mobile</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Colloquy</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleResourceSpecification</key>
+	<string>ResourceRules.plist</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.1</string>
+	<key>CFBundleSignature</key>
+	<string>coRC</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>iPhoneOS</string>
+	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>Internet Relay Chat Server</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>irc</string>
+				<string>ircs</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>4602</string>
+	<key>CQBuildType</key>
+	<string>official</string>
+	<key>DTPlatformName</key>
+	<string>iphoneos</string>
+	<key>DTSDKName</key>
+	<string>iphoneos3.0</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>3.0</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>MVChatCoreCTCPVersionReplyInfo</key>
+	<string>http://colloquy.mobi</string>
+	<key>MinimumOSVersion</key>
+	<string>3.0</string>
+	<key>NSMainNibFile</key>
+	<string>Colloquy</string>
+	<key>SignerIdentity</key>
+	<string>Apple iPhone OS Application Signing</string>
+	<key>UIPrerenderedIcon</key>
+	<true/>
+	<key>UIRequiresPersistentWiFi</key>
+	<true/>
+</dict>
+</plist>

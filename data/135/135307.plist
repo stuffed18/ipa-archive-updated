@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AppiraterAppID</key>
+	<string>284882215</string>
+	<key>BuildMachineOSBuild</key>
+	<string>12E55</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Paper</string>
+	<key>CFBundleExecutable</key>
+	<string>Paper</string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string></string>
+		<string></string>
+		<string>Paper-40.png</string>
+		<string>Paper-40@2x.png</string>
+		<string>Paper-76.png</string>
+		<string>Paper-76@2x.png</string>
+		<string>Paper-120.png</string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string>Paper-Small.png</string>
+		<string>Paper-Small@2x.png</string>
+	</array>
+	<key>CFBundleIdentifier</key>
+	<string>com.facebook.Paper</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Paper</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleResourceSpecification</key>
+	<string>ResourceRules.plist</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.1</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>iPhoneOS</string>
+	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.facebook</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb-paper</string>
+				<string>fb283116811738331</string>
+				<string>fb-paper-1219179-pocket</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1219179</string>
+	<key>DTCompiler</key>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<key>DTPlatformBuild</key>
+	<string>11B508</string>
+	<key>DTPlatformName</key>
+	<string>iphoneos</string>
+	<key>DTPlatformVersion</key>
+	<string>7.0</string>
+	<key>DTSDKBuild</key>
+	<string>11B508</string>
+	<key>DTSDKName</key>
+	<string>iphoneos7.0</string>
+	<key>DTXcode</key>
+	<string>0502</string>
+	<key>DTXcodeBuild</key>
+	<string>5A3005</string>
+	<key>FBAppModules</key>
+	<array>
+		<string>FBComposeModule</string>
+		<string>FBMessengerModule</string>
+		<string>FBReadLaterIncomingURLsAppModule</string>
+	</array>
+	<key>FBPlatformVersion</key>
+	<string>1.0.1</string>
+	<key>FacebookAppID</key>
+	<string>283116811738331</string>
+	<key>FacebookAppID~ipad</key>
+	<string>283116811738331</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>MinimumOSVersion</key>
+	<string>7.0</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This allows you to share photos from your library and save photos to your camera roll. </string>
+	<key>NSPrincipalClass</key>
+	<string>FBApplication</string>
+	<key>Nuxes</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>Feed Sections in Bookmarks</string>
+			<key>nuxID</key>
+			<string>2169</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>NUX for swipe for photos in timeline redesigned</string>
+			<key>nuxID</key>
+			<string>2139</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Tab bar Messenger redirect tooltip NUX</string>
+			<key>nuxID</key>
+			<string>2069</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Quick Promotion Multistep Intersititial NUX</string>
+			<key>nuxID</key>
+			<string>2059</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Quick Promotion Messages Interstitial</string>
+			<key>nuxID</key>
+			<string>2015</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Quick Promotion Megaphone</string>
+			<key>nuxID</key>
+			<string>1821</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Tag Other Friends</string>
+			<key>nuxID</key>
+			<string>1968</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Graph Search Interstitial</string>
+			<key>nuxID</key>
+			<string>2045</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Quick Promotion Interstitial NUX</string>
+			<key>nuxID</key>
+			<string>1817</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Quick Promotion Footer NUX</string>
+			<key>nuxID</key>
+			<string>1819</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Quick Promotion Divebar NUX</string>
+			<key>nuxID</key>
+			<string>1823</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Chat Heads Nux</string>
+			<key>nuxID</key>
+			<string>1782</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Recent Photo Beeper Prompt</string>
+			<key>nuxID</key>
+			<string>2106</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Nearby Friends Interstitial</string>
+			<key>nuxID</key>
+			<string>1631</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Account Confirmation Nux</string>
+			<key>nuxID</key>
+			<string>1831</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Tab Navigation Tooltip</string>
+			<key>nuxID</key>
+			<string>1663</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Contact Importer Interstitial</string>
+			<key>nuxID</key>
+			<string>1629</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>New Account NUX Interstitial</string>
+			<key>nuxID</key>
+			<string>1613</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Zero-Rating Interstitial</string>
+			<key>nuxID</key>
+			<string>1669</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Profile Helper Interstitial</string>
+			<key>nuxID</key>
+			<string>1970</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Composer Itunes Suggestions Nux</string>
+			<key>nuxID</key>
+			<string>2211</string>
+		</dict>
+	</array>
+	<key>SoftwareName</key>
+	<string>Facebook for iPhone/iPad</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>FBUIKit.bundle/FacebookIcons-Regular.otf</string>
+	</array>
+	<key>UIApplicationExitsOnSuspend</key>
+	<false/>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>1</integer>
+	</array>
+	<key>UILaunchImages</key>
+	<array>
+		<dict>
+			<key>UILaunchImageMinimumOSVersion</key>
+			<string>7.0</string>
+			<key>UILaunchImageName</key>
+			<string>Default-iOS7</string>
+			<key>UILaunchImageOrientation</key>
+			<string>Portrait</string>
+			<key>UILaunchImageSize</key>
+			<string>{320, 568}</string>
+		</dict>
+		<dict>
+			<key>UILaunchImageMinimumOSVersion</key>
+			<string>7.0</string>
+			<key>UILaunchImageName</key>
+			<string>Default-iOS7</string>
+			<key>UILaunchImageOrientation</key>
+			<string>Portrait</string>
+			<key>UILaunchImageSize</key>
+			<string>{320, 480}</string>
+		</dict>
+		<dict>
+			<key>UILaunchImageMinimumOSVersion</key>
+			<string>7.0</string>
+			<key>UILaunchImageName</key>
+			<string>Default-iOS7-Portrait</string>
+			<key>UILaunchImageOrientation</key>
+			<string>Portrait</string>
+			<key>UILaunchImageSize</key>
+			<string>{768, 1024}</string>
+		</dict>
+		<dict>
+			<key>UILaunchImageMinimumOSVersion</key>
+			<string>7.0</string>
+			<key>UILaunchImageName</key>
+			<string>Default-iOS7-Landscape</string>
+			<key>UILaunchImageOrientation</key>
+			<string>Landscape</string>
+			<key>UILaunchImageSize</key>
+			<string>{768, 1024}</string>
+		</dict>
+	</array>
+	<key>UIPrerenderedIcon</key>
+	<true/>
+	<key>UIRequiresPersistentWiFi</key>
+	<true/>
+	<key>UIStatusBarHidden</key>
+	<true/>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleBlackOpaque</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>UIViewGroupOpacity</key>
+	<false/>
+</dict>
+</plist>
