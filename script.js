@@ -108,7 +108,8 @@
             const bid = bundleInput.value.toLowerCase().trim();
             const min = parseVersion(minosInput.value);
             const max = parseVersion(maxosInput.value) || 999999;
-            const dev = parseInt(deviceSelect.value);
+            const devValue = deviceSelect.value;
+            const dev = devValue ? parseInt(devValue) : 0;
             const unique = uniqueCheck.checked;
 
             let filtered = apps.filter(app => {
@@ -141,14 +142,15 @@
             const countDiv = document.getElementById('searchResultCount');
             if (countDiv) {
                 if (currentFiltered.length > 0) {
-                    countDiv.textContent = `Results: ${currentFiltered.length.toLocaleString()}`;
+                    const startRange = (currentPage * PER_PAGE) + 1;
+                    const endRange = Math.min((currentPage + 1) * PER_PAGE, currentFiltered.length);
+                    countDiv.textContent = `Showing ${startRange.toLocaleString()}-${endRange.toLocaleString()} of ${currentFiltered.length.toLocaleString()} results`;
                     countDiv.style.display = 'block';
                 } else {
                     countDiv.style.display = 'none';
                 }
             }
-
-            // Apply transition class
+            // ... (rest of function)
             searchResults.classList.remove('results-fade-in');
             void searchResults.offsetWidth; // Force reflow
             searchResults.classList.add('results-fade-in');
@@ -202,9 +204,10 @@
         function randomIPA() {
             if (!appsLoaded) return;
 
-            // Clear keywords to allow true random discovery
+            // Clear keywords and reset page to allow true random discovery
             searchInput.value = '';
             bundleInput.value = '';
+            currentPage = 0; 
             saveConfig(); 
 
             const filteredPool = getFilteredApps();
@@ -272,14 +275,18 @@
             });
         }
 
-        const VERSIONS_PER_PAGE = 8;
+        const VERSIONS_PER_PAGE = 21;
 
         function renderVersionPage(bundleId, page = 0) {
             const container = document.querySelector(`.versions-container[data-bid="${bundleId}"]`);
             const pagination = document.querySelector(`.versions-pagination[data-bid="${bundleId}"]`);
             if (!container || !pagination) return;
 
-            const allVersions = apps.filter(a => a.bundle_id === bundleId && a.bundle_id !== '').sort((a,b) => b.min_os - a.min_os);
+            // Sort versions ASCENDING (Oldest first) to match the main database logic
+            const allVersions = apps.filter(a => a.bundle_id === bundleId && a.bundle_id !== '').sort((a,b) => {
+                if (a.min_os !== b.min_os) return a.min_os - b.min_os;
+                return String(a.version).localeCompare(b.version, undefined, {numeric: true});
+            });
             const list = allVersions.length > 0 ? allVersions : []; 
             
             const totalPages = Math.ceil(list.length / VERSIONS_PER_PAGE);
@@ -307,16 +314,68 @@
             if (totalPages > 1) {
                 const wrap = document.createElement('div');
                 wrap.className = 'pagination-wrap';
-                for (let i = 0; i < totalPages; i++) {
+                
+                const range = 2;
+                let start = Math.max(0, page - range);
+                let end = Math.min(totalPages - 1, page + range);
+
+                // First
+                if (page > 0) {
+                    const first = document.createElement('button');
+                    first.innerHTML = '&laquo;&laquo;';
+                    first.title = 'First Page';
+                    first.onclick = (e) => { e.stopPropagation(); renderVersionPage(bundleId, 0); };
+                    wrap.appendChild(first);
+                }
+
+                if (page > 0) {
+                    const prev = document.createElement('button');
+                    prev.innerHTML = '&laquo;';
+                    prev.onclick = (e) => { e.stopPropagation(); renderVersionPage(bundleId, page - 1); };
+                    wrap.appendChild(prev);
+                }
+
+                for (let i = start; i <= end; i++) {
                     const btn = document.createElement('button');
                     btn.textContent = i + 1;
                     if (i === page) btn.className = 'active';
-                    btn.onclick = (e) => {
-                        e.stopPropagation();
-                        renderVersionPage(bundleId, i);
-                    };
+                    btn.onclick = (e) => { e.stopPropagation(); renderVersionPage(bundleId, i); };
                     wrap.appendChild(btn);
                 }
+
+                if (page < totalPages - 1) {
+                    const next = document.createElement('button');
+                    next.innerHTML = '&raquo;';
+                    next.onclick = (e) => { e.stopPropagation(); renderVersionPage(bundleId, page + 1); };
+                    wrap.appendChild(next);
+                }
+
+                // Last
+                if (page < totalPages - 1) {
+                    const last = document.createElement('button');
+                    last.innerHTML = '&raquo;&raquo;';
+                    last.title = 'Last Page';
+                    last.onclick = (e) => { e.stopPropagation(); renderVersionPage(bundleId, totalPages - 1); };
+                    wrap.appendChild(last);
+                }
+
+                // Jump Spot (...)
+                const spot = document.createElement('input');
+                spot.type = 'number';
+                spot.placeholder = '...';
+                spot.className = 'pagination-spot';
+                spot.onkeydown = (e) => {
+                    if (e.key === 'Enter') {
+                        let p = parseInt(spot.value) - 1;
+                        if (!isNaN(p) && p >= 0 && p < totalPages) {
+                            renderVersionPage(bundleId, p);
+                        } else {
+                            spot.value = '';
+                        }
+                    }
+                };
+                wrap.appendChild(spot);
+
                 pagination.appendChild(wrap);
             }
         }
@@ -435,7 +494,11 @@
             const modal = createModal(app);
             modalContainer.appendChild(modal);
             document.body.style.overflow = 'hidden';
-            setTimeout(() => modal.classList.add('active'), 10);
+
+            setTimeout(() => {
+                modal.classList.add('active');
+                renderVersionPage(app.bundle_id, 0); // Always open to Page 1
+            }, 10);
         }
 
         function closeModal(btn) {
