@@ -191,6 +191,12 @@
 
         function randomIPA() {
             if (!appsLoaded) return;
+
+            // Clear keywords to allow true random discovery
+            searchInput.value = '';
+            bundleInput.value = '';
+            saveConfig(); 
+
             const filteredPool = getFilteredApps();
             if (filteredPool.length === 0) {
                 alert('No apps match your current filters. Try changing the OS or Device settings.');
@@ -368,11 +374,6 @@
                             <button onclick="savePlistServer()" class="get-btn-glossy" style="padding:6px 12px; font-size:12px; background: var(--ios-blue); color: white; border-color: #135a9a;">Save</button>
                             <button onclick="document.getElementById('plistConfigArea').style.display='none'" class="get-btn-glossy" style="padding:6px 12px; font-size:12px; background: var(--ios-grey); color: #333; border-color: #bbb;">Abort</button>
                         </div>
-                    </div>
-
-                    <div class="modal-section">
-                        <h3><i class="fas fa-folder-open"></i> Archive Path</h3>
-                        <p style="font-size:12px; color:#666; word-break: break-all;">${escapeHtml(app.path)}</p>
                     </div>
 
                     <div class="version-sheet-overlay" onclick="if(event.target === this) this.classList.remove('active')">

@@ -321,8 +321,8 @@ header:after {
     background: 
         /* 1. Softened Sunlight Hotspot */
         radial-gradient(circle at 50% 5%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 40%),
-        /* 2. Refined 'Gloss Cut' (More transparent to show icon colors) */
-        radial-gradient(160% 115% at 50% -5%, rgba(255, 255, 255, 0.25) 49%, rgba(255, 255, 255, 0) 50.5%),
+        /* 2. Refined 'Gloss Cut' (Increased curvature for distinct half-dome bubble) */
+        radial-gradient(130% 90% at 50% -5%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0) 51%),
         /* 3. Subtle 'Reflection Back' */
         linear-gradient(to top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 20%);
     pointer-events: none;
@@ -341,27 +341,11 @@ header:after {
     display: block;
 }
 
-/* Modal and Hero Icon Enhancements */
-.modal-app-icon, .hero-card .card-icon-glossy {
-    position: relative;
+/* Hero Card Specific Shadow Enhancement */
+.hero-card .card-icon-glossy {
     box-shadow: 
-        0 8px 16px rgba(0,0,0,0.4), 
+        0 12px 24px rgba(0,0,0,0.4), 
         inset 0 0 1px rgba(255,255,255,0.9);
-}
-
-.modal-app-icon::after, .hero-card .card-icon-glossy::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(
-        180deg, 
-        rgba(255, 255, 255, 0.5) 0%, 
-        rgba(255, 255, 255, 0.2) 50%, 
-        rgba(255, 255, 255, 0) 50.1%, 
-        rgba(255, 255, 255, 0) 100%
-    );
-    pointer-events: none;
-    border-radius: inherit;
 }
 
 .card-name-glossy {
@@ -562,7 +546,7 @@ header:after {
     top: 0; left: 0; right: 0; bottom: 0;
     background: 
         radial-gradient(circle at 50% 5%, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 35%),
-        radial-gradient(160% 115% at 50% -5%, rgba(255, 255, 255, 0.3) 49%, rgba(255, 255, 255, 0) 50.5%),
+        radial-gradient(130% 90% at 50% -5%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 51%),
         linear-gradient(to top, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 20%);
     pointer-events: none;
     border-radius: inherit;
