@@ -112,7 +112,7 @@
             const unique = uniqueCheck.checked;
 
             let filtered = apps.filter(app => {
-                if (q && !app.title.toLowerCase().includes(q)) return false;
+                if (q && !(app.title.toLowerCase().includes(q) || app.path.toLowerCase().includes(q))) return false;
                 if (bid && !app.bundle_id.toLowerCase().includes(bid)) return false;
                 if (min && app.min_os < min) return false;
                 if (max && app.min_os > max) return false;
