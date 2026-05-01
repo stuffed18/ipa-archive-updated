@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+    <key>CoronaDelegates</key>
+    <array/>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Set Location Always Usage Description in build settings</string>
+    <key>DTPlatformVersion</key>
+    <string>17.2</string>
+    <key>DTSDKBuild</key>
+    <string>21C52</string>
+    <key>UIStatusBarStyle</key>
+    <string>UIStatusBarStyleBlackTranslucent</string>
+    <key>CFBundleIcons~ipad</key>
+    <dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>AppIcon20x20</string>
+          <string>AppIcon29x29</string>
+          <string>AppIcon40x40</string>
+          <string>AppIcon57x57</string>
+          <string>AppIcon60x60</string>
+          <string>AppIcon50x50</string>
+          <string>AppIcon72x72</string>
+          <string>AppIcon76x76</string>
+          <string>AppIcon83.5x83.5</string>
+        </array>
+        <key>CFBundleIconName</key>
+        <string>AppIcon</string>
+      </dict>
+    </dict>
+    <key>NSSiriUsageDescription</key>
+    <string>Set Siri Usage description in build settings</string>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>NSCameraUsageDescription</key>
+    <string>Set Camera Usage Description in build settings</string>
+    <key>NSMainNibFile</key>
+    <string>MainWindow</string>
+    <key>CFBundleDisplayName</key>
+    <string>Recursion</string>
+    <key>CoronaViewSupportedInterfaceOrientations</key>
+    <array>
+      <string>UIInterfaceOrientationLandscapeLeft</string>
+      <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <key>DTXcodeBuild</key>
+    <string>15C500b</string>
+    <key>NSRemindersUsageDescription</key>
+    <string>Set Reminders Usage description in build settings</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.glitchgames.recursion</string>
+    <key>UIDeviceFamily</key>
+    <array>
+      <integer>1</integer>
+      <integer>2</integer>
+    </array>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleIcons</key>
+    <dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>AppIcon20x20</string>
+          <string>AppIcon29x29</string>
+          <string>AppIcon40x40</string>
+          <string>AppIcon57x57</string>
+          <string>AppIcon60x60</string>
+        </array>
+        <key>CFBundleIconName</key>
+        <string>AppIcon</string>
+      </dict>
+    </dict>
+    <key>CFBundleSupportedPlatforms</key>
+    <array>
+      <string>iPhoneOS</string>
+    </array>
+    <key>NSMainNibFile~ipad</key>
+    <string>MainWindow-iPad</string>
+    <key>UIRequiresFullScreen</key>
+    <true/>
+    <key>ITSAppUsesNonExemptEncryption</key>
+    <false/>
+    <key>NSMotionUsageDescription</key>
+    <string>Set Motion Usage description in build settings</string>
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>Set Bluetooth Peripheral description in build settings</string>
+    <key>MinimumOSVersion</key>
+    <string>11.0</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>Set Photo Library Add Usage description in build settings</string>
+    <key>CoronaSDKBuild</key>
+    <string>3704</string>
+    <key>CFBundleName</key>
+    <string>Recursion</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0.3</string>
+    <key>UIStatusBarHidden</key>
+    <true/>
+    <key>UIRequiredDeviceCapabilities</key>
+    <array>
+      <string>arm64</string>
+    </array>
+    <key>CFBundleExecutable</key>
+    <string>Recursion</string>
+    <key>NSAppleMusicUsageDescription</key>
+    <string>Set Apple Music description in build settings</string>
+    <key>NSSpeechRecognitionUsageDescription</key>
+    <string>Set Speech Recognition Usage description in build settings</string>
+    <key>UIPrerenderedIcon</key>
+    <true/>
+    <key>DTAppStoreToolsBuild</key>
+    <string>15E204</string>
+    <key>ContentOrientation</key>
+    <string>UIInterfaceOrientationLandscapeLeft</string>
+    <key>NSLocationUsageDescription</key>
+    <string>Set Location Usage Description in build settings</string>
+    <key>BuildMachineOSBuild</key>
+    <string>22G436</string>
+    <key>NSCalendarsUsageDescription</key>
+    <string>Set Calendars Peripheral description in build settings</string>
+    <key>DTPlatformName</key>
+    <string>iphoneos</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Set Microphone Recognition Usage description in build settings</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Set Location When In Use Usage description in build settings</string>
+    <key>CFBundleVersion</key>
+    <string>2024.3.191425</string>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>DTCompiler</key>
+    <string>com.apple.compilers.llvm.clang.1_0</string>
+    <key>NSHomeKitUsageDescription</key>
+    <string>Set Home Kit Usage Description in build settings</string>
+    <key>DTSDKName</key>
+    <string>iphoneos17.2</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+      <key>NSExceptionDomains</key>
+      <dict>
+        <key>glitch.games</key>
+        <dict>
+          <key>NSIncludesSubdomains</key>
+          <true/>
+          <key>NSThirdPartyExceptionAllowsInsecureHTTPLoads</key>
+          <true/>
+        </dict>
+      </dict>
+    </dict>
+    <key>NSContactsUsageDescription</key>
+    <string>Set Contacts Usage Description in build settings</string>
+    <key>DTPlatformBuild</key>
+    <string>21C52</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Set Photo Usage description in build settings</string>
+    <key>DTXcode</key>
+    <string>1520</string>
+    <key>UIInterfaceOrientation</key>
+    <string>UIInterfaceOrientationLandscapeLeft</string>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+      <string>UIInterfaceOrientationLandscapeLeft</string>
+      <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+  </dict>
+</plist>
