@@ -409,11 +409,12 @@ class CacheDB:
         self, baseUrlId: int, entries: 'Iterable[tuple[str, int, str]]'
     ) -> int:
         ''' :entries: must be iterable of `(path_name, filesize, crc32)` '''
+        before = self._db.total_changes
         self._db.executemany('''
         INSERT OR IGNORE INTO idx (base_url, path_name, fsize) VALUES (?,?,?);
         ''', ((baseUrlId, path, size) for path, size, _crc in entries))
         self._db.commit()
-        return self._db.total_changes
+        return self._db.total_changes - before
 
     # Update URL
 
@@ -531,10 +532,11 @@ class CacheDB:
             self._db.commit()
             return x.rowcount
         elif type == 'add':
-            x1 = self._db.execute('DELETE FROM scrape_queue;')
-            x2 = self._db.execute('DELETE FROM scanned_archives;')
+            before = self._db.total_changes
+            self._db.execute('DELETE FROM scrape_queue;')
+            self._db.execute('DELETE FROM scanned_archives;')
             self._db.commit()
-            return x1.rowcount
+            return self._db.total_changes - before
         return 0
 
     def setError(self, uid: int, *, done: int) -> None:
