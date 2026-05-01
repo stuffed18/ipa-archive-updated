@@ -138,6 +138,16 @@
             currentPage = page;
             currentFiltered = getFilteredApps();
             
+            const countDiv = document.getElementById('searchResultCount');
+            if (countDiv) {
+                if (currentFiltered.length > 0) {
+                    countDiv.textContent = `Results: ${currentFiltered.length.toLocaleString()}`;
+                    countDiv.style.display = 'block';
+                } else {
+                    countDiv.style.display = 'none';
+                }
+            }
+
             // Apply transition class
             searchResults.classList.remove('results-fade-in');
             void searchResults.offsetWidth; // Force reflow

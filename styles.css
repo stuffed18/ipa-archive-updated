@@ -260,6 +260,17 @@ header:after {
     margin: 0 auto;
 }
 
+.result-count-glossy {
+    font-size: 14px;
+    font-weight: 700;
+    color: #666;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding-left: 5px;
+    text-shadow: var(--text-shadow);
+}
+
 .app-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
