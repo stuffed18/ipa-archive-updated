@@ -297,10 +297,15 @@
                 const filename = v.path.split('/').pop();
                 return `
                 <li class="version-li">
-                    <div class="version-info-main">
-                        <div class="version-name"><strong>v${v.version}</strong> (${(v.fsize / 1024).toFixed(1)} MB)</div>
-                        <div class="version-filename"><a href="${url}" rel="noopener noreferrer nofollow">${filename}</a></div>
-                        <div class="version-os">Requires iOS ${formatOS(v.min_os)}+</div>
+                    <div class="version-header-row">
+                        <div class="version-icon-mini card-icon-glossy">
+                            ${v.icon ? `<img src="${v.icon}" alt="v${v.version}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : '<i class="fas fa-mobile-alt"></i>'}
+                        </div>
+                        <div class="version-info-main">
+                            <div class="version-name"><strong>v${v.version}</strong> (${(v.fsize / 1024).toFixed(1)} MB)</div>
+                            <div class="version-filename"><a href="${url}" rel="noopener noreferrer nofollow">${filename}</a></div>
+                            <div class="version-os">Requires iOS ${formatOS(v.min_os)}+</div>
+                        </div>
                     </div>
                     <div class="version-actions-grid" style="grid-template-columns: 1fr 1fr;">
                         <a href="${url}" download class="v-btn-action download-v">Download</a>

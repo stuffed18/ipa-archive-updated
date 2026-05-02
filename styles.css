@@ -607,6 +607,35 @@ header:after {
     gap: 4px;
 }
 
+.version-header-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.version-icon-mini {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    flex-shrink: 0;
+    margin: 0; /* Reset card-icon-glossy margins */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2), inset 0 0 1px rgba(255,255,255,0.8);
+}
+
+.version-icon-mini::before {
+    top: 6%; left: 10%;
+    width: 2px; height: 2px;
+}
+
+.version-icon-mini i {
+    font-size: 20px;
+    color: #888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
 .version-name {
     font-size: 15px;
     color: #333;
