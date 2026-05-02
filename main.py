@@ -595,15 +595,21 @@ class CacheDB:
                 del db
                 
                 version_match = re.search(r'iOS[ _-]?(\d+(?:\.\d+)*)', path, re.IGNORECASE)
-                if not version_match or version_match.group(1) == "0.0":
+                if version_match:
+                    raw = version_match.group(1)
+                
+                if not version_match or raw == "0.0" or raw == "0":
                     version_match = re.search(r'os(\d)(\d)?', path, re.IGNORECASE)
                     if version_match:
                         raw = version_match.group(1) + ('.' + version_match.group(2) if version_match.group(2) else '.0')
                     else:
-                        # Final fallback: if it's in the system, it requires at least 2.0
                         raw = "2.0"
+                
+                # Final guard: if we extracted something that looks like 0.0 or 0
+                if raw == "0.0" or raw == "0":
+                    raw = "2.0"
                 else:
-                    raw = version_match.group(1)
+                    raw = version_match.group(1) if 'version_match' in locals() and version_match else raw
 
         if raw is not None:
             raw = str(raw)
