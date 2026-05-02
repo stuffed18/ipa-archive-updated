@@ -578,6 +578,33 @@ class CacheDB:
             version += f' ({v_long})'
         # minOS = [int(x) for x in plist.get('MinimumOSVersion', '0').split('.')]
         raw = plist.get('MinimumOSVersion')
+        if not raw:
+            # Fallback 1: SDK version
+            raw = plist.get('DTPlatformVersion')
+            if not raw:
+                # Fallback 2: SDK Name
+                sdk = plist.get('DTSDKName')
+                if sdk and isinstance(sdk, str):
+                    raw = ''.join(c for c in sdk if c.isdigit() or c == '.')
+            
+            if not raw or raw.strip() == "" or raw == ".":
+                # Fallback 3: Try to extract version from filename/path
+                # Patterns: iOS_2.0, os30, iOS 3.1, iPhoneOS 4.2
+                db = CacheDB()
+                path = db._db.execute("SELECT path_name FROM idx WHERE pk=?", [uid]).fetchone()[0]
+                del db
+                
+                version_match = re.search(r'iOS[ _-]?(\d+(?:\.\d+)*)', path, re.IGNORECASE)
+                if not version_match or version_match.group(1) == "0.0":
+                    version_match = re.search(r'os(\d)(\d)?', path, re.IGNORECASE)
+                    if version_match:
+                        raw = version_match.group(1) + ('.' + version_match.group(2) if version_match.group(2) else '.0')
+                    else:
+                        # Final fallback: if it's in the system, it requires at least 2.0
+                        raw = "2.0"
+                else:
+                    raw = version_match.group(1)
+
         if raw is not None:
             raw = str(raw)
 
