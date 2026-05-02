@@ -578,6 +578,37 @@ class CacheDB:
             version += f' ({v_long})'
         # minOS = [int(x) for x in plist.get('MinimumOSVersion', '0').split('.')]
         raw = plist.get('MinimumOSVersion')
+        if not raw:
+            # Fallback 1: SDK version
+            raw = plist.get('DTPlatformVersion')
+            if not raw:
+                # Fallback 2: SDK Name
+                sdk = plist.get('DTSDKName')
+                if sdk and isinstance(sdk, str):
+                    raw = ''.join(c for c in sdk if c.isdigit() or c == '.')
+            
+            if not raw or raw.strip() == "" or raw == ".":
+                # Fallback 3: Try to extract version from filename/path
+                # Patterns: iOS_2.0, os30, iOS 3.1, iPhoneOS 4.2
+                db = CacheDB()
+                path = db._db.execute("SELECT path_name FROM idx WHERE pk=?", [uid]).fetchone()[0]
+                del db
+                
+                version_match = re.search(r'iOS[ _-]?(\d+(?:\.\d+)*)', path, re.IGNORECASE)
+                if version_match:
+                    raw = version_match.group(1)
+                
+                if not version_match or raw == "0.0" or raw == "0":
+                    version_match = re.search(r'os(\d)(\d)?', path, re.IGNORECASE)
+                    if version_match:
+                        raw = version_match.group(1) + ('.' + version_match.group(2) if version_match.group(2) else '.0')
+                    else:
+                        raw = "2.0"
+                
+                # Final guard: if we extracted something that looks like 0.0 or 0
+                if raw == "0.0" or raw == "0":
+                    raw = "2.0"
+
         if raw is not None:
             raw = str(raw)
 
@@ -608,7 +639,7 @@ class CacheDB:
                 LIMIT 1''', [bundleId, version]).fetchone()
             if res:
                 potential_img_pk = res[0]
-                if diskPath(potential_img_pk, '.jpg').exists():
+                if potential_img_pk != uid and diskPath(potential_img_pk, '.jpg').exists():
                     image_pk = potential_img_pk
                     # If we found a duplicate, we can delete our own image if it exists
                     for ext in ['.jpg', '.png']:
@@ -1071,7 +1102,19 @@ def _processIpaZip(uid: int, zip, basename, img_path, plist_path, image_only) ->
     artwork = False
     zip_listing = zip.infolist()
     
-    # First pass: find Info.plist AND check for duplicates
+    # First pass: find iTunesArtwork (usually high res)
+    for entry in zip_listing:
+        fn = entry.filename.lstrip('/')
+        if fn.lower() == 'itunesartwork' and entry.file_size > 0:
+            extractZipEntry(zip, entry, img_path)
+            if os.path.exists(img_path) and os.path.getsize(img_path) > 0:
+                if processImage(img_path):
+                    artwork = True
+                    break
+                else:
+                    if img_path.exists(): img_path.unlink()
+
+    # Second pass: find Info.plist AND check for duplicates if artwork not found via iTunesArtwork
     for entry in zip_listing:
         fn = entry.filename.lstrip('/')
 
@@ -1081,7 +1124,7 @@ def _processIpaZip(uid: int, zip, basename, img_path, plist_path, image_only) ->
                 app_prefix = plist_match.group(1)
                 extractZipEntry(zip, entry, plist_path)
                 
-                # Deduplication check: if we already have this app's icon, don't download it again
+                # Deduplication check
                 if plist_path.exists():
                     try:
                         with open(plist_path, 'rb') as fp:
@@ -1094,32 +1137,21 @@ def _processIpaZip(uid: int, zip, basename, img_path, plist_path, image_only) ->
                             db = CacheDB()
                             existing_img_pk = db.hasImage(bid, ver)
                             if existing_img_pk:
-                                print(f'  reusing image from {existing_img_pk}')
-                                artwork = True # Skip further icon extraction
-                                if image_only: return True # Optimization: if only image requested, we are done
+                                if artwork:
+                                    print(f'  reusing image from {existing_img_pk}')
+                                    if img_path.exists(): img_path.unlink()
+                                else:
+                                    print(f'  reusing image from {existing_img_pk}')
+                                    artwork = True
+                                
+                                if image_only: 
+                                    del db
+                                    return True
                             del db
                     except:
                         pass
-                
-                if image_only and not artwork:
-                    pass # Continue to find icon
-                elif image_only and artwork:
-                    return True
 
-    # Second pass: extract iTunesArtwork if needed
-    if not artwork:
-        for entry in zip_listing:
-            fn = entry.filename.lstrip('/')
-            if fn.lower() == 'itunesartwork' and entry.file_size > 0:
-                extractZipEntry(zip, entry, img_path)
-                if os.path.exists(img_path) and os.path.getsize(img_path) > 0:
-                    if processImage(img_path):
-                        artwork = True
-                        break
-                    else:
-                        img_path.unlink() # Cleanup
-
-    # if no iTunesArtwork found, load file referenced in plist
+    # Third pass: if no iTunesArtwork, load file referenced in plist
     if not artwork and app_prefix and plist_path.exists():
         with open(plist_path, 'rb') as fp:
             try:
@@ -1205,13 +1237,8 @@ def processImage(png_path: Path) -> bool:
             if img.mode != 'RGB':
                 img = img.convert('RGB')
             
-            # Downscale if larger than 128x128
-            MAX_SIZE = (128, 128)
-            if img.width > MAX_SIZE[0] or img.height > MAX_SIZE[1]:
-                img.thumbnail(MAX_SIZE, Image.Resampling.LANCZOS)
-            
-            # Save optimized JPEG
-            img.save(jpg_path, 'JPEG', quality=80, optimize=True)
+            # Save optimized JPEG at high quality
+            img.save(jpg_path, 'JPEG', quality=95, optimize=True)
             os.chmod(jpg_path, 0o644)
             
         png_path.unlink() # Remove PNG after successful conversion
@@ -1235,13 +1262,15 @@ def expandImageName(
     if not prefix.endswith('/'):
         prefix += '/'
     
-    # Normalize icon names
+    # Normalize icon names and prioritize high-res versions
     search_names = []
-    for name in iconList + ['Icon', 'icon']:
-        if not name: continue
-        search_names.append(name.lower())
-        if not name.lower().endswith('.png'):
-            search_names.append(name.lower() + '.png')
+    # Resolution priority: 3x, 2x, then standard
+    for suffix in ['@3x', '@2x', '']:
+        for name in iconList + ['Icon', 'icon']:
+            if not name: continue
+            base = name[:-4] if name.lower().endswith('.png') else name
+            search_names.append(f"{base}{suffix}".lower())
+            search_names.append(f"{base}{suffix}.png".lower())
 
     # 1. Try case-insensitive exact matches
     for x in zip_listing:
