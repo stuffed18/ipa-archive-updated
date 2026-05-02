@@ -359,22 +359,24 @@
                     wrap.appendChild(last);
                 }
 
-                // Jump Spot (...)
-                const spot = document.createElement('input');
-                spot.type = 'number';
-                spot.placeholder = '...';
-                spot.className = 'pagination-spot';
-                spot.onkeydown = (e) => {
-                    if (e.key === 'Enter') {
-                        let p = parseInt(spot.value) - 1;
-                        if (!isNaN(p) && p >= 0 && p < totalPages) {
-                            renderVersionPage(bundleId, p);
-                        } else {
-                            spot.value = '';
+                // Jump Spot (...) - Only show if there are many pages (e.g. > 10)
+                if (totalPages > 10) {
+                    const spot = document.createElement('input');
+                    spot.type = 'number';
+                    spot.placeholder = '...';
+                    spot.className = 'pagination-spot';
+                    spot.onkeydown = (e) => {
+                        if (e.key === 'Enter') {
+                            let p = parseInt(spot.value) - 1;
+                            if (!isNaN(p) && p >= 0 && p < totalPages) {
+                                renderVersionPage(bundleId, p);
+                            } else {
+                                spot.value = '';
+                            }
                         }
-                    }
-                };
-                wrap.appendChild(spot);
+                    };
+                    wrap.appendChild(spot);
+                }
 
                 pagination.appendChild(wrap);
             }
