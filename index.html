@@ -1,109 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0">
-	<meta name="referrer" content="no-referrer">
-	<title>IPA Archive</title>
-	<link rel="shortcut icon" href="./favicon.ico">
-	<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
-	<link rel="stylesheet" href="style.css">
-	<script src='script.js?v=2'></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Grand IPA Archive - Archiving Every Delisted iOS App from the most well known to the most Obscure">
+    <meta name="keywords" content="iOS, app archive, IPA, iOS apps, app icons, download, iOS software, iOS games, iOS app collection, legacy apps, iOS archive, IPA archive">
+    <meta property="og:title" content="The Grand IPA Archive">
+    <meta property="og:image" content="apple-touch-icon.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>The Grand IPA Archive</title>
+    <link rel="icon" href="apple-touch-icon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-	<button style="float: right; margin: 0 16px" onclick="randomIPA()">Random</button>
-	<h1>IPA Archive</h1>
-	<form onsubmit="event.preventDefault(); searchIPA(); return false;" autocomplete="off">
-		<input id="page" hidden>
-		<input id="minid" hidden>
-		<label for="search">Search: <input id="search" placeholder="Search"></label>
-		<label for="bundleid">BundleId: <input id="bundleid" placeholder="com.gameloft."></label>
-		<label for="unique">Unique: <input id="unique" type="checkbox" checked></label>
-		<label for="minos">min OS: <input id="minos" placeholder="1.0"></label>
-		<label for="maxos">max OS: <input id="maxos" placeholder="5.1.1"></label>
-		<label for="device">Device: <select id="device">
-				<option value="">Any</option>
-				<option value="1">iPhone</option>
-				<option value="2">iPad</option>
-				<option value="3">TV</option>
-				<option value="4">Watch</option>
-			</select></label>
-		<button type="submit">Search</button>
-	</form>
+    <!-- Glossy Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <div class="card-icon-glossy" style="width: 44px; height: 44px; border-radius: 10px; margin: 0 12px 0 0;">
+                    <img src="apple-touch-icon.png" alt="Logo">
+                </div>
+                <div class="header-text">
+                    <h1>The Grand IPA Archive</h1>
+                    <div id="statsBar" class="stats-bar">Loading database...</div>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="random-btn-header" onclick="randomIPA()"><i class="fas fa-shuffle"></i> Random</button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Search & Filter Container -->
+    <div class="main-search-wrapper">
+        <form id="searchForm" class="ios-form" onsubmit="event.preventDefault(); applyFilters();">
+            <div class="search-row">
+                <input type="text" id="searchInput" placeholder="Search apps..." class="ios-input main-search">
+                <button type="submit" class="ios-btn-blue">Search</button>
+            </div>
+            <div class="filter-grid">
+                <div class="filter-item">
+                    <label>Bundle ID</label>
+                    <input type="text" id="bundleid" placeholder="com.gameloft." class="ios-input">
+                </div>
+                <div class="filter-item">
+                    <label>Min OS</label>
+                    <input type="text" id="minos" placeholder="1.0" class="ios-input">
+                </div>
+                <div class="filter-item">
+                    <label>Max OS</label>
+                    <input type="text" id="maxos" placeholder="5.1.1" class="ios-input">
+                </div>
+                <div class="filter-item">
+                    <label>Device</label>
+                    <div class="ios-segmented-control" id="deviceSegments">
+                        <button type="button" class="segment active" data-value="">Any</button>
+                        <button type="button" class="segment" data-value="2" title="iPhone"><i class="fa-solid fa-mobile-screen-button"></i></button>
+                        <button type="button" class="segment" data-value="4" title="iPad"><i class="fa-solid fa-tablet-screen-button"></i></button>
+                    </div>
+                    <input type="hidden" id="device" value="">
+                </div>
+                <div class="filter-item checkbox-item">
+                    <label for="unique">Unique</label>
+                    <input type="checkbox" id="unique" checked>
+                </div>
+            </div>
+        </form>
+    </div>
 
-	<div id="content">JavaScript disabled?</div>
-
-	<div id="templates" hidden>
-		<div class="entry full">
-			<div>
-				<img XSRC="$IMG" onerror="onImgError(this)">
-				<button onclick="installIPA($IDX)">Install</button>
-			</div>
-			<div class="info">
-				<h4>$TITLE</h4>
-				<div>BundleId: $BUNDLEID</div>
-				<div>Version: v$VERSION – $SIZE</div>
-				<div>Device: $PLATFORM</div>
-				<div>Minimum OS: $MINOS</div>
-				<div>Link: <a href="$URL" rel="noopener noreferrer nofollow">$URLNAME</a></div>
-			</div>
-		</div>
-		<div class="entry short">
-			<div><img XSRC="$IMG" onerror="onImgError(this)"></div>
-			<div class="info">
-				<h4>$TITLE</h4>
-				<div>BundleId: $BUNDLEID</div>
-				<div>Device: $PLATFORM</div>
-				<div>Minimum OS: $MINOS</div>
-				<div><a onclick="searchBundle($IDX)">Show all</a></div>
-			</div>
-		</div>
-		<div class="itunes">
-			<h4>iTunes Info:</h4>
-			<div>Genre: $GENRES</div>
-			<div>Rating: $RATING</div>
-			<div>Advisory: $ADVISORY</div>
-			<br>
-			<div>Current Version: <b>$VERSION</b> (last update: $DATE)</div>
-			<div>Price: $PRICE</div>
-			<div>Link: <a href="$URL" rel="noopener noreferrer nofollow">iTunes</a></div>
-			<div>$IMG</div>
-			<p>$DESCRIPTION</p>
-		</div>
-		<a class="screenshot" href="$REF" target="_blank"><img XSRC="$URL" crossorigin="anonymous"
-				referrerpolicy="no-referrer"></a>
-		<div class="randomAction">
-			Actions:
-			<button onclick="searchBundle($IDX, '&random=$IDX')">Show all versions</button>
-			<button onclick="randomIPA()">Next Random</button>
-		</div>
-		<div class="no-itunes">
-			<p>iTunes search disabled. No plist server configured.</p>
-			<a onclick="installIPA()">Configure now</a>
-		</div>
-	</div>
-
-	<div id="overlay" hidden>
-		<div id="installMsg">
-			<h3>Install on device</h3>
-			<p>
-				Unfortunatelly, this function is not possible with static HTML+JS.
-				You must provided a plist generator URL.
-				See <a href="https://github.com/stuffed18/ipa-archive-updated?tab=readme-ov-file#starting-plist-server" target="_blank">Readme</a> file for further instructions on how to set up such a
-				service.
-			</p>
-			<form onsubmit="event.preventDefault(); setPlistGen(); return false;" autocomplete="off">
-				<label for="plistServer">Generator URL:</label>
-				<input id="plistServer" placeholder="http://192.168.0.1/">
-				<button type="submit">Save</button>
-				<button type="button" onclick="document.getElementById('overlay').hidden=true">Abort</button>
-			</form>
-		</div>
-	</div>
-
-	<script>loadDB()</script>
+    <!-- Results Area -->
+    <div id="resultsContainer" class="results-grid">
+        <div id="searchResultCount" class="result-count-glossy" style="display: none;"></div>
+        <div class="search-empty-state" id="searchEmptyState">
+            <i class="fas fa-search search-icon"></i>
+            <p class="search-message">Enter criteria to start searching</p>
+        </div>
+        <div id="searchResults" class="app-grid"></div>
+        <div id="pagination" class="ios-pagination"></div>
+    </div>
+    
+    <!-- Modal Container -->
+    <div id="modalContainer"></div>
+    
+    <script src="script.js"></script>
 </body>
-
 </html>

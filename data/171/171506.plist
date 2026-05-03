@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>CFBundleAllowMixedLocalizations</key>
+        <true/>
+        <key>CFBundleVersion</key>
+        <string>1.0.0</string>
+        <key>CFBundleShortVersionString</key>
+        <string>1.0</string>
+        <key>CFBundleIdentifier</key>
+        <string>com.genjipig.fancyface</string>
+        <key>CFBundleInfoDictionaryVersion</key>
+        <string>6.0</string>
+        <key>CFBundleExecutable</key>
+        <string>FaceApp</string>
+        <key>CFBundleDisplayName</key>
+        <string>FancyFace</string>
+        <key>CFBundlePackageType</key>
+        <string>APPL</string>
+        <key>DTPlatformName</key>
+        <string>iphoneos</string>
+        <key>DTSDKName</key>
+        <string>iphoneos3.0</string>
+        <key>MinimumOSVersion</key>
+        <string>3.0</string>
+        <key>NSMainNibFile</key>
+        <string>MainWindow</string>
+        <key>CFBundleResourceSpecification</key>
+        <string>ResourceRules.plist</string>
+        <key>UIStatusBarHidden</key>
+        <true/>
+        <key>renderMode</key>
+        <string>auto</string>
+        <key>CTAutoOrients</key>
+        <false/>
+        <key>CTInitialWindowVisible</key>
+        <true/>
+        <key>CTInitialWindowTitle</key>
+        <string>FancyFace</string>
+        <key>CFBundleSupportedPlatforms</key>
+        <array>
+            <string>iPhoneOS</string>
+        </array>
+    </dict>
+</plist>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleURLName</key>
+        <string>com.imangi.templerun</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>templerun</string>
+        </array>
+      </dict>
+    </array>
+    <key>UIRequiredDeviceCapabilities</key>
+    <array>
+      <string>gamekit</string>
+    </array>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>UIRequiresFullScreen</key>
+    <true/>
+    <key>DTPlatformVersion</key>
+    <string>11.0</string>
+    <key>CFBundleIconFile</key>
+    <string>Icon.png</string>
+    <key>CFBundleName</key>
+    <string>TempleRun</string>
+    <key>DTSDKName</key>
+    <string>iphoneos11.0</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Temple Run would like to save an image to your photo library.</string>
+    <key>UIViewControllerBasedStatusBarAppearance</key>
+    <false/>
+    <key>CFBundleIcons</key>
+    <dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>AppIcon29x29</string>
+          <string>AppIcon57x57</string>
+          <string>AppIcon60x60</string>
+        </array>
+        <key>CFBundleIconName</key>
+        <string>AppIcon</string>
+      </dict>
+    </dict>
+    <key>UpsightAppToken</key>
+    <string>55788879c5ad48829a3e19327c147513</string>
+    <key>CFBundleDisplayName</key>
+    <string>TempleRun</string>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>fuse_ssl</key>
+    <true/>
+    <key>DTSDKBuild</key>
+    <string>15A372</string>
+    <key>NSCameraUsageDescription</key>
+    <string>Temple Run would like to store a photo.</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.6.4</string>
+    <key>CFBundleSupportedPlatforms</key>
+    <array>
+      <string>iPhoneOS</string>
+    </array>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+      <string>UIInterfaceOrientationPortraitUpsideDown</string>
+    </array>
+    <key>UpsightPublicKey</key>
+    <string>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5o+KMEwOHciX/U9pM1Yj0szlWix0bHu+vT+eRlLNRxIHTJWuJ1r1y6OCnnOa588kdq7CJ4GEoXYJ5iaT7Q9NPX2vn3j0x9hwHYr8d/jBklsksSEVp15TR9XDLEDRUS09KQGrm68d9ybiUCXgRHD1r19Ms+xYJzZfMD/1YAL93QuYCegVm9suwbq8d+EkTjhihyW2r59kzO7vd+PJCy6ymJYvSaS9/3mXJayTax5L2CXQEtexSGe+IdYEQuhy3hPEeJeKJH9rxBtRBjZ+BsAek0wLbPbYhNdchmNyGWixhmOLbWQabm9Dzkbv21YE6Fxcmoxyu5oQ/otTP2dCZ5Vg9QIDAQAB</string>
+    <key>BuildMachineOSBuild</key>
+    <string>16G29</string>
+    <key>DTPlatformBuild</key>
+    <string>15A372</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>MinimumOSVersion</key>
+    <string>6.0</string>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>English</string>
+    <key>DTXcodeBuild</key>
+    <string>9A235</string>
+    <key>CFBundleVersion</key>
+    <string>1.6.4.2</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>Temple Run would like to save an image to your photo library.</string>
+    <key>UILaunchImageFile</key>
+    <string>Brand Assets</string>
+    <key>UIPrerenderedIcon</key>
+    <true/>
+    <key>UILaunchImages</key>
+    <array>
+      <dict>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+        <key>UILaunchImageName</key>
+        <string>Brand Assets-800-Portrait-736h</string>
+        <key>UILaunchImageSize</key>
+        <string>{414, 736}</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>8.0</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageOrientation</key>
+        <string>Landscape</string>
+        <key>UILaunchImageName</key>
+        <string>Brand Assets-800-Landscape-736h</string>
+        <key>UILaunchImageSize</key>
+        <string>{414, 736}</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>8.0</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+        <key>UILaunchImageName</key>
+        <string>Brand Assets-800-667h</string>
+        <key>UILaunchImageSize</key>
+        <string>{375, 667}</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>8.0</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+        <key>UILaunchImageName</key>
+        <string>Brand Assets-700</string>
+        <key>UILaunchImageSize</key>
+        <string>{320, 480}</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>7.0</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+        <key>UILaunchImageName</key>
+        <string>Brand Assets-700-568h</string>
+        <key>UILaunchImageSize</key>
+        <string>{320, 568}</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>7.0</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+        <key>UILaunchImageName</key>
+        <string>Brand Assets-700-Portrait</string>
+        <key>UILaunchImageSize</key>
+        <string>{768, 1024}</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>7.0</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageOrientation</key>
+        <string>Landscape</string>
+        <key>UILaunchImageName</key>
+        <string>Brand Assets-700-Landscape</string>
+        <key>UILaunchImageSize</key>
+        <string>{768, 1024}</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>7.0</string>
+      </dict>
+    </array>
+    <key>UIStatusBarHidden</key>
+    <true/>
+    <key>UIDeviceFamily</key>
+    <array>
+      <integer>1</integer>
+      <integer>2</integer>
+    </array>
+    <key>NSMotionUsageDescription</key>
+    <string>Temple Run would like to use the accelerometer for game play.</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.imangi.templerun</string>
+    <key>CFBundleIconFiles</key>
+    <array>
+      <string>Icon.png</string>
+      <string>Icon@2x.png</string>
+      <string>Icon-72.png</string>
+      <string>Icon-Small-50.png</string>
+      <string>Icon-Small.png</string>
+      <string>Icon-Small@2x.png</string>
+      <string>Icon-72@2x.png</string>
+    </array>
+    <key>DTXcode</key>
+    <string>0900</string>
+    <key>NSCalendarsUsageDescription</key>
+    <string>Temple Run would like to create a calender event.</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+      <key>NSAllowsArbitraryLoads</key>
+      <true/>
+    </dict>
+    <key>CFBundleExecutable</key>
+    <string>TempleRun</string>
+    <key>CFBundleIcons~ipad</key>
+    <dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>AppIcon29x29</string>
+          <string>AppIcon57x57</string>
+          <string>AppIcon60x60</string>
+          <string>AppIcon50x50</string>
+          <string>AppIcon72x72</string>
+          <string>AppIcon76x76</string>
+          <string>AppIcon83.5x83.5</string>
+        </array>
+        <key>CFBundleIconName</key>
+        <string>AppIcon</string>
+      </dict>
+    </dict>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>DTPlatformName</key>
+    <string>iphoneos</string>
+    <key>DTCompiler</key>
+    <string>com.apple.compilers.llvm.clang.1_0</string>
+  </dict>
+</plist>

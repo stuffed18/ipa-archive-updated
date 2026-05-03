@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleURLName</key>
+        <string>com.phoenixsolutions.ruler</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>com.phoenixsolutions.ruler</string>
+        </array>
+      </dict>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>fb1601168070181006</string>
+        </array>
+      </dict>
+    </array>
+    <key>UIRequiredDeviceCapabilities</key>
+    <array>
+      <string>armv7</string>
+    </array>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>UIRequiresFullScreen</key>
+    <true/>
+    <key>DTPlatformVersion</key>
+    <string>13.0</string>
+    <key>UISupportedInterfaceOrientations~ipad</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+    </array>
+    <key>CFBundleName</key>
+    <string>Ruler</string>
+    <key>DTSDKName</key>
+    <string>iphoneos13.0</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>This lets you open photos from your library for measuring.</string>
+    <key>UIViewControllerBasedStatusBarAppearance</key>
+    <false/>
+    <key>CFBundleIcons</key>
+    <dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>Ruler Icons Set29x29</string>
+          <string>Ruler Icons Set40x40</string>
+          <string>Ruler Icons Set57x57</string>
+          <string>Ruler Icons Set60x60</string>
+        </array>
+        <key>CFBundleIconName</key>
+        <string>Ruler Icons Set</string>
+      </dict>
+    </dict>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+      <string>com.phoenixsolutions.flowerboard</string>
+      <string>com.phoenixsolutions.flowerboardhd</string>
+      <string>com.phoenixsolutions.imetalbox</string>
+      <string>com.phoenixsolutions.ruler</string>
+      <string>com.phoenixsolutions.bubblelevel</string>
+      <string>com.phoenixsolutions.surfacelevel</string>
+      <string>com.phoenixsolutions.protractor</string>
+      <string>com.phoenixsolutions.quicksketchfree</string>
+      <string>com.phoenixsolutions.PaperBird</string>
+      <string>com.phoenixsolutions.neonkeyboardfree</string>
+      <string>com.phoenixsolutions.measurenotes</string>
+      <string>com.phoenixsolutions.magnifier</string>
+      <string>com.phoenixsolutions.fractioncalculator</string>
+      <string>com.phoenixsolutions.tipcalculator</string>
+      <string>com.phoenixsolutions.tapecalc</string>
+      <string>com.phoenixsolutions.measurenotes</string>
+      <string>com.phoenixsolutions.stopwatch</string>
+      <string>com.phoenixsolutions.currencyconverter</string>
+    </array>
+    <key>DTSDKBuild</key>
+    <string>17A566</string>
+    <key>NSCameraUsageDescription</key>
+    <string>This lets you use the phone's camera for measuring.</string>
+    <key>CFBundleShortVersionString</key>
+    <string>3.4.4</string>
+    <key>CFBundleSupportedPlatforms</key>
+    <array>
+      <string>iPhoneOS</string>
+    </array>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+    </array>
+    <key>BuildMachineOSBuild</key>
+    <string>18G87</string>
+    <key>DTPlatformBuild</key>
+    <string>17A566</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>MinimumOSVersion</key>
+    <string>10.3</string>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>DTXcodeBuild</key>
+    <string>11A419c</string>
+    <key>CFBundleVersion</key>
+    <string>3.4.4.1</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>This lets you save photos to your Camera Roll.</string>
+    <key>UIAppFonts</key>
+    <array>
+      <string>SnellRoundhand.ttc</string>
+    </array>
+    <key>UIStatusBarHidden</key>
+    <true/>
+    <key>FacebookAppID</key>
+    <string>1601168070181006</string>
+    <key>UILaunchImages</key>
+    <array>
+      <dict>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+        <key>UILaunchImageName</key>
+        <string>LaunchImage-800-Portrait-736h</string>
+        <key>UILaunchImageSize</key>
+        <string>{414, 736}</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>8.0</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageOrientation</key>
+        <string>Landscape</string>
+        <key>UILaunchImageName</key>
+        <string>LaunchImage-800-Landscape-736h</string>
+        <key>UILaunchImageSize</key>
+        <string>{414, 736}</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>8.0</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+        <key>UILaunchImageName</key>
+        <string>LaunchImage-800-667h</string>
+        <key>UILaunchImageSize</key>
+        <string>{375, 667}</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>8.0</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+        <key>UILaunchImageName</key>
+        <string>LaunchImage-700</string>
+        <key>UILaunchImageSize</key>
+        <string>{320, 480}</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>7.0</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+        <key>UILaunchImageName</key>
+        <string>LaunchImage-700-568h</string>
+        <key>UILaunchImageSize</key>
+        <string>{320, 568}</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>7.0</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+        <key>UILaunchImageName</key>
+        <string>LaunchImage-700-Portrait</string>
+        <key>UILaunchImageSize</key>
+        <string>{768, 1024}</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>7.0</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageOrientation</key>
+        <string>Landscape</string>
+        <key>UILaunchImageName</key>
+        <string>LaunchImage-700-Landscape</string>
+        <key>UILaunchImageSize</key>
+        <string>{768, 1024}</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>7.0</string>
+      </dict>
+    </array>
+    <key>UIDeviceFamily</key>
+    <array>
+      <integer>1</integer>
+      <integer>2</integer>
+    </array>
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+    <key>FacebookDisplayName</key>
+    <string>Ruler</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.phoenixsolutions.ruler</string>
+    <key>DTXcode</key>
+    <string>1100</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+      <key>NSAllowsArbitraryLoads</key>
+      <true/>
+    </dict>
+    <key>CFBundleExecutable</key>
+    <string>Ruler</string>
+    <key>CFBundleIcons~ipad</key>
+    <dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>Ruler Icons Set29x29</string>
+          <string>Ruler Icons Set40x40</string>
+          <string>Ruler Icons Set57x57</string>
+          <string>Ruler Icons Set60x60</string>
+          <string>Ruler Icons Set50x50</string>
+          <string>Ruler Icons Set72x72</string>
+          <string>Ruler Icons Set76x76</string>
+          <string>Ruler Icons Set83.5x83.5</string>
+        </array>
+        <key>CFBundleIconName</key>
+        <string>Ruler Icons Set</string>
+      </dict>
+    </dict>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>UIMainStoryboardFile</key>
+    <string>Ruler</string>
+    <key>DTPlatformName</key>
+    <string>iphoneos</string>
+    <key>DTCompiler</key>
+    <string>com.apple.compilers.llvm.clang.1_0</string>
+    <key>DTAppStoreToolsBuild</key>
+    <string>11A1002b</string>
+  </dict>
+</plist>

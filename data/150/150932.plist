@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDisplayName</key>
+	<string>Quickoffice</string>
+	<key>CFBundleExecutable</key>
+	<string>Quickoffice</string>
+	<key>CFBundleIconFile</key>
+	<string>Quickoffice.png</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.quickoffice.quickoffice</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleResourceSpecification</key>
+	<string>ResourceRules.plist</string>
+	<key>CFBundleSignature</key>
+	<string>QOfc</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>iPhoneOS</string>
+	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.quickoffice.mobilefilespro.quickofficedoc</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>quickofficedoc</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1.2.0</string>
+	<key>DTPlatformName</key>
+	<string>iphoneos</string>
+	<key>DTSDKName</key>
+	<string>iphoneos2.1</string>
+	<key>MinimumOSVersion</key>
+	<string>2.1</string>
+	<key>QOAppExternalInfoWebsiteURL</key>
+	<string>http://www.quickoffice.com/quickoffice_iphone/</string>
+	<key>QOAppFullName</key>
+	<string>Quickoffice</string>
+	<key>QOAppIdentifier</key>
+	<string>qo</string>
+	<key>QOAppName</key>
+	<string>Quickoffice</string>
+	<key>SignerIdentity</key>
+	<string>Apple iPhone OS Application Signing</string>
+	<key>UIPrerenderedIcon</key>
+	<true/>
+</dict>
+</plist>

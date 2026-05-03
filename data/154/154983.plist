@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDisplayName</key>
+	<string>Rollercoaster</string>
+	<key>CFBundleExecutable</key>
+	<string>RCR</string>
+	<key>CFBundleIconFile</key>
+	<string>icon.png</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.digitalchocolate.rcr</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleMainMenuFreeLink</key>
+	<string>www.digitalchocolate.com/iphone?utm_source=iphone_75_free&amp;utm_medium=gmgbutton&amp;utm_content=mainmenu&amp;utm_campaign=iphone_75_free</string>
+	<key>CFBundleMainMenuFullLink</key>
+	<string>www.digitalchocolate.com/iphone?utm_source=iphone_75_full&amp;utm_medium=gmgbutton&amp;utm_content=mainmenu&amp;utm_campaign=iphone_75_full</string>
+	<key>CFBundleName</key>
+	<string>RCR</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleResourceSpecification</key>
+	<string>ResourceRules.plist</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleUpsellFreeLink</key>
+	<string>www.digitalchocolate.com/iphone?utm_source=iphone_75_free&amp;utm_medium=gmgbutton&amp;utm_content=upsell&amp;utm_campaign=iphone_75_free</string>
+	<key>CFBundleVersion</key>
+	<string>66</string>
+	<key>CFBundleVolEffect</key>
+	<integer>100</integer>
+	<key>CFBundleVolMusic</key>
+	<integer>30</integer>
+	<key>DTPlatformName</key>
+	<string>iphoneos</string>
+	<key>DTSDKName</key>
+	<string>iphoneos2.2</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>MORE_GAMES</key>
+	<string>http://www.digitalchocolate.com/iphone?utm_source=iphone_1111_full&amp;utm_medium=gmgbutton&amp;utm_content=mainmenu&amp;utm_campaign=iphone_1111_full</string>
+	<key>MinimumOSVersion</key>
+	<string>2.2</string>
+	<key>SignerIdentity</key>
+	<string>Apple iPhone OS Application Signing</string>
+	<key>UIInterfaceOrientation</key>
+	<string>UIInterfaceOrientationLandscapeRight</string>
+	<key>UIPrerenderedIcon</key>
+	<true/>
+	<key>UIStatusBarHidden</key>
+	<true/>
+</dict>
+</plist>

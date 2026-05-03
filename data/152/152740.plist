@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>B2AClassId</key>
+	<data>
+	FqJw0A==
+	</data>
+	<key>CFAccAllowDown</key>
+	<true/>
+	<key>CFAccAllowLeft</key>
+	<true/>
+	<key>CFAccAllowRight</key>
+	<true/>
+	<key>CFAccAllowUp</key>
+	<false/>
+	<key>CFBundleAccBasePitch</key>
+	<string>1</string>
+	<key>CFBundleAccBaseRoll</key>
+	<string>45</string>
+	<key>CFBundleAccDropAcceleration</key>
+	<string>30</string>
+	<key>CFBundleAccDropDramaAngle</key>
+	<string>105</string>
+	<key>CFBundleAccPitchAcceleration</key>
+	<string>5</string>
+	<key>CFBundleAccPitchDeadzone</key>
+	<string>12</string>
+	<key>CFBundleAccRollDeadzone</key>
+	<string>20</string>
+	<key>CFBundleCompany</key>
+	<string>SEGA Moblie</string>
+	<key>CFBundleCopyLeft</key>
+	<string>©SEGA All rights reserved</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>ColumnsDLX</string>
+	<key>CFBundleExecutable</key>
+	<string>ColumnsDeluxe</string>
+	<key>CFBundleIconFile</key>
+	<string>icon.png</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.sega.ColumnsDeluxe</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>ColumnsDeluxe</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleResourceSpecification</key>
+	<string>ResourceRules.plist</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0.26</string>
+	<key>CFBundleVolEffect</key>
+	<integer>100</integer>
+	<key>CFBundleVolMusic</key>
+	<integer>50</integer>
+	<key>DTPlatformName</key>
+	<string>iphoneos</string>
+	<key>DTSDKName</key>
+	<string>(SDK_NAME)</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSMainNibFile</key>
+	<string>MainWindow</string>
+	<key>SignerIdentity</key>
+	<string>Apple iPhone OS Application Signing</string>
+	<key>UIStatusBarHidden</key>
+	<true/>
+</dict>
+</plist>

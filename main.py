@@ -409,11 +409,12 @@ class CacheDB:
         self, baseUrlId: int, entries: 'Iterable[tuple[str, int, str]]'
     ) -> int:
         ''' :entries: must be iterable of `(path_name, filesize, crc32)` '''
+        before = self._db.total_changes
         self._db.executemany('''
         INSERT OR IGNORE INTO idx (base_url, path_name, fsize) VALUES (?,?,?);
         ''', ((baseUrlId, path, size) for path, size, _crc in entries))
         self._db.commit()
-        return self._db.total_changes
+        return self._db.total_changes - before
 
     # Update URL
 
@@ -460,7 +461,7 @@ class CacheDB:
                 version, base_url, path_name, fsize / 1024,
                 image_pk
             FROM idx WHERE done=?
-            ORDER BY tt COLLATE NOCASE, min_os, platform, version;''', [done])
+            ORDER BY tt COLLATE NOCASE, bundle_id, min_os, version;''', [done])
 
     def getUniqueImagePks(self) -> Iterable[tuple[int, int]]:
         ''' Returns (pk, image_pk) for each unique image_pk, excluding known errors (done=4) '''
@@ -531,10 +532,11 @@ class CacheDB:
             self._db.commit()
             return x.rowcount
         elif type == 'add':
-            x1 = self._db.execute('DELETE FROM scrape_queue;')
-            x2 = self._db.execute('DELETE FROM scanned_archives;')
+            before = self._db.total_changes
+            self._db.execute('DELETE FROM scrape_queue;')
+            self._db.execute('DELETE FROM scanned_archives;')
             self._db.commit()
-            return x1.rowcount
+            return self._db.total_changes - before
         return 0
 
     def setError(self, uid: int, *, done: int) -> None:
@@ -576,6 +578,37 @@ class CacheDB:
             version += f' ({v_long})'
         # minOS = [int(x) for x in plist.get('MinimumOSVersion', '0').split('.')]
         raw = plist.get('MinimumOSVersion')
+        if not raw:
+            # Fallback 1: SDK version
+            raw = plist.get('DTPlatformVersion')
+            if not raw:
+                # Fallback 2: SDK Name
+                sdk = plist.get('DTSDKName')
+                if sdk and isinstance(sdk, str):
+                    raw = ''.join(c for c in sdk if c.isdigit() or c == '.')
+            
+            if not raw or raw.strip() == "" or raw == ".":
+                # Fallback 3: Try to extract version from filename/path
+                # Patterns: iOS_2.0, os30, iOS 3.1, iPhoneOS 4.2
+                db = CacheDB()
+                path = db._db.execute("SELECT path_name FROM idx WHERE pk=?", [uid]).fetchone()[0]
+                del db
+                
+                version_match = re.search(r'iOS[ _-]?(\d+(?:\.\d+)*)', path, re.IGNORECASE)
+                if version_match:
+                    raw = version_match.group(1)
+                
+                if not version_match or raw == "0.0" or raw == "0":
+                    version_match = re.search(r'os(\d)(\d)?', path, re.IGNORECASE)
+                    if version_match:
+                        raw = version_match.group(1) + ('.' + version_match.group(2) if version_match.group(2) else '.0')
+                    else:
+                        raw = "2.0"
+                
+                # Final guard: if we extracted something that looks like 0.0 or 0
+                if raw == "0.0" or raw == "0":
+                    raw = "2.0"
+
         if raw is not None:
             raw = str(raw)
 
@@ -606,7 +639,7 @@ class CacheDB:
                 LIMIT 1''', [bundleId, version]).fetchone()
             if res:
                 potential_img_pk = res[0]
-                if diskPath(potential_img_pk, '.jpg').exists():
+                if potential_img_pk != uid and diskPath(potential_img_pk, '.jpg').exists():
                     image_pk = potential_img_pk
                     # If we found a duplicate, we can delete our own image if it exists
                     for ext in ['.jpg', '.png']:
@@ -654,6 +687,9 @@ def addNewUrl(url: str, resume: bool = False) -> None:
 
     json_file = pathToListJson(archiveId)
     entries = downloadListArchiveOrg(baseUrlId, archiveId, json_file, resume=resume)
+    if entries is None:
+        print(f'[ERROR] Could not fetch metadata for {archiveId}. Aborting.')
+        return
     inserted = DB.insertIpaUrls(baseUrlId, entries)
     
     # If successful, remove from queue
@@ -725,21 +761,33 @@ def getNestedIpasViaViewArchive(url: str, archivePath: str) -> 'list[tuple[str, 
 
 def downloadListArchiveOrg(
     baseUrlId: int, archiveId: str, json_file: Path, *, force: bool = False, resume: bool = False
-) -> 'list[tuple[str, int, str]]':
-    ''' :returns: List of `(path_name, file_size, crc32)` '''
+) -> 'list[tuple[str, int, str]]|None':
+    ''' :returns: List of `(path_name, file_size, crc32)` or None on failure '''
     # store json for later
     if force or not json_file.exists():
         json_file.parent.mkdir(exist_ok=True)
         print(f'load: {archiveId}')
         req = Request(f'https://archive.org/metadata/{archiveId}/files')
         req.add_header('Accept-Encoding', 'deflate, gzip')
-        with urlopen(req) as page:
-            with open(json_file, 'wb') as fp:
-                while True:
-                    block = page.read(8096)
-                    if not block:
-                        break
-                    fp.write(block)
+        
+        import time
+        for attempt in range(3):
+            try:
+                with urlopen(req) as page:
+                    with open(json_file, 'wb') as fp:
+                        while True:
+                            block = page.read(8096)
+                            if not block:
+                                break
+                            fp.write(block)
+                break # Success
+            except Exception as e:
+                if attempt == 2:
+                    print(f'[ERROR] Failed to fetch metadata for {archiveId} after 3 attempts: {e}', file=stderr)
+                    return None
+                print(f'[WARN] Attempt {attempt+1} failed for {archiveId}: {e}. Retrying...', file=stderr)
+                time.sleep(1)
+
     # read saved json from disk
     try:
         with gzip.open(json_file, 'rb') as fp:
@@ -816,8 +864,16 @@ def updateUrl(url_or_uid: 'str|int', proc_i: int, proc_total: int):
 
     old_json_file = pathToListJson(archiveId)
     new_json_file = pathToListJson(archiveId, tmp=True)
-    old_entries = set(downloadListArchiveOrg(baseUrlId, archiveId, old_json_file, resume=True))
-    new_entries = set(downloadListArchiveOrg(baseUrlId, archiveId, new_json_file, resume=True))
+    old_entries_raw = downloadListArchiveOrg(baseUrlId, archiveId, old_json_file, resume=True)
+    new_entries_raw = downloadListArchiveOrg(baseUrlId, archiveId, new_json_file, resume=True)
+    
+    if old_entries_raw is None or new_entries_raw is None:
+        print(f'  [SKIP] Could not fetch metadata for {archiveId}. Skipping update.')
+        DB.markBaseUrlUpdated(baseUrlId)
+        return
+
+    old_entries = set(old_entries_raw)
+    new_entries = set(new_entries_raw)
     old_diff = old_entries - new_entries
     new_diff = new_entries - old_entries
 
@@ -915,6 +971,7 @@ def _procSinglePendingWrapper(args):
 def procSinglePending(
     processed: int, pending: int, uid: int, base_url: str, path_name
 ) -> 'tuple[int, bool]':
+    # ... (code truncated)
     full_path = path_name
     display_path = path_name.replace(NESTED_SEP, ' -> ')
     print(f'[{processed}|{pending} queued]: load[{uid}] {display_path}')
@@ -979,9 +1036,9 @@ def loadIpa(uid: int, url: str, *,
     # RemoteZip does not work on these via the Archive.org bridge.
     if inner_path and not url.lower().endswith('.zip'):
         direct_inner_url = f"{url}/{quote(inner_path)}"
-        with tempfile.NamedTemporaryFile(suffix='.ipa') as tmp:
-            print(f"  downloading inner ipa from bridge: {inner_path}")
-            try:
+        try:
+            with tempfile.NamedTemporaryFile(suffix='.ipa') as tmp:
+                print(f"  downloading inner ipa from bridge: {inner_path}")
                 req = Request(direct_inner_url, headers={'User-Agent': 'Mozilla/5.0'})
                 with urlopen(req) as response:
                     data = response.read(1024)
@@ -997,52 +1054,46 @@ def loadIpa(uid: int, url: str, *,
                             f.write(chunk)
                 
                 import zipfile
-                with zipfile.ZipFile(tmp.name) as zip:
-                    return _processIpaZip(uid, zip, basename, img_path, plist_path, image_only)
-            except Exception as e:
-                print(f"ERROR: [{uid}] could not download/process inner ipa: {e}", file=stderr)
-                return False
+                try:
+                    with zipfile.ZipFile(tmp.name) as zip:
+                        return _processIpaZip(uid, zip, basename, img_path, plist_path, image_only)
+                except zipfile.BadZipFile:
+                    print(f"ERROR: [{uid}] downloaded file is not a valid zip", file=stderr)
+                    return False
+        except Exception as e:
+            print(f"ERROR: [{uid}] could not download/process inner ipa: {e}", file=stderr)
+            return False
 
     # Handle ZIP archives (RemoteZip is fast here)
-    import time
-    last_err = None
-    for attempt in range(3):
-        try:
-            with RemoteZip(url) as outer_zip:
-                if inner_path:
-                    # Open nested IPA from outer ZIP and save to temp file to ensure seekability
-                    import zipfile
-                    with tempfile.NamedTemporaryFile(suffix='.ipa') as tmp:
-                        print(f"  extracting nested ipa to temp: {inner_path}")
-                        with outer_zip.open(inner_path) as src:
-                            while True:
-                                buf = src.read(1024*1024)
-                                if not buf: break
-                                tmp.write(buf)
-                        tmp.flush()
-                        with zipfile.ZipFile(tmp.name) as zip:
-                            return _processIpaZip(uid, zip, basename, img_path, plist_path, image_only)
-                else:
-                    # Regular direct IPA
-                    if USE_ZIP_FILESIZE:
-                        filesize = outer_zip.fp.tell() if outer_zip.fp else 0
-                        with open(basename.with_suffix('.size'), 'w') as fp:
-                            fp.write(str(filesize))
-                    return _processIpaZip(uid, outer_zip, basename, img_path, plist_path, image_only)
-        except Exception as e:
-            last_err = e
-            if '404' in str(e): break # Don't retry 404
-            
-            # Special handling for BadZipFile to help diagnose
-            if "File is not a zip file" in str(e):
-                print(f"  [ERROR] [{uid}] BadZipFile: {url} is not a valid zip.", file=stderr)
-                break
-
-            print(f"  [WARN] connect attempt {attempt+1} failed for {uid}: {e}", file=stderr)
-            time.sleep(1)
-    
-    if last_err:
-        print(f"ERROR: [{uid}] connection failed after retries: {last_err}", file=stderr)
+    try:
+        with RemoteZip(url) as outer_zip:
+            if inner_path:
+                # Open nested IPA from outer ZIP and save to temp file to ensure seekability
+                import zipfile
+                with tempfile.NamedTemporaryFile(suffix='.ipa') as tmp:
+                    print(f"  extracting nested ipa to temp: {inner_path}")
+                    with outer_zip.open(inner_path) as src:
+                        while True:
+                            buf = src.read(1024*1024)
+                            if not buf: break
+                            tmp.write(buf)
+                    tmp.flush()
+                    with zipfile.ZipFile(tmp.name) as zip:
+                        return _processIpaZip(uid, zip, basename, img_path, plist_path, image_only)
+            else:
+                # Regular direct IPA
+                if USE_ZIP_FILESIZE:
+                    filesize = outer_zip.fp.tell() if outer_zip.fp else 0
+                    with open(basename.with_suffix('.size'), 'w') as fp:
+                        fp.write(str(filesize))
+                return _processIpaZip(uid, outer_zip, basename, img_path, plist_path, image_only)
+    except Exception as e:
+        if '404' in str(e):
+            print(f"ERROR: [{uid}] File not found (404): {url}", file=stderr)
+        elif "File is not a zip file" in str(e):
+            print(f"  [ERROR] [{uid}] BadZipFile: {url} is not a valid zip.", file=stderr)
+        else:
+            print(f"ERROR: [{uid}] connection failed: {e}", file=stderr)
     return False
 
 
@@ -1051,7 +1102,19 @@ def _processIpaZip(uid: int, zip, basename, img_path, plist_path, image_only) ->
     artwork = False
     zip_listing = zip.infolist()
     
-    # First pass: find Info.plist AND check for duplicates
+    # First pass: find iTunesArtwork (usually high res)
+    for entry in zip_listing:
+        fn = entry.filename.lstrip('/')
+        if fn.lower() == 'itunesartwork' and entry.file_size > 0:
+            extractZipEntry(zip, entry, img_path)
+            if os.path.exists(img_path) and os.path.getsize(img_path) > 0:
+                if processImage(img_path):
+                    artwork = True
+                    break
+                else:
+                    if img_path.exists(): img_path.unlink()
+
+    # Second pass: find Info.plist AND check for duplicates if artwork not found via iTunesArtwork
     for entry in zip_listing:
         fn = entry.filename.lstrip('/')
 
@@ -1061,7 +1124,7 @@ def _processIpaZip(uid: int, zip, basename, img_path, plist_path, image_only) ->
                 app_prefix = plist_match.group(1)
                 extractZipEntry(zip, entry, plist_path)
                 
-                # Deduplication check: if we already have this app's icon, don't download it again
+                # Deduplication check
                 if plist_path.exists():
                     try:
                         with open(plist_path, 'rb') as fp:
@@ -1074,32 +1137,21 @@ def _processIpaZip(uid: int, zip, basename, img_path, plist_path, image_only) ->
                             db = CacheDB()
                             existing_img_pk = db.hasImage(bid, ver)
                             if existing_img_pk:
-                                print(f'  reusing image from {existing_img_pk}')
-                                artwork = True # Skip further icon extraction
-                                if image_only: return True # Optimization: if only image requested, we are done
+                                if artwork:
+                                    print(f'  reusing image from {existing_img_pk}')
+                                    if img_path.exists(): img_path.unlink()
+                                else:
+                                    print(f'  reusing image from {existing_img_pk}')
+                                    artwork = True
+                                
+                                if image_only: 
+                                    del db
+                                    return True
                             del db
                     except:
                         pass
-                
-                if image_only and not artwork:
-                    pass # Continue to find icon
-                elif image_only and artwork:
-                    return True
 
-    # Second pass: extract iTunesArtwork if needed
-    if not artwork:
-        for entry in zip_listing:
-            fn = entry.filename.lstrip('/')
-            if fn.lower() == 'itunesartwork' and entry.file_size > 0:
-                extractZipEntry(zip, entry, img_path)
-                if os.path.exists(img_path) and os.path.getsize(img_path) > 0:
-                    if processImage(img_path):
-                        artwork = True
-                        break
-                    else:
-                        img_path.unlink() # Cleanup
-
-    # if no iTunesArtwork found, load file referenced in plist
+    # Third pass: if no iTunesArtwork, load file referenced in plist
     if not artwork and app_prefix and plist_path.exists():
         with open(plist_path, 'rb') as fp:
             try:
@@ -1185,13 +1237,8 @@ def processImage(png_path: Path) -> bool:
             if img.mode != 'RGB':
                 img = img.convert('RGB')
             
-            # Downscale if larger than 128x128
-            MAX_SIZE = (128, 128)
-            if img.width > MAX_SIZE[0] or img.height > MAX_SIZE[1]:
-                img.thumbnail(MAX_SIZE, Image.Resampling.LANCZOS)
-            
-            # Save optimized JPEG
-            img.save(jpg_path, 'JPEG', quality=80, optimize=True)
+            # Save optimized JPEG at high quality
+            img.save(jpg_path, 'JPEG', quality=95, optimize=True)
             os.chmod(jpg_path, 0o644)
             
         png_path.unlink() # Remove PNG after successful conversion
@@ -1215,13 +1262,15 @@ def expandImageName(
     if not prefix.endswith('/'):
         prefix += '/'
     
-    # Normalize icon names
+    # Normalize icon names and prioritize high-res versions
     search_names = []
-    for name in iconList + ['Icon', 'icon']:
-        if not name: continue
-        search_names.append(name.lower())
-        if not name.lower().endswith('.png'):
-            search_names.append(name.lower() + '.png')
+    # Resolution priority: 3x, 2x, then standard
+    for suffix in ['@3x', '@2x', '']:
+        for name in iconList + ['Icon', 'icon']:
+            if not name: continue
+            base = name[:-4] if name.lower().endswith('.png') else name
+            search_names.append(f"{base}{suffix}".lower())
+            search_names.append(f"{base}{suffix}.png".lower())
 
     # 1. Try case-insensitive exact matches
     for x in zip_listing:
@@ -1326,6 +1375,23 @@ def iconNameFromPlist(plist: dict) -> 'list[str]':
 # [json] Export to json
 ###############################################
 
+def parse_version(v: str) -> list:
+    ''' Returns a list of integers for version comparison. '''
+    if not v:
+        return []
+    # Handle version strings like "1.2.3 (456)" or "1.2.3-beta"
+    v = str(v).split(' ')[0].split('-')[0]
+    return [int(x) for x in re.findall(r'\d+', v)]
+
+
+def normalize_title(t: str) -> str:
+    ''' Returns a normalized title for better grouping. '''
+    if not t:
+        return ''
+    # Remove all non-alphanumeric characters and lowercase
+    return re.sub(r'[^a-z0-9]', '', t.lower())
+
+
 def export_json():
     DB = CacheDB()
     url_map = DB.jsonUrlMap()
@@ -1335,36 +1401,52 @@ def export_json():
     url_map[maxUrlId] = '---'
     submap = {}
     total = DB.count(done=1)
+    
+    entries = []
+    print(f'Collecting {total} entries...')
+    for i, entry in enumerate(DB.enumJsonIpa(done=1)):
+        if i % 1000 == 0:
+            print(f'\rcollected [{i}/{total}]', end='')
+        
+        # Normalize path: replace ## with / for the JSON export
+        entry = list(entry)
+        path_name = entry[7].replace(NESTED_SEP, '/')
+        entry[7] = path_name
+
+        # if path_name is in a subdirectory, reindex URLs
+        if '/' in entry[7]:
+            baseurl = url_map[entry[6]]
+            sub_dir, sub_file = entry[7].rsplit('/', 1)
+            newurl = baseurl + '/' + sub_dir
+            subIdx = submap.get(newurl, None)
+            if subIdx is None:
+                maxUrlId += 1
+                submap[newurl] = maxUrlId
+                subIdx = maxUrlId
+            entry[6] = subIdx
+            entry[7] = sub_file
+        
+        entries.append(entry)
+    print(f'\rcollected [{total}/{total}] done.')
+
+    # Custom sort: Normalized Title -> Bundle ID -> Version -> Platform
+    print('Sorting entries...')
+    entries.sort(key=lambda x: (
+        normalize_title(x[3] or ''),
+        x[4] or '',
+        parse_version(x[5]),
+        x[1] or 0
+    ))
+
+    print(f'Writing {CACHE_DIR / "ipa.json"}...')
     with open(CACHE_DIR / 'ipa.json', 'w') as fp:
         fp.write('[')
-        for i, entry in enumerate(DB.enumJsonIpa(done=1)):
-            if i % 113 == 0:
-                print(f'\rprocessing [{i}/{total}]', end='')
-            
-            # Normalize path: replace ## with / for the JSON export
-            entry = list(entry)
-            path_name = entry[7].replace(NESTED_SEP, '/')
-            entry[7] = path_name
-
-            # if path_name is in a subdirectory, reindex URLs
-            if '/' in entry[7]:
-                baseurl = url_map[entry[6]]
-                sub_dir, sub_file = entry[7].rsplit('/', 1)
-                newurl = baseurl + '/' + sub_dir
-                subIdx = submap.get(newurl, None)
-                if subIdx is None:
-                    maxUrlId += 1
-                    submap[newurl] = maxUrlId
-                    subIdx = maxUrlId
-                entry = list(entry)
-                entry[6] = subIdx
-                entry[7] = sub_file
-
-            fp.write(json.dumps(entry, separators=(',', ':')) + ',\n')
-        fp.seek(max(fp.tell(), 3) - 2)
+        for i, entry in enumerate(entries):
+            fp.write(json.dumps(entry, separators=(',', ':')))
+            if i < len(entries) - 1:
+                fp.write(',\n')
         fp.write(']')
-        print('\r', end='')
-    print(f'write ipa.json: {total} entries')
+    print(f'write ipa.json: {len(entries)} entries')
 
     for newurl, newidx in submap.items():
         url_map[newidx] = newurl

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Pirate Battles</string>
+	<key>CFBundleExecutable</key>
+	<string>shipbattles</string>
+	<key>CFBundleIconFile</key>
+	<string>icon.png</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.digitalchocolate.shipbattles</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Pirate Ship Battles</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleResourceSpecification</key>
+	<string>ResourceRules.plist</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>iPhoneOS</string>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1.0.7</string>
+	<key>DCFlurryKey</key>
+	<string>1RTKP1LALNBKYLBN3IWL</string>
+	<key>DCGmgUrl</key>
+	<string>http://www.digitalchocolate.com/iphone?utm_source=iphone_1105_full&amp;utm_medium=gmgbutton&amp;utm_content=mainmenu&amp;utm_campaign=iphone_1105_full</string>
+	<key>DCUpsellUrl</key>
+	<string>http://www.digitalchocolate.com/iphone/</string>
+	<key>DTPlatformName</key>
+	<string>iphoneos</string>
+	<key>DTSDKName</key>
+	<string>iphoneos3.0</string>
+	<key>ICRM_GAME_ID</key>
+	<string>iSkull_Full</string>
+	<key>ICRM_GAME_VERSION</key>
+	<string>1.0.7</string>
+	<key>ICRM_URL</key>
+	<string>http://icrm.digitalchocolate.com</string>
+	<key>MinimumOSVersion</key>
+	<string>2.1</string>
+	<key>UIInterfaceOrientation</key>
+	<string>UIInterfaceOrientationLandscapeRight</string>
+	<key>UIPrerenderedIcon</key>
+	<string>true</string>
+	<key>UIStatusBarHidden</key>
+	<true/>
+</dict>
+</plist>

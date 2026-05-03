@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDisplayName</key>
+	<string>Budapest</string>
+	<key>CFBundleExecutable</key>
+	<string>City Guide</string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>icon.png</string>
+		<string>icon4.png</string>
+	</array>
+	<key>CFBundleIdentifier</key>
+	<string>com.lonelyplanet.cityguide.budapest</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>City Guide</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleResourceSpecification</key>
+	<string>ResourceRules.plist</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>iPhoneOS</string>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>2.0.2</string>
+	<key>DTCompiler</key>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<key>DTPlatformName</key>
+	<string>iphoneos</string>
+	<key>DTPlatformVersion</key>
+	<string>4.0 GM</string>
+	<key>DTSDKName</key>
+	<string>iphoneos4.0</string>
+	<key>DTXcode</key>
+	<string>0323</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>MinimumOSVersion</key>
+	<string>4.0</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>LonelyPlanet.bundle/en.lproj/fonts/LPBentonSansMedium-Regular.ttf</string>
+		<string>LonelyPlanet.bundle/en.lproj/fonts/LPBentonSans-Bold.ttf</string>
+		<string>LonelyPlanet.bundle/en.lproj/fonts/LPBentonSans-BoldItalic.ttf</string>
+		<string>LonelyPlanet.bundle/en.lproj/fonts/LPBentonSans-Italic.ttf</string>
+		<string>LonelyPlanet.bundle/en.lproj/fonts/LPBentonSans-Regular.ttf</string>
+	</array>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>1</integer>
+	</array>
+	<key>UIPrerenderedIcon</key>
+	<true/>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleBlackOpaque</string>
+	<key>sku</key>
+	<string>content</string>
+</dict>
+</plist>

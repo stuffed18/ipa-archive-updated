@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+    <key>DTPlatformVersion</key>
+    <string>10.0</string>
+    <key>Full screen Cross Promotion AD Tablet</key>
+    <string>7115118e20604bb89f3c9a8b01733432</string>
+    <key>Game Start Vid Ad ID Tablet</key>
+    <string>d3d4249f7a674a729f43e1614c60edfc</string>
+    <key>DTSDKBuild</key>
+    <string>14A345</string>
+    <key>CFBundleIcons~ipad</key>
+    <dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>AppIcon57x57</string>
+          <string>AppIcon60x60</string>
+          <string>AppIcon72x72</string>
+          <string>AppIcon76x76</string>
+          <string>AppIcon83.5x83.5</string>
+        </array>
+        <key>UIPrerenderedIcon</key>
+        <true/>
+      </dict>
+    </dict>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>CFBundleDisplayName</key>
+    <string></string>
+    <key>Game Start Native Ad ID Tablet</key>
+    <string>8c4d1d0d3914476b9e6ea8d903ffaca4</string>
+    <key>DTXcodeBuild</key>
+    <string>8A218a</string>
+    <key>CFBundleLocalizations</key>
+    <array>
+      <string>en</string>
+      <string>fr</string>
+      <string>it</string>
+      <string>de</string>
+      <string>es</string>
+      <string>ja</string>
+    </array>
+    <key>Game Start Native Ad ID</key>
+    <string>3714596ead394357b4ba48da78c35f35</string>
+    <key>Between Zone Ad ID</key>
+    <string>bef2723e3cfe49d7a8d0d3f6e20432ce</string>
+    <key>Full screen Cross Promotion AD</key>
+    <string>f38d0fd2965d44c09eba0aad88bc1c45</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.sega.soniccd</string>
+    <key>Unity Ads Zone</key>
+    <string>video</string>
+    <key>LSApplicationCategoryType</key>
+    <string></string>
+    <key>UIDeviceFamily</key>
+    <array>
+      <integer>1</integer>
+      <integer>2</integer>
+    </array>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>Game Start Vid Ad ID</key>
+    <string>bef2723e3cfe49d7a8d0d3f6e20432ce</string>
+    <key>CFBundleIcons</key>
+    <dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>AppIcon57x57</string>
+          <string>AppIcon60x60</string>
+        </array>
+        <key>UIPrerenderedIcon</key>
+        <true/>
+      </dict>
+    </dict>
+    <key>CFBundleSupportedPlatforms</key>
+    <array>
+      <string>iPhoneOS</string>
+    </array>
+    <key>UIMainStoryboardFile</key>
+    <string>Main</string>
+    <key>UIRequiresFullScreen</key>
+    <true/>
+    <key>MinimumOSVersion</key>
+    <string>8.0</string>
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>Advertisement would like to use bluetooth.</string>
+    <key>CFBundleName</key>
+    <string>Sonic CD</string>
+    <key>Between Zone Ad ID Tablet</key>
+    <string>d3d4249f7a674a729f43e1614c60edfc</string>
+    <key>CFBundleShortVersionString</key>
+    <string>2.0.0</string>
+    <key>UILaunchImageFile</key>
+    <string>LaunchImage</string>
+    <key>Pause Ad ID</key>
+    <string>3714596ead394357b4ba48da78c35f35</string>
+    <key>UIRequiredDeviceCapabilities</key>
+    <array>
+      <string>armv7</string>
+      <string>gamekit</string>
+    </array>
+    <key>UIAppFonts</key>
+    <array>
+      <string>Pixeleris.ttf</string>
+      <string>RetroComputer.ttf</string>
+    </array>
+    <key>UIStatusBarHidden</key>
+    <true/>
+    <key>UIViewControllerBasedStatusBarAppearance</key>
+    <false/>
+    <key>UILaunchImages</key>
+    <array>
+      <dict>
+        <key>UILaunchImageSize</key>
+        <string>{320, 480}</string>
+        <key>UILaunchImageName</key>
+        <string>LaunchImage-700</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>7.0</string>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageSize</key>
+        <string>{320, 568}</string>
+        <key>UILaunchImageName</key>
+        <string>LaunchImage-700-568h</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>7.0</string>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageSize</key>
+        <string>{768, 1024}</string>
+        <key>UILaunchImageName</key>
+        <string>LaunchImage-700-Landscape</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>7.0</string>
+        <key>UILaunchImageOrientation</key>
+        <string>Landscape</string>
+      </dict>
+    </array>
+    <key>Pause Ad ID Tablet</key>
+    <string>8c4d1d0d3914476b9e6ea8d903ffaca4</string>
+    <key>CFBundleExecutable</key>
+    <string>Sonic CD</string>
+    <key>UISupportedInterfaceOrientations~ipad</key>
+    <array>
+      <string>UIInterfaceOrientationLandscapeLeft</string>
+      <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <key>BuildMachineOSBuild</key>
+    <string>16A323</string>
+    <key>NSCalendarsUsageDescription</key>
+    <string>Advertisement would like to create a calendar event.</string>
+    <key>Unity App ID</key>
+    <string>128546</string>
+    <key>DTPlatformName</key>
+    <string>iphoneos</string>
+    <key>CFBundleVersion</key>
+    <string>2.0.0.1</string>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>DTCompiler</key>
+    <string>com.apple.compilers.llvm.clang.1_0</string>
+    <key>DTSDKName</key>
+    <string>iphoneos10.0</string>
+    <key>Fabric</key>
+    <dict>
+      <key>Kits</key>
+      <array>
+        <dict>
+          <key>KitName</key>
+          <string>Crashlytics</string>
+          <key>KitInfo</key>
+          <dict/>
+        </dict>
+      </array>
+      <key>APIKey</key>
+      <string>8d8830cc0741ef903514ddf70c07889680c63f46</string>
+    </dict>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+      <key>NSAllowsArbitraryLoads</key>
+      <true/>
+    </dict>
+    <key>DTPlatformBuild</key>
+    <string>14A345</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Advertisement would like to store a photo.</string>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+      <string>UIInterfaceOrientationLandscapeLeft</string>
+      <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <key>DTXcode</key>
+    <string>0800</string>
+  </dict>
+</plist>

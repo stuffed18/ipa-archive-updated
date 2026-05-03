@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>DTCompiler</key>
+    <string>com.apple.compilers.llvm.clang.1_0</string>
+    <key>UIRequiredDeviceCapabilities</key>
+    <array>
+      <string>arm64</string>
+    </array>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>UISupportedInterfaceOrientations~ipad</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+      <string>UIInterfaceOrientationPortraitUpsideDown</string>
+      <string>UIInterfaceOrientationLandscapeLeft</string>
+      <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <key>DTPlatformVersion</key>
+    <string>13.2</string>
+    <key>NSUserActivityTypes</key>
+    <array>
+      <string>RunCodeIntent</string>
+      <string>RunScriptIntent</string>
+      <string>ch.marcela.ada.Pyto.script</string>
+    </array>
+    <key>CFBundleName</key>
+    <string>Pyto</string>
+    <key>DTSDKName</key>
+    <string>iphoneos13.2</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Allow photo library usage if you want to allow scripts accessing to it. The app itself doesn't require photo library access.</string>
+    <key>UISupportsDocumentBrowser</key>
+    <true/>
+    <key>CFBundleIcons</key>
+    <dict>
+      <key>CFBundleAlternateIcons</key>
+      <dict>
+        <key>Dark 3</key>
+        <dict>
+          <key>CFBundleIconFiles</key>
+          <array>
+            <string>Dark 3</string>
+          </array>
+          <key>UIPrerenderedIcon</key>
+          <false/>
+        </dict>
+        <key>Light 4</key>
+        <dict>
+          <key>CFBundleIconFiles</key>
+          <array>
+            <string>Light 4</string>
+          </array>
+          <key>UIPrerenderedIcon</key>
+          <false/>
+        </dict>
+        <key>Dark 2</key>
+        <dict>
+          <key>CFBundleIconFiles</key>
+          <array>
+            <string>Dark 2</string>
+          </array>
+          <key>UIPrerenderedIcon</key>
+          <false/>
+        </dict>
+        <key>Dark 7</key>
+        <dict>
+          <key>CFBundleIconFiles</key>
+          <array>
+            <string>Dark 7</string>
+          </array>
+          <key>UIPrerenderedIcon</key>
+          <false/>
+        </dict>
+        <key>Dark</key>
+        <dict>
+          <key>CFBundleIconFiles</key>
+          <array>
+            <string>Dark</string>
+          </array>
+          <key>UIPrerenderedIcon</key>
+          <false/>
+        </dict>
+        <key>Light 6</key>
+        <dict>
+          <key>CFBundleIconFiles</key>
+          <array>
+            <string>Light 6</string>
+          </array>
+          <key>UIPrerenderedIcon</key>
+          <false/>
+        </dict>
+        <key>Light</key>
+        <dict>
+          <key>CFBundleIconFiles</key>
+          <array>
+            <string>Light</string>
+          </array>
+          <key>UIPrerenderedIcon</key>
+          <false/>
+        </dict>
+        <key>Dark 6</key>
+        <dict>
+          <key>CFBundleIconFiles</key>
+          <array>
+            <string>Dark 6</string>
+          </array>
+          <key>UIPrerenderedIcon</key>
+          <false/>
+        </dict>
+        <key>Light 3</key>
+        <dict>
+          <key>CFBundleIconFiles</key>
+          <array>
+            <string>Light 3</string>
+          </array>
+          <key>UIPrerenderedIcon</key>
+          <false/>
+        </dict>
+        <key>Stripes</key>
+        <dict>
+          <key>CFBundleIconFiles</key>
+          <array>
+            <string>Stripes</string>
+          </array>
+          <key>UIPrerenderedIcon</key>
+          <false/>
+        </dict>
+        <key>Dark 5</key>
+        <dict>
+          <key>CFBundleIconFiles</key>
+          <array>
+            <string>Dark 5</string>
+          </array>
+          <key>UIPrerenderedIcon</key>
+          <false/>
+        </dict>
+        <key>Light 5</key>
+        <dict>
+          <key>CFBundleIconFiles</key>
+          <array>
+            <string>Light 5</string>
+          </array>
+          <key>UIPrerenderedIcon</key>
+          <false/>
+        </dict>
+        <key>Type</key>
+        <dict>
+          <key>CFBundleIconFiles</key>
+          <array>
+            <string>Type</string>
+          </array>
+          <key>UIPrerenderedIcon</key>
+          <false/>
+        </dict>
+        <key>Dark 4</key>
+        <dict>
+          <key>CFBundleIconFiles</key>
+          <array>
+            <string>Dark 4</string>
+          </array>
+          <key>UIPrerenderedIcon</key>
+          <false/>
+        </dict>
+        <key>Light 2</key>
+        <dict>
+          <key>CFBundleIconFiles</key>
+          <array>
+            <string>Light 2</string>
+          </array>
+          <key>UIPrerenderedIcon</key>
+          <false/>
+        </dict>
+      </dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>AppIcon60x60</string>
+        </array>
+        <key>CFBundleIconName</key>
+        <string>AppIcon</string>
+      </dict>
+    </dict>
+    <key>UIStatusBarStyle</key>
+    <string>UIStatusBarStyleDefault</string>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+      <string>pisth</string>
+    </array>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Scripts can access location.</string>
+    <key>CFBundleDocumentTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleTypeName</key>
+        <string>Python Script</string>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+        <key>CFBundleTypeIconFiles</key>
+        <array/>
+        <key>LSItemContentTypes</key>
+        <array>
+          <string>public.python-script</string>
+        </array>
+        <key>LSHandlerRank</key>
+        <string>Owner</string>
+      </dict>
+    </array>
+    <key>DTSDKBuild</key>
+    <string>17B102</string>
+    <key>NSCameraUsageDescription</key>
+    <string>Allow camera usage if you want to allow scripts accessing to it. The app itself doesn't require photo library access.</string>
+    <key>CFBundleShortVersionString</key>
+    <string>11.3.1</string>
+    <key>CFBundleSupportedPlatforms</key>
+    <array>
+      <string>iPhoneOS</string>
+    </array>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+      <string>UIInterfaceOrientationLandscapeLeft</string>
+      <string>UIInterfaceOrientationLandscapeRight</string>
+      <string>UIInterfaceOrientationPortrait</string>
+      <string>UIInterfaceOrientationPortraitUpsideDown</string>
+    </array>
+    <key>BuildMachineOSBuild</key>
+    <string>19A558d</string>
+    <key>DTPlatformBuild</key>
+    <string>17B102</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>DTXcodeBuild</key>
+    <string>11B53</string>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>MinimumOSVersion</key>
+    <string>12.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>Allow photo library usage if you want to allow scripts accessing to it or if you want to save Matplotlib figures. The app itself doesn't require photo library access.</string>
+    <key>NSUbiquitousContainers</key>
+    <dict>
+      <key>iCloud.ch.marcela.ada.Pyto</key>
+      <dict>
+        <key>NSUbiquitousContainerSupportedFolderLevels</key>
+        <string>Any</string>
+        <key>NSUbiquitousContainerName</key>
+        <string>Pyto</string>
+        <key>NSUbiquitousContainerIsDocumentScopePublic</key>
+        <true/>
+      </dict>
+    </dict>
+    <key>UIFileSharingEnabled</key>
+    <true/>
+    <key>UIStatusBarHidden</key>
+    <false/>
+    <key>UIDeviceFamily</key>
+    <array>
+      <integer>1</integer>
+      <integer>2</integer>
+    </array>
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+    <key>CFBundleIdentifier</key>
+    <string>ch.marcela.ada.Pyto</string>
+    <key>UIApplicationSceneManifest</key>
+    <dict>
+      <key>UIApplicationSupportsMultipleScenes</key>
+      <true/>
+      <key>UISceneConfigurations</key>
+      <dict>
+        <key>UIWindowSceneSessionRoleApplication</key>
+        <array>
+          <dict>
+            <key>UISceneConfigurationName</key>
+            <string>Document Browser</string>
+            <key>UISceneDelegateClassName</key>
+            <string>Pyto.SceneDelegate</string>
+            <key>UISceneStoryboardFile</key>
+            <string>Main</string>
+            <key>UILaunchStoryboardName</key>
+            <string>LaunchScreen</string>
+          </dict>
+        </array>
+      </dict>
+    </dict>
+    <key>DTXcode</key>
+    <string>1120</string>
+    <key>CFBundleExecutable</key>
+    <string>Pyto</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+      <key>NSAllowsArbitraryLoads</key>
+      <true/>
+    </dict>
+    <key>CFBundleIcons~ipad</key>
+    <dict>
+      <key>CFBundleAlternateIcons</key>
+      <dict>
+        <key>Dark 3</key>
+        <dict>
+          <key>CFBundleIconFiles</key>
+          <array>
+            <string>Dark 3</string>
+          </array>
+          <key>UIPrerenderedIcon</key>
+          <false/>
+        </dict>
+        <key>Light 4</key>
+        <dict>
+          <key>CFBundleIconFiles</key>
+          <array>
+            <string>Light 4</string>
+          </array>
+          <key>UIPrerenderedIcon</key>
+          <false/>
+        </dict>
+        <key>Dark 2</key>
+        <dict>
+          <key>CFBundleIconFiles</key>
+          <array>
+            <string>Dark 2</string>
+          </array>
+          <key>UIPrerenderedIcon</key>
+          <false/>
+        </dict>
+        <key>Dark 7</key>
+        <dict>
+          <key>CFBundleIconFiles</key>
+          <array>
+            <string>Dark 7</string>
+          </array>
+          <key>UIPrerenderedIcon</key>
+          <false/>
+        </dict>
+        <key>Dark</key>
+        <dict>
+          <key>CFBundleIconFiles</key>
+          <array>
+            <string>Dark</string>
+          </array>
+          <key>UIPrerenderedIcon</key>
+          <false/>
+        </dict>
+        <key>Light 6</key>
+        <dict>
+          <key>CFBundleIconFiles</key>
+          <array>
+            <string>Light 6</string>
+          </array>
+          <key>UIPrerenderedIcon</key>
+          <false/>
+        </dict>
+        <key>Light</key>
+        <dict>
+          <key>CFBundleIconFiles</key>
+          <array>
+            <string>Light</string>
+          </array>
+          <key>UIPrerenderedIcon</key>
+          <false/>
+        </dict>
+        <key>Dark 6</key>
+        <dict>
+          <key>CFBundleIconFiles</key>
+          <array>
+            <string>Dark 6</string>
+          </array>
+          <key>UIPrerenderedIcon</key>
+          <false/>
+        </dict>
+        <key>Light 3</key>
+        <dict>
+          <key>CFBundleIconFiles</key>
+          <array>
+            <string>Light 3</string>
+          </array>
+          <key>UIPrerenderedIcon</key>
+          <false/>
+        </dict>
+        <key>Stripes</key>
+        <dict>
+          <key>CFBundleIconFiles</key>
+          <array>
+            <string>Stripes</string>
+          </array>
+          <key>UIPrerenderedIcon</key>
+          <false/>
+        </dict>
+        <key>Dark 5</key>
+        <dict>
+          <key>CFBundleIconFiles</key>
+          <array>
+            <string>Dark 5</string>
+          </array>
+          <key>UIPrerenderedIcon</key>
+          <false/>
+        </dict>
+        <key>Light 5</key>
+        <dict>
+          <key>CFBundleIconFiles</key>
+          <array>
+            <string>Light 5</string>
+          </array>
+          <key>UIPrerenderedIcon</key>
+          <false/>
+        </dict>
+        <key>Type</key>
+        <dict>
+          <key>CFBundleIconFiles</key>
+          <array>
+            <string>Type</string>
+          </array>
+          <key>UIPrerenderedIcon</key>
+          <false/>
+        </dict>
+        <key>Dark 4</key>
+        <dict>
+          <key>CFBundleIconFiles</key>
+          <array>
+            <string>Dark 4</string>
+          </array>
+          <key>UIPrerenderedIcon</key>
+          <false/>
+        </dict>
+        <key>Light 2</key>
+        <dict>
+          <key>CFBundleIconFiles</key>
+          <array>
+            <string>Light 2</string>
+          </array>
+          <key>UIPrerenderedIcon</key>
+          <false/>
+        </dict>
+      </dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>AppIcon60x60</string>
+          <string>AppIcon76x76</string>
+        </array>
+        <key>CFBundleIconName</key>
+        <string>AppIcon</string>
+      </dict>
+    </dict>
+    <key>UIMainStoryboardFile</key>
+    <string>Main</string>
+    <key>DTPlatformName</key>
+    <string>iphoneos</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleTypeRole</key>
+        <string>Viewer</string>
+        <key>CFBundleURLName</key>
+        <string></string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>pyto-run</string>
+        </array>
+      </dict>
+      <dict>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>pyto</string>
+        </array>
+      </dict>
+    </array>
+    <key>DTAppStoreToolsBuild</key>
+    <string>11C29</string>
+  </dict>
+</plist>

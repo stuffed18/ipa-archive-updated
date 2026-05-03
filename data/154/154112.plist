@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDisplayName</key>
+	<string>20Q Bundle</string>
+	<key>CFBundleExecutable</key>
+	<string>MindReaderBundle</string>
+	<key>CFBundleIconFile</key>
+	<string>iconBundle.png</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.digitalchocolate.20QBundleFull</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>MindReaderBundle</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleResourceSpecification</key>
+	<string>ResourceRules.plist</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>iPhoneOS</string>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1.0.2</string>
+	<key>CFLink20qnet</key>
+	<string>www.20q.net</string>
+	<key>CFLinkGMG</key>
+	<string>www.digitalchocolate.com/iphone?utm_source=iphone_20qbundle_full&amp;utm_medium=gmgbutton&amp;utm_content=mainmenu&amp;utm_campaign=iphone_20bundle_full</string>
+	<key>DTPlatformName</key>
+	<string>iphoneos</string>
+	<key>DTSDKName</key>
+	<string>iphoneos3.1</string>
+	<key>FONDUE_URL</key>
+	<string>http://fondue.digitalchocolate.com</string>
+	<key>ICRM_GAME_ID</key>
+	<string>i20QBundle_Full</string>
+	<key>ICRM_GAME_VERSION</key>
+	<string>1.0.2</string>
+	<key>ICRM_URL</key>
+	<string>http://icrm.digitalchocolate.com</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>MinimumOSVersion</key>
+	<string>2.2</string>
+	<key>NSMainNibFile</key>
+	<string>MainWindow</string>
+	<key>SignerIdentity</key>
+	<string>Apple iPhone OS Application Signing</string>
+	<key>UIPrerenderedIcon</key>
+	<true/>
+	<key>UIStatusBarHidden</key>
+	<true/>
+</dict>
+</plist>

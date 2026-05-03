@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>We need permission</string>
+    <key>DTPlatformVersion</key>
+    <string>11.2</string>
+    <key>DTSDKBuild</key>
+    <string>15C107</string>
+    <key>NFCReaderUsageDescription</key>
+    <string>We need permission</string>
+    <key>CFBundleIcons~ipad</key>
+    <dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>AppIcon20x20</string>
+          <string>AppIcon29x29</string>
+          <string>AppIcon40x40</string>
+          <string>AppIcon57x57</string>
+          <string>AppIcon60x60</string>
+          <string>AppIcon50x50</string>
+          <string>AppIcon72x72</string>
+          <string>AppIcon76x76</string>
+          <string>AppIcon83.5x83.5</string>
+        </array>
+        <key>CFBundleIconName</key>
+        <string>AppIcon</string>
+      </dict>
+    </dict>
+    <key>NSSiriUsageDescription</key>
+    <string>We need permission</string>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>NSCameraUsageDescription</key>
+    <string>We would like access to your camera so you  can use it to create awesome images</string>
+    <key>CFBundleDisplayName</key>
+    <string>Piano Tiles</string>
+    <key>AppLovinSdkKey</key>
+    <string>-7yq7Zbh5wHhkwPWzQXVOu829FadksKh-HW5r7ow13cm-1GyRpSrgauqqTRXKnEI3mOutBpvEQeDRw9uickOBb</string>
+    <key>kTCCServiceMediaLibrary</key>
+    <string>We need permission</string>
+    <key>DTXcodeBuild</key>
+    <string>9C40b</string>
+    <key>NSRemindersUsageDescription</key>
+    <string>We need permission</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.brighthouse.whitetiles4</string>
+    <key>UIDeviceFamily</key>
+    <array>
+      <integer>1</integer>
+      <integer>2</integer>
+    </array>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+      <string>com.ffang.note</string>
+      <string>com.yhai.FlipBottle</string>
+      <string>com.brighthouse.whitetiles4</string>
+      <string>com.brighthouse.whitetiles5s</string>
+      <string>com.brighthouse.whitetiles2s</string>
+      <string>com.mye.wormio</string>
+      <string>com.wxi.whitetank2</string>
+      <string>com.jessin.dieppro</string>
+      <string>com.ffang.whitetank</string>
+      <string>com.yh.diepbattle</string>
+      <string>com.yhaigames.force</string>
+      <string>com.yhaigames.colorcross</string>
+      <string>com.yhaigames.popstar</string>
+      <string>com.brighthouse.stack02</string>
+      <string>com.brighthouse.supergames02</string>
+      <string>com.brighthouse.whitetilesclassic</string>
+      <string>com.yhaigames.stickman</string>
+      <string>com.jinggames.zigrush2</string>
+      <string>com.ffang.BottleFlippy</string>
+      <string>com.ffang.pen</string>
+      <string>com.bhk.ballvsblock</string>
+      <string>com.bhk.flappyball</string>
+      <string>com.newgames.newgames03</string>
+      <string>com.newgames.newgames04</string>
+      <string>com.newgames.newgames05</string>
+      <string>com.newgames.newgames06</string>
+      <string>com.newgames.newgames07</string>
+      <string>com.newgames.newgames08</string>
+      <string>com.newgames.newgames09</string>
+      <string>com.newgames.newgames10</string>
+      <string>com.newgames.newgames11</string>
+      <string>com.newgames.newgames12</string>
+      <string>com.newgames.newgames13</string>
+      <string>com.newgames.newgames14</string>
+      <string>com.newgames.newgames15</string>
+      <string>com.newgames.newgames16</string>
+      <string>com.newgames.newgames17</string>
+      <string>com.newgames.newgames18</string>
+      <string>com.newgames.newgames19</string>
+      <string>com.newgames.newgames20</string>
+      <string>com.newgames.newgames21</string>
+    </array>
+    <key>MMSiteID</key>
+    <string>8a8094180157571f86c0233b6e280053</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleIcons</key>
+    <dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>AppIcon20x20</string>
+          <string>AppIcon29x29</string>
+          <string>AppIcon40x40</string>
+          <string>AppIcon57x57</string>
+          <string>AppIcon60x60</string>
+        </array>
+        <key>CFBundleIconName</key>
+        <string>AppIcon</string>
+      </dict>
+    </dict>
+    <key>CFBundleSupportedPlatforms</key>
+    <array>
+      <string>iPhoneOS</string>
+    </array>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>NSHealthUpdateUsageDescription</key>
+    <string>We need permission</string>
+    <key>UIRequiresFullScreen</key>
+    <true/>
+    <key>NSMotionUsageDescription</key>
+    <string>We need permission</string>
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>We need permission</string>
+    <key>NSVideoSubscriberAccountUsageDescription</key>
+    <string>We need permission</string>
+    <key>MinimumOSVersion</key>
+    <string>8.0</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>We need permission</string>
+    <key>CFBundleName</key>
+    <string>Piano Tiles</string>
+    <key>CFBundleShortVersionString</key>
+    <string>5.9</string>
+    <key>UILaunchImageFile</key>
+    <string>LaunchImage</string>
+    <key>UIStatusBarHidden</key>
+    <true/>
+    <key>UIAppFonts</key>
+    <array/>
+    <key>CFBundleExecutable</key>
+    <string>Piano Tiles</string>
+    <key>NSHealthShareUsageDescription</key>
+    <string>We need permission</string>
+    <key>UILaunchImages</key>
+    <array>
+      <dict>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+        <key>UILaunchImageName</key>
+        <string>LaunchImage-1100-Portrait-2436h</string>
+        <key>UILaunchImageSize</key>
+        <string>{375, 812}</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>11.0</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+        <key>UILaunchImageName</key>
+        <string>LaunchImage-700</string>
+        <key>UILaunchImageSize</key>
+        <string>{320, 480}</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>7.0</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+        <key>UILaunchImageName</key>
+        <string>LaunchImage-700-568h</string>
+        <key>UILaunchImageSize</key>
+        <string>{320, 568}</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>7.0</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+        <key>UILaunchImageName</key>
+        <string>LaunchImage-700-Portrait</string>
+        <key>UILaunchImageSize</key>
+        <string>{768, 1024}</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>7.0</string>
+      </dict>
+    </array>
+    <key>NSAppleMusicUsageDescription</key>
+    <string>We need permission</string>
+    <key>NSSpeechRecognitionUsageDescription</key>
+    <string>We need permission</string>
+    <key>UIPrerenderedIcon</key>
+    <true/>
+    <key>NSLocationUsageDescription</key>
+    <string>We need permission</string>
+    <key>BuildMachineOSBuild</key>
+    <string>16G29</string>
+    <key>NSCalendarsUsageDescription</key>
+    <string>We need permission</string>
+    <key>DTPlatformName</key>
+    <string>iphoneos</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>We need Microphone permission so you can play some mini games with Voice</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>We need permission</string>
+    <key>CFBundleVersion</key>
+    <string>5.9</string>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>English</string>
+    <key>NSFaceIDUsageDescription</key>
+    <string>We need permission</string>
+    <key>DTCompiler</key>
+    <string>com.apple.compilers.llvm.clang.1_0</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>com.brighthouse.whitetiles4</string>
+        </array>
+      </dict>
+    </array>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>We need permission</string>
+    <key>NSHomeKitUsageDescription</key>
+    <string>We need permission</string>
+    <key>DTSDKName</key>
+    <string>iphoneos11.2</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+      <key>NSAllowsArbitraryLoads</key>
+      <true/>
+    </dict>
+    <key>NSContactsUsageDescription</key>
+    <string>We need permission</string>
+    <key>DTPlatformBuild</key>
+    <string>15C107</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>We need photo permission so you can edit your photos</string>
+    <key>DTXcode</key>
+    <string>0920</string>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+    </array>
+    <key>UISupportedDevices</key>
+    <array>
+      <string>iPad3,1</string>
+      <string>iPad3,2</string>
+      <string>iPad3,3</string>
+      <string>iPad3,4</string>
+      <string>iPad3,5</string>
+      <string>iPad3,6</string>
+    </array>
+  </dict>
+</plist>

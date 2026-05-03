@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array>
+		<string>com.apple.store.background.refresh</string>
+	</array>
+	<key>BuildMachineOSBuild</key>
+	<string>20A241113</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en_US</string>
+	<key>CFBundleDisplayName</key>
+	<string>Apple Store</string>
+	<key>CFBundleExecutable</key>
+	<string>Apple Store</string>
+	<key>CFBundleIcons</key>
+	<dict>
+		<key>CFBundlePrimaryIcon</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string>AppIcon60x60</string>
+			</array>
+			<key>CFBundleIconName</key>
+			<string>AppIcon</string>
+		</dict>
+	</dict>
+	<key>CFBundleIcons~ipad</key>
+	<dict>
+		<key>CFBundlePrimaryIcon</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string>AppIcon60x60</string>
+				<string>AppIcon76x76</string>
+			</array>
+			<key>CFBundleIconName</key>
+			<string>AppIcon</string>
+		</dict>
+	</dict>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.store.Jolly</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Apple Store</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>514000</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>iPhoneOS</string>
+	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.apple.store.Jolly</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>applestore</string>
+				<string>applestore-sec</string>
+				<string>wxde3e4ac7392459ad</string>
+				<string>wx761814480c29fef9</string>
+				<string>applestore-alipay</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>5.14.0.761</string>
+	<key>CoreSpotlightContinuation</key>
+	<true/>
+	<key>DTAppStoreToolsBuild</key>
+	<string>13A1030d</string>
+	<key>DTCompiler</key>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<key>DTPlatformBuild</key>
+	<string>19A339</string>
+	<key>DTPlatformName</key>
+	<string>iphoneos</string>
+	<key>DTPlatformVersion</key>
+	<string>15.0</string>
+	<key>DTSDKBuild</key>
+	<string>19A339</string>
+	<key>DTSDKName</key>
+	<string>iphoneos15.0</string>
+	<key>DTXcode</key>
+	<string>1300</string>
+	<key>DTXcodeBuild</key>
+	<string>13A233</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>ITSDRMScheme</key>
+	<string>v2</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>paidy</string>
+		<string>wechat</string>
+		<string>weixin</string>
+		<string>cmblife</string>
+	</array>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>MinimumOSVersion</key>
+	<string>10.0</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>We’ll provide you with relevant products, features, services, and more.</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>This app will use your bluetooth to identify what's happening around you.</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>This app will use your bluetooth to identify what's happening around you.</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>This app requires access to your Calendar to add reminders you’ve scheduled and to allow you to view those reminders later.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>The Apple Store app will let you scan barcodes to confirm compatibility and learn product information. In select countries, it can also scan to make purchases and store payment cards.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>This app will access your Contacts for shipping and billing address information.</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>Use Face ID instead of your Apple ID password to check out, view orders, edit shipping and payment information, and access Self-Checkout receipts.</string>
+	<key>NSLocationTemporaryUsageDescriptionDictionary</key>
+	<dict>
+		<key>requestPreciseLocation</key>
+		<string>Your location is used to identify and notify you about what’s happening at nearby Apple Store locations while you’re using the app.</string>
+		<key>requestPreciseLocationForETA</key>
+		<string>We’ll use your starting location to estimate your arrival time so we can be ready for you.</string>
+	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app will use your location information to identify what’s happening at nearby Apple Retail stores and to notify you about and access services available in store. Your location is used to identify, notify you about, and access services available in nearby Apple Retail Stores while you are using the app.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>This app will need to access your Photo Library</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app will need to access your Photo Library</string>
+	<key>NSUserActivityTypes</key>
+	<array>
+		<string>AvailabilityStatusIntent</string>
+		<string>GetReadyIntent</string>
+		<string>OrderStatusIntent</string>
+		<string>com.apple.store.activity.handoff</string>
+		<string>com.apple.store.activity.storelocation</string>
+	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>AppleIcons-Text.ttf</string>
+		<string>AppleIcons-Thin.ttf</string>
+		<string>AppleIcons-Ultralight.ttf</string>
+		<string>SFProIcons.ttc</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+		<string>fetch</string>
+		<string>remote-notification</string>
+	</array>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>1</integer>
+		<integer>2</integer>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIPrerenderedIcon</key>
+	<true/>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>arm64</string>
+	</array>
+	<key>UIRequiresFullScreen</key>
+	<false/>
+	<key>UIStatusBarHidden</key>
+	<false/>
+	<key>UIStatusBarHidden~ipad</key>
+	<false/>
+	<key>UISupportedDevices</key>
+	<array>
+		<string>iPhone10,1</string>
+		<string>iPhone10,4</string>
+		<string>iPhone12,8</string>
+		<string>iPhone9,1</string>
+		<string>iPhone9,3</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<true/>
+</dict>
+</plist>
