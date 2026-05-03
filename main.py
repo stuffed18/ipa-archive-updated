@@ -586,17 +586,32 @@ class CacheDB:
                 sdk = plist.get('DTSDKName')
                 if sdk and isinstance(sdk, str):
                     raw = ''.join(c for c in sdk if c.isdigit() or c == '.')
+
+            # Fallback 2.5: Try to find existing min_os for same bundle_id and version
+            if (not raw or raw.strip() in ("", ".")) and bundleId and version:
+                res = self._db.execute('''
+                    SELECT min_os FROM idx 
+                    WHERE bundle_id=? AND version=? AND min_os IS NOT NULL AND min_os > 0
+                    LIMIT 1''', [bundleId, version]).fetchone()
+                if res:
+                    m = res[0]
+                    raw = f"{m // 10000}.{(m % 10000) // 100}.{m % 100}".rstrip('.0')
             
             if not raw or raw.strip() == "" or raw == ".":
                 # Fallback 3: Try to extract version from filename/path
                 # Patterns: iOS_2.0, os30, iOS 3.1, iPhoneOS 4.2
-                db = CacheDB()
-                path = db._db.execute("SELECT path_name FROM idx WHERE pk=?", [uid]).fetchone()[0]
-                del db
+                path = self._db.execute("SELECT path_name FROM idx WHERE pk=?", [uid]).fetchone()[0]
                 
-                version_match = re.search(r'iOS[ _-]?(\d+(?:\.\d+)*)', path, re.IGNORECASE)
+                # Improved regex to avoid "Below iOS 7" (common in archives)
+                matches = re.finditer(r'(below|under|before)?\s*iOS[ _-]?(\d+(?:\.\d+)*)', path, re.IGNORECASE)
+                version_match = None
+                for m in matches:
+                    if not m.group(1): # Not preceded by "below", "under", "before"
+                        version_match = m
+                        break
+                
                 if version_match:
-                    raw = version_match.group(1)
+                    raw = version_match.group(2)
                 
                 if not version_match or raw == "0.0" or raw == "0":
                     version_match = re.search(r'os(\d)(\d)?', path, re.IGNORECASE)
