@@ -1,6 +1,6 @@
 # The Grand IPA Archive
 
-Forked from relikd, indexed ~40k more apps. Missing images is due to some png metadata or smth that prevents converting them to jpg on windows. An update is coming soon so that ~30% (guesstimate) of missing images will work again, however the browser doesn't seem to be able to display the rest of the pngs. Maybe it will display on safari? The update is delayed as I have not been able to test on old iphones. 
+Forked from relikd, indexed ~40k more apps. 
 
 NO APPS ARE HOSTED ON THIS SITE. 
 
