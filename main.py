@@ -986,7 +986,6 @@ def _procSinglePendingWrapper(args):
 def procSinglePending(
     processed: int, pending: int, uid: int, base_url: str, path_name
 ) -> 'tuple[int, bool]':
-    # ... (code truncated)
     full_path = path_name
     display_path = path_name.replace(NESTED_SEP, ' -> ')
     print(f'[{processed}|{pending} queued]: load[{uid}] {display_path}')

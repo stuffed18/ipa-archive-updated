@@ -150,7 +150,7 @@
                     countDiv.style.display = 'none';
                 }
             }
-            // ... (rest of function)
+
             searchResults.classList.remove('results-fade-in');
             void searchResults.offsetWidth; // Force reflow
             searchResults.classList.add('results-fade-in');
