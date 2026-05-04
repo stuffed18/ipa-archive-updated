@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="The Grand IPA Archive - Archiving Every Delisted iOS App from the most well known to the most Obscure">
     <meta name="keywords" content="iOS, app archive, IPA, iOS apps, app icons, download, iOS software, iOS games, iOS app collection, legacy apps, iOS archive, IPA archive">
     <meta property="og:title" content="The Grand IPA Archive">
@@ -10,7 +10,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <title>The Grand IPA Archive</title>
     <link rel="icon" href="apple-touch-icon.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="header-actions">
-                <button class="random-btn-header" onclick="randomIPA()"><i class="fas fa-shuffle"></i> Random</button>
+                <button class="random-btn-header" onclick="randomIPA()"><i class="fa fa-refresh"></i> Random</button>
             </div>
         </div>
     </header>
@@ -56,8 +56,8 @@
                     <label>Device</label>
                     <div class="ios-segmented-control" id="deviceSegments">
                         <button type="button" class="segment active" data-value="">Any</button>
-                        <button type="button" class="segment" data-value="2" title="iPhone"><i class="fa-solid fa-mobile-screen-button"></i></button>
-                        <button type="button" class="segment" data-value="4" title="iPad"><i class="fa-solid fa-tablet-screen-button"></i></button>
+                        <button type="button" class="segment" data-value="2" title="iPhone"><i class="fa fa-mobile"></i></button>
+                        <button type="button" class="segment" data-value="4" title="iPad"><i class="fa fa-tablet"></i></button>
                     </div>
                     <input type="hidden" id="device" value="">
                 </div>
@@ -73,7 +73,7 @@
     <div id="resultsContainer" class="results-grid">
         <div id="searchResultCount" class="result-count-glossy" style="display: none;"></div>
         <div class="search-empty-state" id="searchEmptyState">
-            <i class="fas fa-search search-icon"></i>
+            <i class="fa fa-search search-icon"></i>
             <p class="search-message">Enter criteria to start searching</p>
         </div>
         <div id="searchResults" class="app-grid"></div>
