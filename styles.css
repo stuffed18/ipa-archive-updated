@@ -109,6 +109,8 @@ header:after {
     text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
     position: relative;
     overflow: hidden;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
 }
 
 .random-btn-header:after {
@@ -536,18 +538,51 @@ header:after {
     padding: 20px;
     display: -webkit-flex;
     display: flex;
-    gap: 15px;
     -webkit-align-items: center;
     align-items: center;
     border-bottom: 1px solid #ddd;
     background: white;
 }
 
+.modal-app-info {
+    -webkit-flex: 1;
+    flex: 1;
+    min-width: 0; /* Important for ellipsis to work in flexbox */
+}
+
+.modal-app-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.modal-app-developer {
+    font-size: 13px;
+    color: #8e8e93;
+    white-space: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.modal-app-title::-webkit-scrollbar,
+.modal-app-developer::-webkit-scrollbar {
+    display: none;
+}
+
 .modal-app-icon {
     width: 100px; height: 100px;
+    min-width: 100px; min-height: 100px;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    margin-right: 15px;
     border-radius: 22px;
     position: relative;
     overflow: hidden;
+    background-color: #eee;
     box-shadow: 0 8px 16px rgba(0,0,0,0.4), inset 0 0 1px rgba(255,255,255,0.9);
 }
 
@@ -586,7 +621,7 @@ header:after {
         inset 0 0 2px rgba(255,255,255,0.3);
 }
 
-.modal-app-icon img { width: 100%; height: 100%; object-fit: cover; }
+.modal-app-icon img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 .modal-section {
     padding: 20px;
