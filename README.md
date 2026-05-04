@@ -1,6 +1,6 @@
 # The Grand IPA Archive
 
-Forked from relikd, indexed ~40k more apps. 
+Forked from relikd, indexed ~50k more apps. 
 
 NO APPS ARE HOSTED ON THIS SITE. 
 
