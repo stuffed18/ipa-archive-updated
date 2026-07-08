@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>UIRequiresFullScreen</key>
+    <true/>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>UISupportedInterfaceOrientations~ipad</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+      <string>UIInterfaceOrientationPortraitUpsideDown</string>
+    </array>
+    <key>DTPlatformVersion</key>
+    <string>11.2</string>
+    <key>CFBundleName</key>
+    <string>Flower Cards</string>
+    <key>DTSDKName</key>
+    <string>iphoneos11.2</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>App uses photos</string>
+    <key>UIViewControllerBasedStatusBarAppearance</key>
+    <false/>
+    <key>CFBundleIcons</key>
+    <dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>AppIcon60x60</string>
+        </array>
+        <key>CFBundleIconName</key>
+        <string>AppIcon</string>
+      </dict>
+    </dict>
+    <key>LSApplicationCategoryType</key>
+    <string></string>
+    <key>AppID</key>
+    <string>1017186938</string>
+    <key>TwitterURL</key>
+    <string>https://itunes.apple.com/us/app/flower-greeting-cards/id1017186938?ls=1&amp;mt=8</string>
+    <key>CFBundleDisplayName</key>
+    <string>Flower Cards</string>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+      <string>fb</string>
+      <string>instagram</string>
+      <string>tumblr</string>
+      <string>twitter</string>
+    </array>
+    <key>DTSDKBuild</key>
+    <string>15C107</string>
+    <key>NSCameraUsageDescription</key>
+    <string>Taking selfies</string>
+    <key>CFBundleShortVersionString</key>
+    <string>2.1</string>
+    <key>CFBundleSupportedPlatforms</key>
+    <array>
+      <string>iPhoneOS</string>
+    </array>
+    <key>IAP</key>
+    <string>YES</string>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+      <string>UIInterfaceOrientationPortraitUpsideDown</string>
+    </array>
+    <key>BuildMachineOSBuild</key>
+    <string>17B1003</string>
+    <key>DTPlatformBuild</key>
+    <string>15C107</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>MinimumOSVersion</key>
+    <string>10.0</string>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>Flower Cards</string>
+    <key>DTXcodeBuild</key>
+    <string>9C40b</string>
+    <key>CFBundleVersion</key>
+    <string>2.1</string>
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>Ad would like to use bluetooth.</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>App adds photos to your photo library</string>
+    <key>UIAppFonts</key>
+    <array>
+      <string>FromWhereYouAre.ttf</string>
+      <string>finalship.ttf</string>
+      <string>CHILD.TTF</string>
+      <string>WALTER__.TTF</string>
+      <string>PLUMP.TTF</string>
+      <string>Disko.ttf</string>
+      <string>AlphaSmoke.TTF</string>
+      <string>KINKIE__.TTF</string>
+      <string>Hole-Hearted.ttf</string>
+      <string>Bungnipper.ttf</string>
+      <string>showerflower.ttf</string>
+      <string>Floraless.ttf</string>
+      <string>ChopinScript.ttf</string>
+      <string>FancyHeartScript.ttf</string>
+      <string>CRAFL.TTF</string>
+      <string>Filxgirl.TTF</string>
+      <string>FONTL.TTF</string>
+      <string>alliewritingz.ttf</string>
+      <string>DementedLovenote.ttf</string>
+      <string>kawaiiscript.ttf</string>
+      <string>love_and_passion.ttf</string>
+    </array>
+    <key>UIPrerenderedIcon</key>
+    <true/>
+    <key>AppURL</key>
+    <string>&lt;b&gt;&lt;u&gt;&lt;a href='https://itunes.apple.com/us/app/flower-greeting-cards/id1017186938?ls=1&amp;mt=8'&gt;Check out Mother's Frames in the Apple App store&lt;/a&gt;&lt;/u&gt;&lt;/b&gt;</string>
+    <key>NSMotionUsageDescription </key>
+    <string>Interactive ad controls</string>
+    <key>MailAttachmentName</key>
+    <string>Photo.jpg</string>
+    <key>UIDeviceFamily</key>
+    <array>
+      <integer>1</integer>
+      <integer>2</integer>
+    </array>
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.pf21507.flowegreetingcard</string>
+    <key>DTXcode</key>
+    <string>0920</string>
+    <key>App Name</key>
+    <string>Flower Cards</string>
+    <key>sqliteDB</key>
+    <string>UserObject.sqlite</string>
+    <key>NSCalendarsUsageDescription</key>
+    <string>Ad may access calendar</string>
+    <key>CFBundleExecutable</key>
+    <string>180319_Paul2_FlowerGreetingCard_1017186938_V21_iOS11</string>
+    <key>Aviary-API-Key</key>
+    <string>16a0288c7b0ef529</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+      <key>NSAllowsArbitraryLoads</key>
+      <true/>
+    </dict>
+    <key>CFBundleIcons~ipad</key>
+    <dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>AppIcon60x60</string>
+          <string>AppIcon76x76</string>
+          <string>AppIcon83.5x83.5</string>
+        </array>
+        <key>CFBundleIconName</key>
+        <string>AppIcon</string>
+      </dict>
+    </dict>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>DTPlatformName</key>
+    <string>iphoneos</string>
+    <key>DTCompiler</key>
+    <string>com.apple.compilers.llvm.clang.1_0</string>
+    <key>UISupportedDevices</key>
+    <array>
+      <string>iPhone6,1</string>
+      <string>iPhone6,2</string>
+      <string>iPhone7,2</string>
+      <string>iPhone8,1</string>
+      <string>iPhone8,4</string>
+      <string>iPod7,1</string>
+    </array>
+  </dict>
+</plist>
