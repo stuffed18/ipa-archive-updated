@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>UIRequiredDeviceCapabilities</key>
+    <array>
+      <string>armv7</string>
+    </array>
+    <key>UIRequiresFullScreen</key>
+    <true/>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>UISupportedInterfaceOrientations~ipad</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+    </array>
+    <key>DTPlatformVersion</key>
+    <string>10.3</string>
+    <key>DTSDKName</key>
+    <string>iphoneos10.3</string>
+    <key>CFBundleName</key>
+    <string>VideoFusionProject</string>
+    <key>UIViewControllerBasedStatusBarAppearance</key>
+    <false/>
+    <key>UIMainStoryboardFile~ipad</key>
+    <string>Main_iPad</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>This lets you use your videos in making your movies</string>
+    <key>CFBundleIcons</key>
+    <dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>AppIcon29x29</string>
+          <string>AppIcon40x40</string>
+          <string>AppIcon60x60</string>
+        </array>
+      </dict>
+    </dict>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+      <string>fbapi</string>
+      <string>fb-messenger-api</string>
+      <string>fbauth2</string>
+      <string>fbshareextension</string>
+      <string>instagram</string>
+    </array>
+    <key>DTSDKBuild</key>
+    <string>14E8301</string>
+    <key>NSCameraUsageDescription</key>
+    <string>This lets you record videos to use in making your movies</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.2</string>
+    <key>CFBundleSupportedPlatforms</key>
+    <array>
+      <string>iPhoneOS</string>
+    </array>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+    </array>
+    <key>BuildMachineOSBuild</key>
+    <string>16E195</string>
+    <key>DTPlatformBuild</key>
+    <string>14E8301</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>DTXcodeBuild</key>
+    <string>8E3004b</string>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>UIAppFonts</key>
+    <array>
+      <string>AvenirLTOblique.ttf</string>
+      <string>AvenirLT.ttf</string>
+      <string>HAMBH___.TTF</string>
+      <string>Franchise-Bold-hinted.ttf</string>
+      <string>FASHIONV.TTF</string>
+      <string>edosz.ttf</string>
+      <string>DYMAXION.TTF</string>
+      <string>DoubleFeature20.ttf</string>
+      <string>COPASETI.TTF</string>
+      <string>Comic_Andy.ttf</string>
+      <string>Cast Iron.ttf</string>
+      <string>BLOODY.TTF</string>
+      <string>AUBREY1__.TTF</string>
+      <string>As Cute As....ttf</string>
+      <string>Amperzand.ttf</string>
+      <string>AMERSN__.ttf</string>
+      <string>alamain1.ttf</string>
+      <string>akka.ttf</string>
+      <string>actionj.ttf</string>
+      <string>Fragmentcore.otf</string>
+      <string>Fineliner Script.otf</string>
+      <string>ChopinScript.otf</string>
+      <string>WildRide.ttf</string>
+      <string>whoa!.ttf</string>
+      <string>Walkway UltraExpand.ttf</string>
+      <string>Walkway UltraExpand SemiBold.ttf</string>
+      <string>Walkway UltraExpand Bold.ttf</string>
+      <string>Walkway UltraCondensed.ttf</string>
+      <string>Walkway UltraCondensed Semi.ttf</string>
+      <string>Walkway UltraCondensed Bold.ttf</string>
+      <string>Walkway UltraBold.ttf</string>
+      <string>Walkway UltraBold RevOblique.ttf</string>
+      <string>Walkway SemiBold.ttf</string>
+      <string>Walkway SemiBold RevOblique.ttf</string>
+      <string>Walkway rounded.ttf</string>
+      <string>Walkway RevOblique.ttf</string>
+      <string>Walkway Oblique.ttf</string>
+      <string>Walkway Oblique UltraBold.ttf</string>
+      <string>Walkway Oblique SemiBold.ttf</string>
+      <string>Walkway Oblique Expand.ttf</string>
+      <string>Walkway Oblique Bold.ttf</string>
+      <string>Walkway Oblique Black.ttf</string>
+      <string>Walkway Expand.ttf</string>
+      <string>Walkway Expand UltraBold.ttf</string>
+      <string>Walkway Expand SemiBold.ttf</string>
+      <string>Walkway Expand RevOblique.ttf</string>
+      <string>Walkway Expand Bold.ttf</string>
+      <string>Walkway Expand Black.ttf</string>
+      <string>Walkway Condensed.ttf</string>
+      <string>Walkway Condensed SemiBold.ttf</string>
+      <string>Walkway Condensed Bold.ttf</string>
+      <string>Walkway Bold.ttf</string>
+      <string>Walkway Bold RevOblique.ttf</string>
+      <string>Walkway Black.ttf</string>
+      <string>Walkway Black RevOblique.ttf</string>
+      <string>Transformers Movie.ttf</string>
+      <string>TATTI___.TTF</string>
+      <string>subway.ttf</string>
+      <string>Steinerlight.ttf</string>
+      <string>Strjmono.ttf</string>
+      <string>Stjldbl2.ttf</string>
+      <string>Stjldbl1.ttf</string>
+      <string>STJEDISE.TTF</string>
+      <string>Starjout.ttf</string>
+      <string>Starjhol.ttf</string>
+      <string>Starjedi.ttf</string>
+      <string>Showtime.ttf</string>
+      <string>shanghai.ttf</string>
+      <string>Roboto-ThinItalic.ttf</string>
+      <string>Roboto-Thin.ttf</string>
+      <string>Roboto-Regular.ttf</string>
+      <string>Roboto-MediumItalic.ttf</string>
+      <string>Roboto-Medium.ttf</string>
+      <string>Roboto-Light.ttf</string>
+      <string>Roboto-Italic.ttf</string>
+      <string>Roboto-CondensedItalic.ttf</string>
+      <string>Roboto-Condensed.ttf</string>
+      <string>Roboto-BoldItalic.ttf</string>
+      <string>Roboto-BoldCondensedItalic.ttf</string>
+      <string>Roboto-BoldCondensed.ttf</string>
+      <string>Roboto-Bold.ttf</string>
+      <string>Roboto-BlackItalic.ttf</string>
+      <string>Roboto-Black.ttf</string>
+      <string>Quicksand_Light.otf</string>
+      <string>Quicksand_Light_Oblique.otf</string>
+      <string>Quicksand_Dash.otf</string>
+      <string>Quicksand_Book.otf</string>
+      <string>Quicksand_Book_Oblique.otf</string>
+      <string>Quicksand_Bold.otf</string>
+      <string>Quicksand_Bold_Oblique.otf</string>
+      <string>Quadranta-Regular.otf</string>
+      <string>Quadranta-Bold.otf</string>
+      <string>Prisma.otf</string>
+      <string>pricedown bl.ttf</string>
+      <string>pincoyablack.otf</string>
+      <string>Pacifico.ttf</string>
+      <string>Philosopher-Regular.ttf</string>
+      <string>Philosopher-Italic.ttf</string>
+      <string>Philosopher-BoldItalic.ttf</string>
+      <string>Philosopher-Bold.ttf</string>
+      <string>AeroliteCPtwo.otf</string>
+      <string>AeroliteCPone.otf</string>
+      <string>Pacifico.ttf</string>
+      <string>AIRSTREAM.TTF</string>
+      <string>steelfish rf.ttf</string>
+      <string>steelfish rg it.ttf</string>
+      <string>steelfish outline.ttf</string>
+      <string>Lobster 1.4.otf</string>
+      <string>CaviarDreams.ttf</string>
+      <string>BebasNeue.otf</string>
+      <string>Angelina.ttf</string>
+      <string>AIRSTREA.ttf</string>
+      <string>Amatic-Bold.ttf</string>
+      <string>Arvo-Bold.ttf</string>
+      <string>Arvo-BoldItalic.ttf</string>
+      <string>BreeSerif_Regular.ttf</string>
+      <string>Chunkfive.ttf</string>
+      <string>daniel.ttf</string>
+      <string>danielbd.ttf</string>
+      <string>Exo_Black.ttf</string>
+      <string>FFF_Tusj.ttf</string>
+      <string>FontleroyBrown.ttf</string>
+      <string>GoodDog.ttf</string>
+      <string>GrandHotel_Regular.ttf</string>
+      <string>JennaSue.ttf</string>
+      <string>LANEPOSH.ttf</string>
+      <string>Lato-Bla.ttf</string>
+      <string>Lato-BlaIta.ttf</string>
+      <string>LeckerliOne_Regular.ttf</string>
+      <string>LoversQuarrel_Regular.ttf</string>
+      <string>ModernAntiqua-Regular.ttf</string>
+      <string>NOTMK___.ttf</string>
+      <string>SEASRN__.ttf</string>
+      <string>SELFISH.TTF</string>
+      <string>SpecialElite.ttf</string>
+      <string>Yellowtail_Regular.ttf</string>
+      <string>Myriad Pro Italic.ttf</string>
+      <string>EalingOT-Black.otf</string>
+      <string>EalingOT-BlackItalic.otf</string>
+      <string>EalingOT-Italic.otf</string>
+      <string>EalingOT-Regular.otf</string>
+      <string>EalingOT-Thin.otf</string>
+      <string>EalingOT-ThinItalic.otf</string>
+      <string>ERASBD.TTF</string>
+      <string>ERASDEMI.TTF</string>
+      <string>ERASLGHT.TTF</string>
+      <string>ERASMD.TTF</string>
+    </array>
+    <key>CFBundleVersion</key>
+    <string>1.0</string>
+    <key>MinimumOSVersion</key>
+    <string>8.1</string>
+    <key>AppLovinSdkKey</key>
+    <string>ERKcPwDBhPD7oNuqoRk1lTq_hIrt8NQMqmzDfAOMacTM-MBmpvoXScX9vN01mQOZALnrWAB5nfSm0dVpXIL-vt</string>
+    <key>UIStatusBarHidden</key>
+    <true/>
+    <key>UILaunchImages</key>
+    <array>
+      <dict>
+        <key>UILaunchImageSize</key>
+        <string>{320, 480}</string>
+        <key>UILaunchImageName</key>
+        <string>LaunchImage-700</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>7.0</string>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageSize</key>
+        <string>{320, 568}</string>
+        <key>UILaunchImageName</key>
+        <string>LaunchImage-700-568h</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>7.0</string>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageSize</key>
+        <string>{768, 1024}</string>
+        <key>UILaunchImageName</key>
+        <string>LaunchImage-700-Portrait</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>7.0</string>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+      </dict>
+    </array>
+    <key>UIDeviceFamily</key>
+    <array>
+      <integer>1</integer>
+      <integer>2</integer>
+    </array>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>This lets you record audio to use in making your movies</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.bvp.videofusionproject</string>
+    <key>NSAppleMusicUsageDescription</key>
+    <string>This lets you use your music in making your movies</string>
+    <key>DTXcode</key>
+    <string>0833</string>
+    <key>CFBundleExecutable</key>
+    <string>VideoFusionProject</string>
+    <key>CFBundleIcons~ipad</key>
+    <dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>AppIcon29x29</string>
+          <string>AppIcon40x40</string>
+          <string>AppIcon60x60</string>
+          <string>AppIcon76x76</string>
+          <string>AppIcon83.5x83.5</string>
+        </array>
+      </dict>
+    </dict>
+    <key>UIMainStoryboardFile</key>
+    <string>Main_iPhone</string>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>DTPlatformName</key>
+    <string>iphoneos</string>
+    <key>DTCompiler</key>
+    <string>com.apple.compilers.llvm.clang.1_0</string>
+    <key>UISupportedDevices</key>
+    <array>
+      <string>iPad2,1</string>
+      <string>iPad2,2</string>
+      <string>iPad2,3</string>
+      <string>iPad2,4</string>
+      <string>iPad2,5</string>
+      <string>iPad2,6</string>
+      <string>iPad2,7</string>
+    </array>
+  </dict>
+</plist>
