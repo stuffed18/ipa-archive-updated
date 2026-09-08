@@ -23,8 +23,6 @@
     <string>使用通信录描述信息</string>
     <key>DTSDKName</key>
     <string>iphoneos10.2</string>
-    <key>CFBundleName</key>
-    <string>民泰银行</string>
     <key>NSPhotoLibraryUsageDescription</key>
     <string>使用相册描述信息</string>
     <key>CFBundleIcons</key>
@@ -43,10 +41,6 @@
     <string></string>
     <key>LSRequiresIPhoneOS</key>
     <true/>
-    <key>CFBundleDisplayName</key>
-    <string>民泰银行</string>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>民泰银行需要定位权限才可以使用</string>
     <key>DTSDKBuild</key>
     <string>14C89</string>
     <key>NSCameraUsageDescription</key>
@@ -67,8 +61,6 @@
     <string>14C89</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
-    <key>NSBluetoothPeripheralUsageDescription</key>
-    <string>民泰银行APP需要您的同意,才能访问蓝牙</string>
     <key>CFBundleDevelopmentRegion</key>
     <string>en</string>
     <key>MinimumOSVersion</key>

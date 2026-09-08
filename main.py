@@ -28,6 +28,60 @@ KNOWN_BAD_ARTWORK_DHASH = {
     'a5542a2b6a695300',  # Visual dHash fingerprint of generic dummy placeholder artwork
 }
 
+# WeChat app IDs are URL-scheme values in the form wx + 16 hexadecimal digits.
+# Remove them from newly extracted Info.plist files before any metadata is saved.
+RE_WECHAT_APP_ID = re.compile(r'^wx[0-9a-f]{16}$', re.IGNORECASE)
+RE_WECHAT_APP_ID_XML = re.compile(
+    rb'<string>\s*wx[0-9a-f]{16}\s*</string>', re.IGNORECASE
+)
+
+def remove_wechat_app_ids(filepath: Path) -> int:
+    """Remove exact WeChat app-ID values from one newly extracted plist."""
+    if not filepath.exists():
+        return 0
+
+    raw = filepath.read_bytes()
+    # XML plists are edited directly so malformed-but-readable metadata remains intact.
+    if raw.lstrip().startswith(b'<'):
+        cleaned, removed = RE_WECHAT_APP_ID_XML.subn(b'', raw)
+        if removed:
+            filepath.write_bytes(cleaned)
+        return removed
+
+    try:
+        plist = plistlib.loads(raw)
+    except Exception as exc:
+        print(f'  [WARN] could not sanitize plist {filepath}: {exc}', file=stderr)
+        return 0
+
+    removed = 0
+
+    def clean(value) -> None:
+        nonlocal removed
+        if isinstance(value, dict):
+            for key in list(value):
+                item = value[key]
+                if isinstance(item, str) and RE_WECHAT_APP_ID.fullmatch(item):
+                    del value[key]
+                    removed += 1
+                else:
+                    clean(item)
+        elif isinstance(value, list):
+            kept = []
+            for item in value:
+                if isinstance(item, str) and RE_WECHAT_APP_ID.fullmatch(item):
+                    removed += 1
+                else:
+                    clean(item)
+                    kept.append(item)
+            value[:] = kept
+
+    clean(plist)
+    if removed:
+        # Preserve binary plist format for binary source files.
+        filepath.write_bytes(plistlib.dumps(plist, fmt=plistlib.FMT_BINARY, sort_keys=False))
+    return removed
+
 def calc_dhash(img_path: Path) -> str:
     """ Computes difference hash (dHash) for visual similarity comparison. """
     try:
@@ -49,7 +103,7 @@ def calc_dhash(img_path: Path) -> str:
     except Exception:
         return ''
 
-def is_bad_artwork(jpg_path: Path) -> bool:
+def is_bad_artwork(jpg_path: Path, check_dhash: bool = True) -> bool:
     """ Checks if image matches known dummy MD5s or visual dHash fingerprints. """
     if not jpg_path.exists():
         return False
@@ -58,13 +112,14 @@ def is_bad_artwork(jpg_path: Path) -> bool:
             if hashlib.md5(f.read()).hexdigest() in KNOWN_BAD_ARTWORK_MD5:
                 return True
         
-        # Perceptual Visual Check (dHash)
-        dh = calc_dhash(jpg_path)
-        if dh:
-            for bad_dh in KNOWN_BAD_ARTWORK_DHASH:
-                dist = bin(int(dh, 16) ^ int(bad_dh, 16)).count('1')
-                if dist <= 4:
-                    return True
+        # Perceptual Visual Check (dHash) - performed when check_dhash is True
+        if check_dhash:
+            dh = calc_dhash(jpg_path)
+            if dh:
+                for bad_dh in KNOWN_BAD_ARTWORK_DHASH:
+                    dist = bin(int(dh, 16) ^ int(bad_dh, 16)).count('1')
+                    if dist <= 4:
+                        return True
     except Exception:
         pass
     return False
@@ -73,6 +128,38 @@ def clean_plist_str(val) -> str:
     if isinstance(val, (str, int, float)):
         return ' '.join(str(val).split())
     return ''
+
+def safe_load_plist_file(filepath: Path) -> dict:
+    if not filepath.exists():
+        return {}
+    with open(filepath, 'rb') as fp:
+        content = fp.read()
+    if not content:
+        return {}
+    try:
+        return plistlib.loads(content)
+    except Exception:
+        pass
+    
+    # Fallback regex parser for XML plists with syntax errors or unexpected tags
+    result = {}
+    try:
+        text = content.decode('utf-8', errors='ignore')
+        import re
+        keys = re.findall(r'<key>([^<]+)</key>\s*<string>([^<]*)</string>', text)
+        for k, v in keys:
+            if k not in result:
+                result[k] = v
+        
+        arrays = re.findall(r'<key>([^<]+)</key>\s*<array>(.*?)</array>', text, re.DOTALL)
+        for k, arr_content in arrays:
+            str_vals = re.findall(r'<string>([^<]+)</string>', arr_content)
+            if str_vals and k not in result:
+                result[k] = str_vals
+    except Exception:
+        pass
+    return result
+
 
 
 # Increase limit for large metadata chunks
@@ -118,7 +205,7 @@ def main():
     cli = parser.add_subparsers(metavar='command', dest='cmd', required=True)
 
     cmd = cli.add_parser('add', help='Add urls to cache')
-    cmd.add_argument('urls', metavar='URL', nargs='+',
+    cmd.add_argument('urls', metavar='URL', nargs='*', default=[],
                      help='Search URLs for .ipa links. Use "continue" to resume interrupted progress.')
 
     cmd = cli.add_parser('update', help='Update all urls')
@@ -164,7 +251,20 @@ def main():
     args = parser.parse_args()
 
     if args.cmd == 'add':
-        if args.urls == ['continue']:
+        urls = args.urls
+        if not urls:
+            try:
+                user_input = input('Enter URL(s) to add: ').strip()
+                if user_input:
+                    urls = [user_input]
+            except (EOFError, KeyboardInterrupt):
+                urls = []
+        
+        if not urls:
+            print('No URLs provided.')
+            return
+
+        if urls == ['continue']:
             queue = CacheDB().getScrapeQueue()
             if not queue:
                 print('Nothing to resume.')
@@ -175,12 +275,13 @@ def main():
         else:
             # Add all URLs to queue first so they can be resumed if interrupted
             db = CacheDB()
-            for url in args.urls:
+            for url in urls:
                 db.addToScrapeQueue(url)
             
-            for url in args.urls:
+            for url in urls:
                 addNewUrl(url, resume=False)
         print('done.')
+
 
     elif args.cmd == 'update':
         queue = args.urls or CacheDB().getUpdateUrlIds(sinceNow='-7 days')
@@ -363,13 +464,7 @@ def fix_missing_images(DB: 'CacheDB'):
             # Batch list the directory for performance
             existing = {f.name for f in shard_dir.iterdir() if f.suffix == '.jpg'}
             for img_pk in pks:
-                jpg_file = shard_dir / f"{img_pk}.jpg"
                 if f"{img_pk}.jpg" not in existing:
-                    missing.append(img_pk)
-                elif jpg_file.exists() and is_bad_artwork(jpg_file):
-                    print(f"\n[BAD ARTWORK] [{img_pk}] Found generic bad artwork (MD5/dHash). Re-extracting icon...")
-                    try: jpg_file.unlink()
-                    except Exception: pass
                     missing.append(img_pk)
         checked += len(pks)
         if checked % 100 == 0 or checked == total:
@@ -743,6 +838,7 @@ class CacheDB:
             return x1.rowcount
         return 0
 
+
     def setError(self, uid: int, *, done: int) -> None:
         self._db.execute('UPDATE idx SET done=? WHERE pk=?;', [done, uid])
         self._db.commit()
@@ -765,13 +861,11 @@ class CacheDB:
         plist_path = diskPath(uid, '.plist')
         if not plist_path.exists():
             return
-        with open(plist_path, 'rb') as fp:
-            try:
-                plist = plistlib.load(fp)
-            except Exception as e:
-                print(f'ERROR: [{uid}] PLIST: {e}', file=stderr)
-                self.setError(uid, done=3)
-                return
+        plist = safe_load_plist_file(plist_path)
+        if not plist:
+            print(f'ERROR: [{uid}] PLIST: empty or unparseable', file=stderr)
+            self.setError(uid, done=3)
+            return
 
         bundleId = plist.get('CFBundleIdentifier')
         if not isinstance(bundleId, str):
@@ -1354,12 +1448,15 @@ def _processIpaZip(uid: int, zip, basename, img_path, plist_path, image_only) ->
             if plist_match:
                 app_prefix = plist_match.group(1)
                 extractZipEntry(zip, entry, plist_path)
+                removed_ids = remove_wechat_app_ids(plist_path)
+                if removed_ids:
+                    print(f'  [SANITIZED] removed {removed_ids} wx app ID value(s)')
                 
                 # Deduplication check: if we already have this app's icon, don't download it again
                 if plist_path.exists():
                     try:
-                        with open(plist_path, 'rb') as fp:
-                            plist = plistlib.load(fp)
+                        plist = safe_load_plist_file(plist_path)
+                        if plist:
                             bid = plist.get('CFBundleIdentifier')
                             if not isinstance(bid, str):
                                 bid = clean_plist_str(bid)
@@ -1387,23 +1484,22 @@ def _processIpaZip(uid: int, zip, basename, img_path, plist_path, image_only) ->
 
     # Second pass: load icon files referenced in Info.plist (highest authenticity app icons)
     if not artwork and app_prefix and plist_path.exists():
-        with open(plist_path, 'rb') as fp:
-            try:
-                plist = plistlib.load(fp)
-                icon_names = iconNameFromPlist(plist)
-                # Try all candidates until one works
-                for icon_name in icon_names + ['Icon', 'icon']:
-                    icon = expandImageName(zip_listing, app_prefix, [icon_name])
-                    if icon:
-                        extractZipEntry(zip, icon, img_path)
-                        if os.path.exists(img_path) and os.path.getsize(img_path) > 8:
-                            if processImage(img_path):
-                                artwork = True
-                                break
-                            else:
-                                if img_path.exists(): img_path.unlink() # Cleanup
-            except Exception as e:
-                print(f'ERROR: [{uid}] failed to parse plist or find icon: {e}', file=stderr)
+        try:
+            plist = safe_load_plist_file(plist_path)
+            icon_names = iconNameFromPlist(plist) if plist else []
+            # Try all candidates until one works
+            for icon_name in icon_names + ['Icon', 'icon']:
+                icon = expandImageName(zip_listing, app_prefix, [icon_name])
+                if icon:
+                    extractZipEntry(zip, icon, img_path)
+                    if os.path.exists(img_path) and os.path.getsize(img_path) > 8:
+                        if processImage(img_path):
+                            artwork = True
+                            break
+                        else:
+                            if img_path.exists(): img_path.unlink() # Cleanup
+        except Exception as e:
+            print(f'ERROR: [{uid}] failed to parse plist or find icon: {e}', file=stderr)
 
     # Third pass: extract iTunesArtwork inside app_prefix if no plist icon was found
     if not artwork and app_prefix:

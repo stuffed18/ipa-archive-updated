@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>UIRequiredDeviceCapabilities</key>
+    <array>
+      <string>armv7</string>
+    </array>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+        <key>CFBundleURLName</key>
+        <string>com.cidersoftware.Calculator</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>calculatorhdpro</string>
+        </array>
+      </dict>
+    </array>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>UISupportedInterfaceOrientations~ipad</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+      <string>UIInterfaceOrientationPortraitUpsideDown</string>
+      <string>UIInterfaceOrientationLandscapeLeft</string>
+      <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <key>DTPlatformVersion</key>
+    <string>11.2</string>
+    <key>CFBundleName</key>
+    <string>Calculator HD Pro</string>
+    <key>DTSDKName</key>
+    <string>iphoneos11.2</string>
+    <key>CFBundleIcons</key>
+    <dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>Calculator HD Pro29x29</string>
+          <string>Calculator HD Pro40x40</string>
+          <string>Calculator HD Pro60x60</string>
+        </array>
+        <key>UIPrerenderedIcon</key>
+        <true/>
+        <key>CFBundleIconName</key>
+        <string>Calculator HD Pro</string>
+      </dict>
+    </dict>
+    <key>CFBundleDisplayName</key>
+    <string>Calculator</string>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>DTSDKBuild</key>
+    <string>15C107</string>
+    <key>CFBundleShortVersionString</key>
+    <string>3.5.1</string>
+    <key>CFBundleSupportedPlatforms</key>
+    <array>
+      <string>iPhoneOS</string>
+    </array>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+      <string>UIInterfaceOrientationLandscapeLeft</string>
+      <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <key>BuildMachineOSBuild</key>
+    <string>17B1003</string>
+    <key>DTPlatformBuild</key>
+    <string>15C107</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>MinimumOSVersion</key>
+    <string>8.1</string>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>DTXcodeBuild</key>
+    <string>9C40b</string>
+    <key>CFBundleVersion</key>
+    <string>3.5.1.1</string>
+    <key>UILaunchStoryboardName</key>
+    <string>Main</string>
+    <key>UIDeviceFamily</key>
+    <array>
+      <integer>1</integer>
+      <integer>2</integer>
+    </array>
+    <key>Fabric</key>
+    <dict>
+      <key>Kits</key>
+      <array>
+        <dict>
+          <key>KitInfo</key>
+          <dict/>
+          <key>KitName</key>
+          <string>Crashlytics</string>
+        </dict>
+      </array>
+      <key>APIKey</key>
+      <string>4734c0c86eb7bef3193aca8006ff9dfc86182e6e</string>
+    </dict>
+    <key>CFBundleIdentifier</key>
+    <string>com.cidersoftware.Calculator</string>
+    <key>DTXcode</key>
+    <string>0920</string>
+    <key>UIApplicationShortcutItems</key>
+    <array>
+      <dict>
+        <key>UIApplicationShortcutItemType</key>
+        <string>Basic Layout</string>
+        <key>UIApplicationShortcutItemIconFile</key>
+        <string>Shortcut-Use-Basic</string>
+        <key>UIApplicationShortcutItemTitle</key>
+        <string>Basic Layout</string>
+      </dict>
+      <dict>
+        <key>UIApplicationShortcutItemType</key>
+        <string>Scientific Layout</string>
+        <key>UIApplicationShortcutItemIconFile</key>
+        <string>Shortcut-Use-Scientific</string>
+        <key>UIApplicationShortcutItemTitle</key>
+        <string>Scientific Layout</string>
+      </dict>
+      <dict>
+        <key>UIApplicationShortcutItemType</key>
+        <string>Tape Layout</string>
+        <key>UIApplicationShortcutItemIconFile</key>
+        <string>Shortcut-Use-Tape</string>
+        <key>UIApplicationShortcutItemTitle</key>
+        <string>Tape Layout</string>
+      </dict>
+    </array>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+      <key>NSAllowsArbitraryLoadsInWebContent</key>
+      <true/>
+      <key>NSAllowsArbitraryLoads</key>
+      <true/>
+      <key>NSAllowsArbitraryLoadsForMedia</key>
+      <true/>
+    </dict>
+    <key>CFBundleExecutable</key>
+    <string>Calculator HD Pro</string>
+    <key>CFBundleIcons~ipad</key>
+    <dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>Calculator HD Pro29x29</string>
+          <string>Calculator HD Pro40x40</string>
+          <string>Calculator HD Pro60x60</string>
+          <string>Calculator HD Pro76x76</string>
+          <string>Calculator HD Pro83.5x83.5</string>
+        </array>
+        <key>UIPrerenderedIcon</key>
+        <true/>
+        <key>CFBundleIconName</key>
+        <string>Calculator HD Pro</string>
+      </dict>
+    </dict>
+    <key>UIMainStoryboardFile</key>
+    <string>Main</string>
+    <key>DTPlatformName</key>
+    <string>iphoneos</string>
+    <key>DTCompiler</key>
+    <string>com.apple.compilers.llvm.clang.1_0</string>
+  </dict>
+</plist>
