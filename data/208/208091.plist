@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>UIRequiredDeviceCapabilities</key>
+    <array>
+      <string>gamekit</string>
+    </array>
+    <key>UIRequiresFullScreen</key>
+    <true/>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleURLName</key>
+        <string>com.crescentmoongames.2bitcowboy2</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>CG2bitcowboy2</string>
+        </array>
+      </dict>
+    </array>
+    <key>DTPlatformVersion</key>
+    <string>9.3</string>
+    <key>DTSDKName</key>
+    <string>iphoneos9.3</string>
+    <key>CFBundleName</key>
+    <string>2-bit Cowboy Store</string>
+    <key>UIViewControllerBasedStatusBarAppearance</key>
+    <false/>
+    <key>UIMainStoryboardFile~ipad</key>
+    <string>Main_iPad</string>
+    <key>CFBundleIcons</key>
+    <dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>AppIcon29x29</string>
+          <string>AppIcon40x40</string>
+          <string>AppIcon60x60</string>
+        </array>
+      </dict>
+    </dict>
+    <key>UILaunchImageFile~iphone</key>
+    <string>Default.png</string>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>CFBundleDisplayName</key>
+    <string>2-bit Cowboy</string>
+    <key>UIStatusBarHidden~ipad</key>
+    <true/>
+    <key>DTSDKBuild</key>
+    <string>13E230</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0.3</string>
+    <key>CFBundleSupportedPlatforms</key>
+    <array>
+      <string>iPhoneOS</string>
+    </array>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+      <string>UIInterfaceOrientationLandscapeRight</string>
+      <string>UIInterfaceOrientationLandscapeLeft</string>
+    </array>
+    <key>BuildMachineOSBuild</key>
+    <string>15E65</string>
+    <key>DTPlatformBuild</key>
+    <string>13E230</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>DTXcodeBuild</key>
+    <string>7D175</string>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>UIAppFonts</key>
+    <array>
+      <string>visitor1.ttf</string>
+    </array>
+    <key>CFBundleVersion</key>
+    <string>1.0.3</string>
+    <key>UIPrerenderedIcon</key>
+    <true/>
+    <key>UIStatusBarHidden</key>
+    <true/>
+    <key>MinimumOSVersion</key>
+    <string>8.1</string>
+    <key>UILaunchImages</key>
+    <array>
+      <dict>
+        <key>UILaunchImageSize</key>
+        <string>{414, 736}</string>
+        <key>UILaunchImageName</key>
+        <string>Brand Assets-800-Portrait-736h</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>8.0</string>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageSize</key>
+        <string>{375, 667}</string>
+        <key>UILaunchImageName</key>
+        <string>Brand Assets-800-667h</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>8.0</string>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageSize</key>
+        <string>{320, 480}</string>
+        <key>UILaunchImageName</key>
+        <string>Brand Assets-700</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>7.0</string>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageSize</key>
+        <string>{320, 568}</string>
+        <key>UILaunchImageName</key>
+        <string>Brand Assets-700-568h</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>7.0</string>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageSize</key>
+        <string>{768, 1024}</string>
+        <key>UILaunchImageName</key>
+        <string>Brand Assets-700-Portrait</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>7.0</string>
+        <key>UILaunchImageOrientation</key>
+        <string>Portrait</string>
+      </dict>
+    </array>
+    <key>UIDeviceFamily</key>
+    <array>
+      <integer>1</integer>
+      <integer>2</integer>
+    </array>
+    <key>CFBundleIdentifier</key>
+    <string>com.crescentmoongames.2bitcowboy2</string>
+    <key>DTXcode</key>
+    <string>0730</string>
+    <key>CFBundleExecutable</key>
+    <string>2-bit Cowboy Store</string>
+    <key>CFBundleIcons~ipad</key>
+    <dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>AppIcon29x29</string>
+          <string>AppIcon40x40</string>
+          <string>AppIcon60x60</string>
+          <string>AppIcon76x76</string>
+          <string>AppIcon83.5x83.5</string>
+        </array>
+      </dict>
+    </dict>
+    <key>UIMainStoryboardFile</key>
+    <string>Main_iPhone</string>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>DTPlatformName</key>
+    <string>iphoneos</string>
+    <key>DTCompiler</key>
+    <string>com.apple.compilers.llvm.clang.1_0</string>
+  </dict>
+</plist>
