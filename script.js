@@ -15,13 +15,17 @@ function setMessage(msg) {
     document.getElementById('content').innerHTML = msg;
 }
 
-function loadFile(url, onErrFn, fn) {
+function loadFile(url, onErrFn, fn, onProgress) {
     try {
-        const xhr = new XMLHttpRequest();
+        var xhr = new XMLHttpRequest();
         xhr.open('GET', url, true);
-        xhr.responseType = 'text';
-        xhr.onload = function (e) { fn(e.target.response); };
+        xhr.onload = function () { fn(xhr.responseText); };
         xhr.onerror = function (e) { onErrFn('Server or network error.'); };
+        if (onProgress) {
+            xhr.onprogress = function (e) {
+                onProgress(e.loaded, e.total, e.lengthComputable);
+            };
+        }
         xhr.send();
     } catch (error) {
         onErrFn(error);
@@ -35,17 +39,46 @@ function loadDB() {
     } catch (error) {
         alert(error);
     }
-    setMessage('Loading base-urls ...');
-    loadFile('data/urls.json', setMessage, function (data) {
-        baseUrls = JSON.parse(data);
-        setMessage('Loading database ...');
-        loadFile('data/ipa.json', setMessage, function (data) {
-            DB = JSON.parse(data);
-            setMessage('ready. Links in database: ' + DB.length);
-            if (config && (config.page > 0 || config.search || config.bundleid)) {
-                searchIPA(true);
+    setMessage('Loading database ...');
+    var urlsData = null;
+    var ipaData = null;
+    var urlsLoaded = false;
+    var ipaLoaded = false;
+
+    function parseWhenReady() {
+        if (!urlsLoaded || !ipaLoaded) { return; }
+        setMessage('Parsing database ...');
+        window.setTimeout(function () {
+            try {
+                baseUrls = JSON.parse(urlsData);
+                urlsData = null;
+                DB = JSON.parse(ipaData);
+                ipaData = null;
+                setMessage('ready. Links in database: ' + DB.length);
+                if (config && (config.page > 0 || config.search || config.bundleid)) {
+                    searchIPA(true);
+                }
+            } catch (error) {
+                setMessage('Could not read database: ' + error);
             }
-        });
+        }, 0);
+    }
+
+    loadFile('data/urls.json', setMessage, function (data) {
+        urlsData = data;
+        urlsLoaded = true;
+        parseWhenReady();
+    });
+    loadFile('data/ipa.json', setMessage, function (data) {
+        ipaData = data;
+        ipaLoaded = true;
+        parseWhenReady();
+    }, function (loaded, total, lengthComputable) {
+        if (lengthComputable && total > 0) {
+            setMessage('Loading database ... ' + Math.floor(loaded * 100 / total) + '%');
+        } else {
+            setMessage('Loading database ... ' + Math.floor(loaded / 1048576) + ' MB');
+        }
     });
 }
 
@@ -53,10 +86,10 @@ function loadConfig(chkServer) {
     if (!location.hash) {
         return; // keep default values
     }
-    const params = location.hash.substring(1).split('&');
-    const data = {};
+    var params = location.hash.substring(1).split('&');
+    var data = {};
     params.forEach(function (param) {
-        const pair = param.split('=', 2);
+        var pair = param.split('=', 2);
         data[pair[0]] = decodeURIComponent(pair[1]);
     });
     document.querySelectorAll('input,select').forEach(function (input) {
@@ -73,14 +106,14 @@ function loadConfig(chkServer) {
 }
 
 function saveConfig() {
-    const data = [];
+    var data = [];
     document.querySelectorAll('input,select').forEach(function (e) {
-        const value = e.type === 'checkbox' ? e.checked : e.value;
+        var value = e.type === 'checkbox' ? e.checked : e.value;
         if (value) {
             data.push(e.id + '=' + encodeURIComponent(value));
         }
     });
-    const prev = location.hash;
+    var prev = location.hash;
     location.hash = '#' + data.join('&');
     return prev !== location.hash;
 }
@@ -90,29 +123,29 @@ function saveConfig() {
  */
 
 function applySearch() {
-    const rawTerm = (document.getElementById('search').value || '').trim();
-    const term = rawTerm.toLowerCase();
-    const cleanTerm = term.replace(/[\s\-_.]+/g, '');
-    const words = term.split(/\s+/).filter(function (w) { return w.length > 0; });
-    const hasSpecificVersion = words.some(function (w) { return /^[vV]?[0-9]+(\.[0-9]+)+$/.test(w); });
+    var rawTerm = (document.getElementById('search').value || '').trim();
+    var term = rawTerm.toLowerCase();
+    var cleanTerm = term.replace(/[\s\-_.]+/g, '');
+    var words = term.split(/\s+/).filter(function (w) { return w.length > 0; });
+    var hasSpecificVersion = words.some(function (w) { return /^[vV]?[0-9]+(\.[0-9]+)+$/.test(w); });
 
-    const bundle = document.getElementById('bundleid').value.trim().toLowerCase();
-    const unique = document.getElementById('unique').checked;
-    const minos = document.getElementById('minos').value;
-    const maxos = document.getElementById('maxos').value;
-    const platform = document.getElementById('device').value;
-    const minid = document.getElementById('minid').value;
+    var bundle = document.getElementById('bundleid').value.trim().toLowerCase();
+    var unique = document.getElementById('unique').checked;
+    var minos = document.getElementById('minos').value;
+    var maxos = document.getElementById('maxos').value;
+    var platform = document.getElementById('device').value;
+    var minid = document.getElementById('minid').value;
 
-    const minV = minos ? strToVersion(minos) : 0;
-    const maxV = maxos ? strToVersion(maxos) : 9999999;
-    const device = platform ? 1 << platform : 255; // all flags
-    const minPK = minid ? parseInt(minid) : 0;
+    var minV = minos ? strToVersion(minos) : 0;
+    var maxV = maxos ? strToVersion(maxos) : 9999999;
+    var device = platform ? 1 << platform : 255; // all flags
+    var minPK = minid ? parseInt(minid) : 0;
 
     // [7, 2,20200,"180","com.headcasegames.180","1.0",1,"180.ipa", 189930], 
     // [pk, platform, minOS, title, bundleId, version, baseUrl, pathName, size]
     DB_result = [];
     isInitial = false;
-    const uniqueBundleIds = {};
+    var uniqueBundleIds = {};
 
     if (!term) {
         DB.forEach(function (ipa, i) {
@@ -123,7 +156,7 @@ function applySearch() {
                 return;
             }
             if (unique) {
-                const bId = ipa[4];
+                var bId = ipa[4];
                 if (uniqueBundleIds[bId]) {
                     return;
                 }
@@ -136,16 +169,16 @@ function applySearch() {
     }
 
     // Pass 1: Find direct matches and collect matching bundle IDs
-    const matchingBundles = new Set();
-    const directMatches = new Uint8Array(DB.length);
+    var matchingBundles = {};
+    var directMatches = [];
 
-    for (let i = 0; i < DB.length; i++) {
-        const ipa = DB[i];
-        const titleLower = (ipa[3] || '').toLowerCase();
-        const bundleLower = (ipa[4] || '').toLowerCase();
-        const pathLower = (ipa[7] || '').toLowerCase();
+    for (var i = 0; i < DB.length; i++) {
+        var ipa = DB[i];
+        var titleLower = (ipa[3] || '').toLowerCase();
+        var bundleLower = (ipa[4] || '').toLowerCase();
+        var pathLower = (ipa[7] || '').toLowerCase();
 
-        let matched = false;
+        var matched = false;
 
         // 1. Direct exact substring match
         if (titleLower.indexOf(term) > -1 || bundleLower.indexOf(term) > -1 || pathLower.indexOf(term) > -1) {
@@ -153,9 +186,9 @@ function applySearch() {
         }
         // 2. Space / punctuation-insensitive match (e.g. "alive4ever" <=> "alive 4 ever")
         else if (cleanTerm.length >= 2) {
-            const cleanTitle = titleLower.replace(/[\s\-_.]+/g, '');
-            const cleanBundle = bundleLower.replace(/[\s\-_.]+/g, '');
-            const cleanPath = pathLower.replace(/[\s\-_.]+/g, '');
+            var cleanTitle = titleLower.replace(/[\s\-_.]+/g, '');
+            var cleanBundle = bundleLower.replace(/[\s\-_.]+/g, '');
+            var cleanPath = pathLower.replace(/[\s\-_.]+/g, '');
             if (cleanTitle.indexOf(cleanTerm) > -1 || cleanBundle.indexOf(cleanTerm) > -1 || cleanPath.indexOf(cleanTerm) > -1) {
                 matched = true;
             }
@@ -171,14 +204,14 @@ function applySearch() {
         if (matched) {
             directMatches[i] = 1;
             if (!hasSpecificVersion && ipa[4] && ipa[4].length > 3) {
-                matchingBundles.add(ipa[4]);
+                matchingBundles[ipa[4]] = true;
             }
         }
     }
 
     // Pass 2: Filter by criteria (minOS, maxOS, device, unique, etc.) and include bundle-expanded entries
-    for (let i = 0; i < DB.length; i++) {
-        const ipa = DB[i];
+    for (var i = 0; i < DB.length; i++) {
+        var ipa = DB[i];
         if (ipa[2] < minV || ipa[2] > maxV || !(ipa[1] & device) || ipa[0] < minPK) {
             continue;
         }
@@ -186,13 +219,13 @@ function applySearch() {
             continue;
         }
 
-        const isMatch = (directMatches[i] === 1) || (!hasSpecificVersion && ipa[4] && matchingBundles.has(ipa[4]));
+        var isMatch = (directMatches[i] === 1) || (!hasSpecificVersion && ipa[4] && matchingBundles[ipa[4]]);
         if (!isMatch) {
             continue;
         }
 
         if (unique) {
-            const bId = ipa[4];
+            var bId = ipa[4];
             if (uniqueBundleIds[bId]) {
                 continue;
             }
@@ -205,7 +238,7 @@ function applySearch() {
 
 function restoreSearch() {
     location.hash = previousSearch;
-    const conf = loadConfig(false);
+    var conf = loadConfig(false);
     previousSearch = '';
     if (conf.random) {
         randomIPA(conf.random);
@@ -240,7 +273,7 @@ function searchIPA(restorePage) {
  */
 
 function urlsToImgs(redirectUrl, list) {
-    const template = getTemplate('.screenshot');
+    var template = getTemplate('.screenshot');
     var rv = '<div class="carousel">';
     for (var i = 0; i < list.length; i++) {
         rv += renderTemplate(template, { $REF: list[i], $URL: redirectUrl + list[i] }).replace(/XSRC=/gi, 'src=');
@@ -262,8 +295,8 @@ function randomIPA(specificId) {
             idx = Math.floor(Math.random() * DB.length);
         }
     }
-    const entry = entryToDict(DB[idx]);
-    const output = document.getElementById('content');
+    var entry = entryToDict(DB[idx]);
+    var output = document.getElementById('content');
     output.innerHTML = '<h3>Random:</h3>' + entriesToStr('.full', [idx]);
     output.lastElementChild.className += ' single';
     output.innerHTML += renderTemplate(getTemplate('.randomAction'), { $IDX: idx });
@@ -273,18 +306,18 @@ function randomIPA(specificId) {
         return;
     }
     // Append iTunes info to result
-    const redirectUrl = plistServerUrl + '?r='
-    const iTunesUrl = 'https://itunes.apple.com/lookup?bundleId=' + entry.bundleId;
+    var redirectUrl = plistServerUrl + '?r='
+    var iTunesUrl = 'https://itunes.apple.com/lookup?bundleId=' + entry.bundleId;
     loadFile(redirectUrl + iTunesUrl, console.error, function (data) {
-        const obj = JSON.parse(data);
+        var obj = JSON.parse(data);
         if (!obj || obj.resultCount < 1) {
             output.innerHTML += '<p class="no-itunes">No iTunes results.</p>';
             return;
         }
-        const info = obj.results[0];
-        const imgs1 = info.screenshotUrls;
-        const imgs2 = info.ipadScreenshotUrls;
-        const device = document.getElementById('device').value || 255;
+        var info = obj.results[0];
+        var imgs1 = info.screenshotUrls;
+        var imgs2 = info.ipadScreenshotUrls;
+        var device = document.getElementById('device').value || 255;
 
         var imgStr = '';
         if (imgs1 && imgs1.length > 0 && device & 1) {
@@ -324,14 +357,14 @@ function platformToStr(num) {
 
 function versionToStr(num) {
     if (!num) { return '?'; }
-    const major = Math.floor(num / 10000);
-    const minor = Math.floor(num / 100) % 100;
-    const patch = num % 100;
+    var major = Math.floor(num / 10000);
+    var minor = Math.floor(num / 100) % 100;
+    var patch = num % 100;
     return major + '.' + minor + (patch ? '.' + patch : '');
 }
 
 function strToVersion(versionStr) {
-    const x = ((versionStr || '0') + '.0.0.0').split('.');
+    var x = ((versionStr || '0') + '.0.0.0').split('.');
     return parseInt(x[0]) * 10000 + parseInt(x[1]) * 100 + parseInt(x[2]);
 }
 
@@ -357,8 +390,8 @@ function validUrl(url) {
 }
 
 function entryToDict(entry) {
-    const pk = entry[0];
-    const img_pk = (entry[9] !== undefined && entry[9] !== null) ? entry[9] : pk;
+    var pk = entry[0];
+    var img_pk = (entry[9] !== undefined && entry[9] !== null) ? entry[9] : pk;
     return {
         pk: pk,
         platform: entry[1],
@@ -380,10 +413,10 @@ function onImgError(img) {
 }
 
 function entriesToStr(templateType, data) {
-    const template = getTemplate(templateType);
+    var template = getTemplate(templateType);
     var rv = '';
     for (var i = 0; i < data.length; i++) {
-        const entry = entryToDict(DB[data[i]]);
+        var entry = entryToDict(DB[data[i]]);
         rv += renderTemplate(template, {
             $IDX: data[i],
             $IMG: entry.img_url,
@@ -403,19 +436,19 @@ function entriesToStr(templateType, data) {
 function printIPA(offset) {
     if (!offset) { offset = 0; }
 
-    const total = DB_result.length;
+    var total = DB_result.length;
     var content = '<h3>Results: ' + total;
     if (previousSearch) {
         content += ' -- Go to: <a onclick="restoreSearch()">previous search</a>';
     }
     content += '</h3>';
-    const page = Math.floor(offset / PER_PAGE);
-    const pages = Math.ceil(total / PER_PAGE);
+    var page = Math.floor(offset / PER_PAGE);
+    var pages = Math.ceil(total / PER_PAGE);
     if (pages > 1) {
         content += paginationShort(page, pages);
     }
 
-    const templateType = document.getElementById('unique').checked ? '.short' : '.entry';
+    var templateType = document.getElementById('unique').checked ? '.short' : '.entry';
     content += entriesToStr(templateType, DB_result.slice(offset, offset + PER_PAGE));
 
     if (pages > 1) {
@@ -462,8 +495,8 @@ function paginationFull(page, pages) {
  */
 
 function setPlistGen() {
-    const testURL = document.getElementById('plistServer').value;
-    const scheme = testURL.slice(0, 7);
+    var testURL = document.getElementById('plistServer').value;
+    var scheme = testURL.slice(0, 7);
     if (scheme != 'http://' && scheme != 'https:/') {
         alert('URL must start with http:// or https://.');
         return;
@@ -492,9 +525,9 @@ function installIPA(idx) {
         document.getElementById('overlay').hidden = false;
         return;
     }
-    const thisServerUrl = location.href.replace(location.hash, '');
-    const entry = entryToDict(DB[idx]);
-    const json = JSON.stringify({
+    var thisServerUrl = location.href.replace(location.hash, '');
+    var entry = entryToDict(DB[idx]);
+    var json = JSON.stringify({
         u: validUrl(entry.ipa_url),
         n: entry.title,
         b: entry.bundleId,
@@ -511,6 +544,6 @@ function installIPA(idx) {
         b64 = b64.slice(0, -1);
     }
     // window.open(plistServerUrl + '?d=' + b64);
-    const plistUrl = plistServerUrl + '%3Fd%3D' + b64; // url encoded "?d="
+    var plistUrl = plistServerUrl + '%3Fd%3D' + b64; // url encoded "?d="
     window.open('itms-services://?action=download-manifest&url=' + plistUrl);
 }

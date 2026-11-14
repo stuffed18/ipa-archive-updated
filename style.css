@@ -2,6 +2,9 @@ body {
   margin: 4px;
   font-family: sans-serif;
 }
+[hidden] {
+  display: none !important;
+}
 a {
   color: blue;
   text-decoration: underline;

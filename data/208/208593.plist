@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+    </array>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Not used within app</string>
+    <key>DTPlatformVersion</key>
+    <string>13.2</string>
+    <key>DTSDKBuild</key>
+    <string>17B102</string>
+    <key>UIStatusBarStyle</key>
+    <string>UIStatusBarStyleBlackTranslucent</string>
+    <key>CFBundleIcons~ipad</key>
+    <dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>AppIcon20x20</string>
+          <string>AppIcon29x29</string>
+          <string>AppIcon40x40</string>
+          <string>AppIcon60x60</string>
+          <string>AppIcon76x76</string>
+          <string>AppIcon83.5x83.5</string>
+        </array>
+        <key>CFBundleIconName</key>
+        <string>AppIcon</string>
+      </dict>
+    </dict>
+    <key>GADApplicationIdentifier</key>
+    <string>ca-app-pub-7647048968279634~1763589724</string>
+    <key>NSSiriUsageDescription</key>
+    <string>NSSiriUsageDescription should be set to a valid usage description</string>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>NSCameraUsageDescription</key>
+    <string>Not used within app</string>
+    <key>NSMainNibFile</key>
+    <string>MainWindow</string>
+    <key>CFBundleDisplayName</key>
+    <string>Don't Grind</string>
+    <key>CoronaViewSupportedInterfaceOrientations</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+    </array>
+    <key>DTXcodeBuild</key>
+    <string>11C504</string>
+    <key>NSRemindersUsageDescription</key>
+    <string>NSRemindersUsageDescription should be set to a valid usage description</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.laserdog.dontgrind</string>
+    <key>UIDeviceFamily</key>
+    <array>
+      <integer>1</integer>
+      <integer>2</integer>
+    </array>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleIcons</key>
+    <dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>AppIcon20x20</string>
+          <string>AppIcon29x29</string>
+          <string>AppIcon40x40</string>
+          <string>AppIcon60x60</string>
+        </array>
+        <key>CFBundleIconName</key>
+        <string>AppIcon</string>
+      </dict>
+    </dict>
+    <key>CFBundleSupportedPlatforms</key>
+    <array>
+      <string>iPhoneOS</string>
+    </array>
+    <key>NSMainNibFile~ipad</key>
+    <string>MainWindow-iPad</string>
+    <key>UIRequiresFullScreen</key>
+    <true/>
+    <key>CoronaSDKBuild</key>
+    <string>2020.3577</string>
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>NSBluetoothPeripheralUsageDescription should be set to a valid usage description</string>
+    <key>MinimumOSVersion</key>
+    <string>8.0</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>Used to save screenshots</string>
+    <key>NSMotionUsageDescription</key>
+    <string>NSMotionUsageDescription should be set to a valid usage description</string>
+    <key>CFBundleName</key>
+    <string>Don't Grind</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.5.7</string>
+    <key>UIStatusBarHidden</key>
+    <false/>
+    <key>UIAppFonts</key>
+    <array>
+      <string>CuteHandWritingBold.ttf</string>
+      <string>codeLight.otf</string>
+      <string>CuteHandWriting.ttf</string>
+      <string>codeBold.otf</string>
+    </array>
+    <key>CFBundleExecutable</key>
+    <string>Don't Grind</string>
+    <key>UILaunchImages</key>
+    <array>
+      <dict>
+        <key>UILaunchImageOrientation</key>
+        <string>LandscapeRight</string>
+        <key>UILaunchImageName</key>
+        <string>Default</string>
+        <key>UILaunchImageSize</key>
+        <string>{320, 480}</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>7.0</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageOrientation</key>
+        <string>LandscapeRight</string>
+        <key>UILaunchImageName</key>
+        <string>Default-568h</string>
+        <key>UILaunchImageSize</key>
+        <string>{320, 568}</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>7.0</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageOrientation</key>
+        <string>LandscapeRight</string>
+        <key>UILaunchImageName</key>
+        <string>Default-Landscape</string>
+        <key>UILaunchImageSize</key>
+        <string>{768, 1024}</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>7.0</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageOrientation</key>
+        <string>LandscapeRight</string>
+        <key>UILaunchImageName</key>
+        <string>Default-667h</string>
+        <key>UILaunchImageSize</key>
+        <string>{375, 667}</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>8.0</string>
+      </dict>
+      <dict>
+        <key>UILaunchImageOrientation</key>
+        <string>LandscapeRight</string>
+        <key>UILaunchImageName</key>
+        <string>Default-Landscape-736h</string>
+        <key>UILaunchImageSize</key>
+        <string>{414, 736}</string>
+        <key>UILaunchImageMinimumOSVersion</key>
+        <string>8.0</string>
+      </dict>
+    </array>
+    <key>NSAppleMusicUsageDescription</key>
+    <string>NSAppleMusicUsageDescription should be set to a valid usage description</string>
+    <key>NSSpeechRecognitionUsageDescription</key>
+    <string>NSSpeechRecognitionUsageDescription should be set to a valid usage description</string>
+    <key>UIPrerenderedIcon</key>
+    <true/>
+    <key>NSLocationUsageDescription</key>
+    <string>NSLocationUsageDescription should be set to a valid usage description</string>
+    <key>BuildMachineOSBuild</key>
+    <string>18F132</string>
+    <key>NSCalendarsUsageDescription</key>
+    <string>Not used within app</string>
+    <key>DTPlatformName</key>
+    <string>iphoneos</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Not used within app</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>NSLocationWhenInUseUsageDescription should be set to a valid usage description</string>
+    <key>CFBundleVersion</key>
+    <string>2020.03.271350</string>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>DTCompiler</key>
+    <string>com.apple.compilers.llvm.clang.1_0</string>
+    <key>NSHomeKitUsageDescription</key>
+    <string>NSHomeKitUsageDescription should be set to a valid usage description</string>
+    <key>DTSDKName</key>
+    <string>iphoneos13.2</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+      <key>NSAllowsArbitraryLoads</key>
+      <true/>
+    </dict>
+    <key>NSContactsUsageDescription</key>
+    <string>NSContactsUsageDescription should be set to a valid usage description</string>
+    <key>DTPlatformBuild</key>
+    <string>17B102</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Used within app</string>
+    <key>CoronaDelegates</key>
+    <array/>
+    <key>UIInterfaceOrientation</key>
+    <string>UIInterfaceOrientationPortrait</string>
+    <key>DTXcode</key>
+    <string>1130</string>
+    <key>DTAppStoreToolsBuild</key>
+    <string>11E146</string>
+  </dict>
+</plist>
